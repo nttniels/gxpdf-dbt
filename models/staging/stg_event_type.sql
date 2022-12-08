@@ -4,5 +4,5 @@ with event_type as (
 
 select 
     id as event_type_id
-    , name as event_type_name
+    , replace(lower(name),' ','_') as event_type_name
 from event_type
