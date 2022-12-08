@@ -11,3 +11,4 @@ sources:
       - name: event_type
       - name: team
       - name: player
+      - name: event
