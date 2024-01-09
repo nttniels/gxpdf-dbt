@@ -1,8 +1,8 @@
 
-version: 0
+version: 1
 
 sources:
-  - name: SAP_S4H_LSD200
+  - name: SAP_S4H_LSD200    #'schema name' defaults to source
     tables:
       - name: makt
       - name: mara
