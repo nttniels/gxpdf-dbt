@@ -39,7 +39,15 @@ models:
     # Applies to all files under models/example/
     10_bronze_raw:
       +materialized: table
+      +database: d3010_dev_bronze_raw
     20_bronze_polished:
       +materialized: view
-      +database: d3020_dev_raw_polished
+      +database: d3020_dev_bronze_pol
+    30_silver:
+      +materialized: view
+      +database: d3030_dev_silver
+    40_gold:
+      +materialized: view
+      +database: d3040_dev_gold
+
     

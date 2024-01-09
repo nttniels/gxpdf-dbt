@@ -1,8 +1,8 @@
 
 select 
-    matnr as number,
-    spras as string(1),
-    maktx as string(40),
-    maktg as string(40)
-    primary key (matnr, spras)
+    -- matnr as number,
+    -- spras as string,
+    -- maktx as string,
+    -- maktg as string
+    *
 from {{ source('SAP_S4H_LSD200', 'makt') }}
