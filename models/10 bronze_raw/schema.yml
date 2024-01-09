@@ -11,7 +11,3 @@ sources:
       - name: vbbe
       - name: vbep
       - name: vbfa
-
-  - name: stripe
-    tables:
-      - name: payments
