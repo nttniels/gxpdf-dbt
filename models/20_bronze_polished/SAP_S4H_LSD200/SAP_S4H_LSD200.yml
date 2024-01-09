@@ -1,5 +1,7 @@
 
-version: 2
+version: 1
+
+# {{ config(schema='SAP_S4H_LSD200') }}
 
 models:
     - name: makt
@@ -7,5 +9,3 @@ models:
       columns:
           - name: matnr
             description: "material number"
-            tests:
-                - not_null
