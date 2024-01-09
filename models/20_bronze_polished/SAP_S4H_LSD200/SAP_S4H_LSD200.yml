@@ -1,11 +1,8 @@
-
 version: 1
 
-# {{ config(schema='SAP_S4H_LSD200') }}
-
 models:
-    - name: makt
+    - name: material
       description: "material descriptions"
-      columns:
-          - name: matnr
-            description: "material number"
+
+
+# {{ config(schema='SAP_S4H_LSD200') }}

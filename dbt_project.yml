@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'gxpdf_mvp'
+name: 'gxpdf'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
@@ -35,11 +35,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  gxpdf_mvp:
+  gxpdf:
     # Applies to all files under models/example/
     10_bronze_raw:
       +materialized: table
-      +database: d3010_dev_bronze_raw
+      +database: env_var('DBT_BRONZE_RAW')
     20_bronze_polished:
       +materialized: view
       +database: d3020_dev_bronze_pol
@@ -49,5 +49,3 @@ models:
     40_gold:
       +materialized: view
       +database: d3040_dev_gold
-
-    
