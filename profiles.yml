@@ -1,0 +1,9 @@
+default:
+  target: development
+  outputs:
+    development:
+      type: snowflake
+      dbname: "{{ env_var('DBT_BRONZE_RAW') }}"
+
+
+      # https://www.reddit.com/r/dataengineering/comments/16jj2ap/dbt_cloud_multiple_databases/
