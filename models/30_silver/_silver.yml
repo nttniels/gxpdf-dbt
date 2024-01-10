@@ -1,0 +1,5 @@
+version: 1
+
+silver:
+  - name: s_material
+    description: "material master"
