@@ -27,7 +27,6 @@ models:
       +materialized: table
     20_bronze_polished:
       +materialized: view
-      +database: d3020_dev_bronze_pol
     30_silver:
       +materialized: view
       +database: d3030_dev_silver
