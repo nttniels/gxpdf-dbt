@@ -1,0 +1,15 @@
+version: 1
+
+sources:
+  - name: SAP_S4H_LSD200
+    description: "SAP S4Hana lifesciences development system"
+    tables:
+      - name: makt
+      - name: mara
+      - name: vbak
+      - name: vbap
+      - name: vbbe
+      - name: vbfa
+      - name: vbkd
+      - name: vbpa
+      - name: vbuk
