@@ -1,5 +1,5 @@
 -- LAYER: BRONZE-POLISHED
-{{ config(database=env_var("DBT_BRONZE_POL")) }}
+{{ config(database=env_var("DBT_BRONZE_POL"), schema="SAP_S4H") }}
 
 
 -- SOURCE TABLES FROM BRONZE-RAW

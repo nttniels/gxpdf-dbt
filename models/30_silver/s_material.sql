@@ -1,8 +1,8 @@
 -- LAYER: SILVER
-{{ config(database=env_var("DBT_SILVER"), schema="models") }}
+{{ config(database=env_var("DBT_SILVER"), schema="3NF") }}
 
 
---
+-- SELECTED FIELDS FROM BRONZE-POLISHED
 with
     polished_model as (select * from {{ ref("SAP_S4H_material") }}),
 
