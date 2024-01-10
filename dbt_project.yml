@@ -22,18 +22,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   gxpdf:
-    # Applies to all files under models/
     10_bronze_raw:
       +materialized: table
     20_bronze_polished:
       +materialized: view
-      +database: d3020_dev_bronze_pol
+      #schema per source system defined in models
     30_silver:
       +materialized: view
-      +database: d3030_dev_silver
+      +schema: silver
     40_gold:
       +materialized: view
-      +database: d3040_dev_gold
+      +schema: gold
 
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 

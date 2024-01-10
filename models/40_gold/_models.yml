@@ -1,0 +1,5 @@
+version: 1
+
+gold:
+  - name: material
+    description: "material master"
