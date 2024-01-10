@@ -3,6 +3,3 @@ version: 1
 models:
     - name: material
       description: "material descriptions"
-
-
-# {{ config(schema='SAP_S4H_LSD200') }}
