@@ -22,8 +22,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   gxpdf:
-    10_bronze_raw:
-      +materialized: table
     20_bronze_polished:
       +materialized: view
       #schema per source system defined in models
