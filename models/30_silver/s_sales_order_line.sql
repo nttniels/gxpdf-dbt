@@ -7,9 +7,11 @@ with
 bp1 as (select * from {{ ref("bp_SAP_S4H_vbap") }}),
 
 silver_model as (
+    
     select 
         bp1.*
     from bp1
+
 )
 
 select * from silver_model {{ env_var("DBT_LIMIT") }}
