@@ -7,6 +7,7 @@ jobs:
     lint-models:
         runs-on: ubuntu-latest
         steps:
+        - uses: "actions/checkout@v2"
         - name: Install SQLFluff
           run: pip install sqlfluff sqlfluff-templater-dbt
         - name: Run SQLFluff
