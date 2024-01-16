@@ -17,7 +17,7 @@ on:
   - name: Install SQLFluff
   run: pip install sqlfluff sqlfluff-templater-dbt
   - name: Run SQLFluff
-  run: sqlfluff lint <dir with sql files: e.g. models OR models/marts>/
+  run: sqlfluff lint models
  
  piperider-compare:
     runs-on: ubuntu-latest
