@@ -1,5 +1,7 @@
 version: 1
 
-silver:
+# SILVER
+models:
   - name: s_material
-    description: "material master"
+  - name: s_sales_order_header
+  - name: s_sales_order_line

@@ -6,6 +6,7 @@
 with
 s1 as (select * from {{ ref('s_sales_order_header') }}),
 s2 as (select * from {{ ref('s_sales_order_line') }}),
+s3 as (select * from {{ ref('s_material') }}),
 
 gold_model as (
     
@@ -19,6 +20,7 @@ gold_model as (
         s1.created_on,
         s2.item_nr,
         s2.material,
+        s3.description,
         s2.material_group,
         s2.quantity,
         s2.quantity_unit,
@@ -30,8 +32,12 @@ gold_model as (
         s2.price_qty,
         s2.price_unit,
         s2.first_date
-    from sales_order_header
-    left join s2 on s1.sales_document = s1.sales_document
+    from s2
+
+    left join s1 on s1.sales_document = s2.sales_document
+    left join s3 on s2.material = s3.material
+
+    order by s1.sales_document asc
     
 )
 

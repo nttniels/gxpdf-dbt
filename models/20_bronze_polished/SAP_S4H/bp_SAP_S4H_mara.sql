@@ -11,7 +11,7 @@ bronze_polished_model as (
         matnr::string(18) as material,
         meins::string(3) as uom_base,
         matkl::string(6) as material_group
-    from bronze_raw_table        
+    from bronze_raw_table
 )
 
 -- SELECT MODEL

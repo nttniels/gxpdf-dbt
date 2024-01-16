@@ -1,5 +1,6 @@
 version: 1
 
-gold:
-  - name: material
-    description: "material master"
+models:
+  - name: g_material
+    description: material master
+  - name: g_sales_order

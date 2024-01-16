@@ -7,6 +7,7 @@ with bronze_raw_table as (select * from {{ source("br_sap_s4h", "vbap") }}),
 
 -- PREPARE DATA FOR USAGE IN SILVER
 bronze_polished_model as (
+
     select 
         vbeln::string(10) as sales_document,
         posnr::string(3) as item_nr,
@@ -27,6 +28,7 @@ bronze_polished_model as (
             substring(cpd_updat::string,7,2)
             )::date as first_date
     from bronze_raw_table
+
 )
 
 -- SELECT MODEL
