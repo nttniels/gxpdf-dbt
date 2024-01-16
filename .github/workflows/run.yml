@@ -3,12 +3,14 @@ on:
 pull_request:
     branches: [ "10-production" ]
   jobs:
-      SQLFLUFF:
-      runs-on: ubuntu-latest
-      - name: Install SQLFluff
-          run: pip install sqlfluff sqlfluff-templater-dbt
-      - name: Run SQLFluff
-          run: sqlfluff lint models
+      name: SQLFLUFF:
+      deploy:    
+          runs-on: ubuntu-latest
+          steps:
+          - name: Install SQLFluff
+              run: pip install sqlfluff sqlfluff-templater-dbt
+          - name: Run SQLFluff
+              run: sqlfluff lint models
  
 # piperider-compare:
  #   runs-on: ubuntu-latest
