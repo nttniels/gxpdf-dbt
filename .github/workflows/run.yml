@@ -5,7 +5,8 @@ name: CI_Tranformations_SQL_Linter_Piperider
 # Controls when the workflow will run
 on:
   pull_request:
-    branches: [ "10-production" ]
+    branches: 
+    - 10-production
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
