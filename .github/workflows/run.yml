@@ -1,8 +1,8 @@
 name: SQLFluff
 on:
-    - pull_request:
-        #branches: 
-         #   - '10-production'
+    pull:
+        branches:
+            - '10-production'
 jobs:
     lint-models:
     runs-on: ubuntu-latest
