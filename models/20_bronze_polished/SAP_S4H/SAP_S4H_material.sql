@@ -12,3 +12,5 @@ with
 -- SELECT MODEL
 select *
 from bronze_polished_model {{ env_var("DBT_LIMIT") }}
+
+-- extra comment for github PR
