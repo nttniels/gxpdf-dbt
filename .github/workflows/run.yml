@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install SQLFluff
-        run: pip install sqlfluff sqlfluff-templater-dbt
+        run: pip install sqlfluff
     - name: Run SQLFluff
         run: sqlfluff lint models
  
