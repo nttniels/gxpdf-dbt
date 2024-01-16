@@ -1,0 +1,5 @@
+analysis/
+reports/
+macros/
+dbt_packages/
+target/

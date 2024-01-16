@@ -1,0 +1,12 @@
+version: 1
+
+# BRONZE POLISHED
+models:
+  - name: bp_SAP_S4H_mara
+    description: material master
+  - name: bp_SAP_S4H_makt
+    description: material master text
+  - name: bp_SAP_S4H_vbak
+    description: Sales order header
+  - name: bp_SAP_S4H_vbap
+    description: Sales order item
