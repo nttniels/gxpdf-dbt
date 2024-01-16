@@ -1,0 +1,42 @@
+name: SQLFluff
+on: [pull_request]
+    #pull_request:
+        #branches:
+            #- '10-production'
+jobs:
+    lint-models:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Install SQLFluff
+          run: pip install sqlfluff sqlfluff-templater-dbt
+        - name: Run SQLFluff
+          run: sqlfluff lint models
+ 
+# piperider-compare:
+ #   runs-on: ubuntu-latest
+  #  - name: Install Piperider
+   # run: pip install 'piperider[snowflake]'
+    #- name: Initialize project
+    #run: piperider init
+    #- name: run piperider
+    #run: piperider run
+    #permissions:
+    #contents: read
+    #pull-requests: write
+#
+ #   steps:
+  #  - uses: actions/checkout@v3
+   # 
+    #- name: PipeRider Compare
+    #uses: InfuseAI/piperider-compare-action@v1
+     # env:
+      #  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+       # SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+       # SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+       # SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+       # SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+       # SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+       # SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
+
+# htt//medium.com/inthepipeline/implementing-ci-cd-for-dbt-first-steps-f595247bc25b
+#update test 123456
