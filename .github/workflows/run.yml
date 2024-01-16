@@ -1,6 +1,6 @@
 name: SQLFluff
 on:
-    pull:
+    pull_request:
         branches:
             - '10-production'
 jobs:
