@@ -1,0 +1,7 @@
+version: 1
+
+# SILVER
+models:
+  - name: s_material
+  - name: s_sales_order_header
+  - name: s_sales_order_line

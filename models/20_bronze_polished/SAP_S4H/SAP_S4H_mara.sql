@@ -4,7 +4,7 @@
 
 -- SOURCE TABLES FROM BRONZE-RAW
 with
-    bronze_raw_table as (select * from {{ source("SAP_S4H", "mara") }}),
+    bronze_raw_table as (select * from {{ source("br_sap_s4h", "mara") }}),
 
     -- PREPARE DATA FOR USAGE IN SILVER
     bronze_polished_model as (select matnr as numerics from bronze_raw_table)
