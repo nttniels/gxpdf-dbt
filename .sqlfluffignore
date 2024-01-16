@@ -6,7 +6,7 @@ target/
 [sqlfluff:templater:dbt]
 apply_dbt_builtins = true
 profile = my_dbt_profile
-project_dir = ./my_dbt_project
+project_dir = ./gxpdf-dbt
 profiles_dir = ~/.dbt
 
 [sqlfluff:indentation]
