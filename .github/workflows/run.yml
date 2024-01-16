@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_Tranformations_SQL_Linter_Piperider
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    branches: 
+    - 10-production
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  jobs:
+  SQLFLUFF:
+  runs-on: ubuntu-latest
+  - name: Install SQLFluff
+  run: pip install sqlfluff sqlfluff-templater-dbt
+  - name: Run SQLFluff
+  run: sqlfluff lint models
+ 
+# piperider-compare:
+ #   runs-on: ubuntu-latest
+  #  - name: Install Piperider
+   # run: pip install 'piperider[snowflake]'
+    #- name: Initialize project
+    #run: piperider init
+    #- name: run piperider
+    #run: piperider run
+    #permissions:
+    #contents: read
+    #pull-requests: write
+#
+ #   steps:
+  #  - uses: actions/checkout@v3
+   # 
+    #- name: PipeRider Compare
+    #uses: InfuseAI/piperider-compare-action@v1
+     # env:
+      #  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+       # SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+       # SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+       # SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+       # SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
+       # SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+       # SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
+
+# htt//medium.com/inthepipeline/implementing-ci-cd-for-dbt-first-steps-f595247bc25b
