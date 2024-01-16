@@ -39,4 +39,4 @@ jobs:
        # SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
 
 # htt//medium.com/inthepipeline/implementing-ci-cd-for-dbt-first-steps-f595247bc25b
-#update test 12345
+#update test 1234
