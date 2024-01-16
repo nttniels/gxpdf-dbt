@@ -5,11 +5,11 @@ on:
          #   - '10-production'
 jobs:
     lint-models:
-        runs-on: ubuntu-latest
-        steps:
-         - name: Install SQLFluff
-         run: pip install sqlfluff
-        - name: Run SQLFluff
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install SQLFluff
+        run: pip install sqlfluff sqlfluff-templater-dbt
+    - name: Run SQLFluff
         run: sqlfluff lint models
  
 # piperider-compare:
