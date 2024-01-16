@@ -1,7 +1,8 @@
 name: CI_Tranformations_SQL_Linter_Piperider
 on:
     pull_request:
-        branches: [ "10-production" ]
+        branches: 
+            - '10-production'
       jobs:
           name: SQLFLUFF:
           deploy:    
