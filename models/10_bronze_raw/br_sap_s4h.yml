@@ -6,15 +6,28 @@ sources:
     description: "SAP S4Hana lifesciences system"
     tables:
       - name: makt
+        description: material master texts
       - name: mara
+        description: material master
       - name: vbak
+        description: sales document - header data
       - name: vbap
+        description: sales document - item data
       - name: vbbe
+        description: sales requirements - individual items
       - name: vbfa
+        description: Sales Document Flow
       - name: vbkd
+        description: Sales Document - Business Data
       - name: vbpa
+        description: Sales Document - Partner
       - name: vbuk
+        description: Sales document - header status & adminis
+
+
 # look at possibility to generate this file from schema definition in bronze_raw
+# 13-JAN-2024 current working assumption is to decouple this on purpose to have control over the transormation
+
 
 # all source tables in one file?
 # could benefit search
