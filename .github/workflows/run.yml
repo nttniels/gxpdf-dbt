@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-SQLFLUFF:
+  SQLFLUFF:
   runs-on: ubuntu-latest
   - name: Install SQLFluff
   run: pip install sqlfluff sqlfluff-templater-dbt
