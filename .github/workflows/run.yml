@@ -22,6 +22,8 @@ on:
  
  piperider-compare:
     runs-on: ubuntu-latest
+    - name: Install Piperider
+    run: pip install 'piperider[snowflake]'
     permissions:
     pull-requests: write
 
