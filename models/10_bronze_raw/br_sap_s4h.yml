@@ -1,7 +1,7 @@
 version: 1 #match verstion with data contract
 
 sources:
-  - name: SAP_S4H #[supplier]_[systemID]
+  - name: br_sap_s4h #br_[supplier]_[systemID]    all lowercase
     schema: SAP_S4H_LSD200 # temporary, schema should match source system name
     description: "SAP S4Hana lifesciences system"
     tables:

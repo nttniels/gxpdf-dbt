@@ -1,0 +1,7 @@
+version: 1
+
+models:
+  - name: bp_SAP_S4H_mara
+    description: "material master"
+  - name: bp_SAP_S4H_makt
+    description: "material master text"
