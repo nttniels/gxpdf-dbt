@@ -1,5 +1,5 @@
 -- LAYER: GOLD
-{{ config(database=env_var("DBT_GOLD"), schema="data_products") }}
+{{ config(database=env_var("DBT_GOLD")) }}
 
 
 -- -- SELECTED FIELDS FROM SILVER
