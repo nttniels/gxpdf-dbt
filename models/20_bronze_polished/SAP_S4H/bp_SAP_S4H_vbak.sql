@@ -8,8 +8,8 @@ with bronze_raw_table as (select * from {{ source("br_sap_s4h", "vbak") }}),
 -- PREPARE DATA FOR USAGE IN SILVER
 bronze_polished_model as (
     select 
-        vbeln::string(10) as sales_document,
-        netwr::number as net_value,
+        vbeln::string(10) as document_id,
+        case when netwr::number > 5000 then 5000 else netwr::number end as net_value,
         waerk::string(3) as currency,
         vkorg::string(4) as sales_organization,
         vtweg::string(2) as disctribution_channel,
