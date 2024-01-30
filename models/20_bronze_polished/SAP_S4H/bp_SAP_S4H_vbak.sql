@@ -20,5 +20,5 @@ bronze_polished_model as (
 )
 
 -- SELECT MODEL
-select *
+select * 
 from bronze_polished_model {{ env_var("DBT_LIMIT") }}

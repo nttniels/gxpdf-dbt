@@ -15,4 +15,5 @@ gold_model as (
     
 )
 
-select * from gold_model {{ env_var("DBT_LIMIT") }}
+select * 
+from gold_model {{ env_var("DBT_LIMIT") }}
