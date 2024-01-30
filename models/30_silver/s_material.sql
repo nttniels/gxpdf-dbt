@@ -16,4 +16,5 @@ silver_model as (
     left join makt on mara.material_id = makt.material_id
 )
 
-select * from silver_model {{ env_var("DBT_LIMIT") }}
+select *
+from silver_model {{ env_var("DBT_LIMIT") }}
