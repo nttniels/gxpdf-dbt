@@ -9,8 +9,8 @@ with bronze_raw_table as (select * from {{ source("br_sap_s4h", "vbap") }}),
 bronze_polished_model as (
 
     select 
-        vbeln::string(10) as sales_document,
-        posnr::string(3) as item_nr,
+        vbeln::string(10) as document_id,
+        posnr::string(3) as item_id,
         matnr::string as material,
         matkl::string as material_group,
         kwmeng::number as quantity,

@@ -9,8 +9,8 @@ silver_model as (select * from {{ ref('s_material') }}),
 gold_model as (
 
     select 
-        material,
-        description
+        material_id,
+        description::string(40)
     from silver_model
     
 )

@@ -8,7 +8,7 @@ with bronze_raw_table as (select * from {{ source("br_sap_s4h", "vbak") }}),
 -- PREPARE DATA FOR USAGE IN SILVER
 bronze_polished_model as (
     select 
-        vbeln::string(10) as sales_document,
+        vbeln::string(10) as document_id,
         netwr::number as net_value,
         waerk::string(3) as currency,
         vkorg::string(4) as sales_organization,

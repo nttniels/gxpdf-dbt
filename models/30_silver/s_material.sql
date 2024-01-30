@@ -13,7 +13,7 @@ silver_model as (
         makt.lang,
         makt.description
     from mara
-    left join makt on mara.material = makt.material
+    left join makt on mara.material_id = makt.material_id
 )
 
 select * from silver_model {{ env_var("DBT_LIMIT") }}
