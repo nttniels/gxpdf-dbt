@@ -3,6 +3,17 @@ version: 1
 models:
   - name: g_material
     description: material master
+    columns:
+        - name: material_id
+          tags:
+            - primary-key
 
   - name: g_sales_order
     description: sales order header & item combined
+    columns:
+        - name: document_id
+          tags:
+            - primary-key
+        - name: item_id
+          tags:
+            - primary-key

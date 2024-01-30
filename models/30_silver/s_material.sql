@@ -4,16 +4,18 @@
 
 -- SELECTED FIELDS FROM BRONZE-POLISHED
 with
-mara as (select * from {{ ref("bp_SAP_S4H_mara") }}),
-makt as (select * from {{ ref("bp_SAP_S4H_makt") }}),
+bp1 as (select * from {{ ref("bp_SAP_S4H_mara") }}),
+bp2 as (select * from {{ ref("bp_SAP_S4H_makt") }}),
 
 silver_model as (
     select 
-        mara.*,
-        makt.lang,
-        makt.description
-    from mara
-    left join makt on mara.material_id = makt.material_id
+        bp1.material_id,
+        bp1.uom_base,
+        bp1.material_group,
+        bp2.lang,
+        bp2.description
+    from bp1
+    left join bp2 on bp1.material_id = bp2.material_id
 )
 
 select *
