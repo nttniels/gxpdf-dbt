@@ -10,7 +10,7 @@ gold_model as (
 
     select 
         material,
-        description
+        description::string(40)
     from silver_model
     
 )
