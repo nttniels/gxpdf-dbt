@@ -14,4 +14,5 @@ silver_model as (
     
 )
 
-select * from silver_model {{ env_var("DBT_LIMIT") }}
+select *
+from silver_model {{ env_var("DBT_LIMIT") }}
