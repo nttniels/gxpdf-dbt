@@ -8,7 +8,7 @@ with bronze_raw_table as (select * from {{ source("br_sap_s4h", "makt") }}),
 -- PREPARE DATA FOR USAGE IN SILVER
 bronze_polished_model as (
     select
-        matnr::string(18) as material,
+        matnr::string(18) as material_id,
         spras::string(1) as lang,
         maktx::string(40) as description
     from bronze_raw_table

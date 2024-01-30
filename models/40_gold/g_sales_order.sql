@@ -11,14 +11,14 @@ s3 as (select * from {{ ref('s_material') }}),
 gold_model as (
     
     select 
-        s1.sales_document,
+        s1.document_id,
         s1.net_value,
         s1.currency,
         s1.sales_organization,
         s1.disctribution_channel,
         s1.created_by,
         s1.created_on,
-        s2.item_nr,
+        s2.item_id,
         s2.material,
         s3.description,
         s2.material_group,
@@ -34,10 +34,10 @@ gold_model as (
         s2.first_date
     from s2
 
-    left join s1 on s1.sales_document = s2.sales_document
-    left join s3 on s2.material = s3.material
+    left join s1 on s1.document_id = s2.document_id
+    left join s3 on s2.material = s3.material_id
 
-    order by s1.sales_document asc
+    order by s1.document_id asc
     
 )
 

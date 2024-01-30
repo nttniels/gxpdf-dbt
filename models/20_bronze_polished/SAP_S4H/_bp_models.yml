@@ -4,9 +4,31 @@ version: 1
 models:
   - name: bp_SAP_S4H_mara
     description: material master
+    columns:
+      - name: material_id
+        tags:
+          - primary-key
+
   - name: bp_SAP_S4H_makt
     description: material master text
+    columns:
+      - name: material_id
+        tags:
+          - primary-key
+
   - name: bp_SAP_S4H_vbak
     description: Sales order header
+    columns:
+      - name: document_id
+        tags:
+          - primary-key
+
   - name: bp_SAP_S4H_vbap
     description: Sales order item
+    columns:
+      - name: document_id
+        tags:
+          - primary-key
+      - name: item_id
+        tags:
+          - primary-key

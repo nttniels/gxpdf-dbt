@@ -3,4 +3,6 @@ version: 1
 models:
   - name: g_material
     description: material master
+
   - name: g_sales_order
+    description: sales order header & item combined
