@@ -8,7 +8,6 @@
     {%- if default_schema.name == 'CUSTOM_SCHEMAS_DEFINED_IN_CODE' -%}
         {%- if custom_schema_name is none -%}
             -- return no default schema name
-            {{ 'checkSchemaMacro' | trim }}
         {%- else -%}
             -- only return custom schema name
             {{ custom_schema_name | trim }}
