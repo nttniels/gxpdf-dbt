@@ -1,5 +1,5 @@
 -- TARGET LAYER: SILVER
-{{ config(database=env_var("DBT_SILVER"), schema="3NF") }}
+{{ config(database=env_var("DBT_SILVER")) }}
 
 
 -- SELECTED FIELDS FROM BRONZE-POLISHED

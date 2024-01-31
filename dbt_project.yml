@@ -27,7 +27,7 @@ models:
       #schema per source system defined in models
     30_silver:
       +materialized: view
-      +schema: 3NF
+      +schema: 
     40_gold:
       +materialized: view
       +schema: data_products
