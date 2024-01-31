@@ -27,10 +27,12 @@ models:
       #schema per source system defined in models
     30_silver:
       +materialized: view
-      +schema: 3NF
+      # +schema: Public from environment setting
     40_gold:
       +materialized: view
-      +schema: data_products
+      # +schema: Public from environment setting
+    40_gold/sales:
+      +schema: sales
 
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
