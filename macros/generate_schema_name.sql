@@ -9,9 +9,10 @@
     {%- if env_var('DBT_DEFAULT_SCHEMA') == 'OFF' -%}
         {%- if custom_schema_name is none -%}
             {# return no default schema name #}
+            {{ default_schema }}
         {%- else -%}
             {# only return custom schema name #}
-            {{ custom_schema_name | trim }}
+            {{ default_schema }}_{{ custom_schema_name | trim }}
         {%- endif -%}
 
     {# default macro #}
