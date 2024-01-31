@@ -3,10 +3,6 @@
     {%- set default_schema = target.schema -%}
 
     {%- if custom_schema_name is none -%}
-
-        {% if 'PUBLIC_' in default_schema -%}
-            {{ default_schema }}
-        {%- else -%}
             {{ default_schema }}
         {%- endif -%}
     {%- else -%}
@@ -15,6 +11,11 @@
 
         {% if 'PUBLIC_' in schema -%}
             {{ schema | replace('PUBLIC_','') }}
+        {%- else -%}
+            {{ schema }}
+        {%- endif -%}
+        {% if 'public_' in schema -%}
+            {{ schema | replace('public_','') }}
         {%- else -%}
             {{ schema }}
         {%- endif -%}
