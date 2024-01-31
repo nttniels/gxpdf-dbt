@@ -19,7 +19,6 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_modules"
 
 # Configuring models
-
 models:
   gxpdf:
     20_bronze_polished:
@@ -31,8 +30,8 @@ models:
     40_gold:
       +materialized: view
       # +schema: Public from environment setting
-    40_gold/sales:
-      +schema: sales
+      sales:
+        +schema: sales
 
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
