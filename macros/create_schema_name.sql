@@ -5,7 +5,7 @@
     {%- if custom_schema_name is none -%}
 
         {% if 'PUBLIC_' in default_schema -%}
-            {{ default_schema | replace('PUBLIC_','') }}
+            {{ default_schema }}
         {%- else -%}
             {{ default_schema }}
         {%- endif -%}
