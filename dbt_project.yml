@@ -27,10 +27,10 @@ models:
       #schema per source system defined in models
     30_silver:
       +materialized: view
-      # +schema: Public
+      # +schema: Public from environment setting
     40_gold:
       +materialized: view
-      +schema: Public
+      # +schema: Public from environment setting
     40_gold/sales:
       +schema: sales
 
