@@ -27,10 +27,12 @@ models:
       #schema per source system defined in models
     30_silver:
       +materialized: view
-      +schema: models
+      # +schema: Public
     40_gold:
       +materialized: view
-      +schema: data_products
+      +schema: Public
+    40_gold/sales:
+      +schema: sales
 
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
