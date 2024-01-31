@@ -5,7 +5,7 @@
 
     {%- set default_schema = target.schema -%}
     
-    {%- if default_schema.name == 'custom_schemas_defined_in_code' -%}
+    {%- if default_schema.name == 'CUSTOM_SCHEMAS_DEFINED_IN_CODE' -%}
         {%- if custom_schema_name is none -%}
             -- return no default schema name
             {{ 'checkSchemaMacro' | trim }}
