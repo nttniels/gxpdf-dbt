@@ -2,7 +2,7 @@
 
     {%- set default_schema = target.schema -%}
     {%- if custom_schema_name is none -%}
-        {{ default_schema }}
+        {{ default_schema | replace('PUBLIC_','') }}
     {%- else -%}
 
         {% set s1 = default_schema %}
