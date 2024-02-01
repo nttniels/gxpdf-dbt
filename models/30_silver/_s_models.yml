@@ -4,22 +4,38 @@ version: 1
 models:
   - name: s_material
     columns:
-        - name: material_id
-          tags:
-            - primary-key
+      - name: material_id
+        tags:
+          - primary-key
+    meta:
+      datafold:
+        datadiff:
+          never_diff: false
+          include_columns:
+            - material_id
+            - uom_base
+            - material_group
+            - description
 
   - name: s_sales_order_header
     columns:
-        - name: document_id
-          tags:
-            - primary-key
+      - name: document_id
+        tags:
+          - primary-key
+    meta:
+      datafold:
+        datadiff:
+          never_diff: false
 
   - name: s_sales_order_line
     columns:
-          - name: document_id
-            tags:
-              - primary-key
-          - name: item_id
-            tags:
-              - primary-key
-        
+      - name: document_id
+        tags:
+          - primary-key
+      - name: item_id
+        tags:
+          - primary-key
+    meta:
+      datafold:
+        datadiff:
+          never_diff: false
