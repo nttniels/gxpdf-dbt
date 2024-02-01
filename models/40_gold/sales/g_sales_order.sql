@@ -12,7 +12,7 @@ gold_model as (
     
     select 
         s1.document_id,
-        -- s1.net_value,
+        s1.net_value,
         s1.currency,
         s1.sales_organization,
         s1.disctribution_channel,
@@ -22,7 +22,7 @@ gold_model as (
         s2.material,
         s3.description,
         s2.material_group,
-        s2.quantity,
+        -- s2.quantity,
         s2.quantity_unit,
         s2.weight_brut,
         s2.weight_net,
