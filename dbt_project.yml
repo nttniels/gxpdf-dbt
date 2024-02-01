@@ -23,12 +23,18 @@ models:
   gxpdf:
     20_bronze_polished:
       +materialized: view
+      +docs:
+        node_color: "silver"
       #schema per source system defined in models
     30_silver:
       +materialized: view
+      +docs:
+        node_color: "silver"
       # +schema: Public from environment setting
     40_gold:
       +materialized: view
+      +docs:
+        node_color: "gold"
       # +schema: Public from environment setting
       sales:
         +schema: sales
