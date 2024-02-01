@@ -14,7 +14,7 @@ gold_model as (
         s1.document_id,
         s1.net_value,
         s1.currency,
-        -- s1.sales_organization,
+        s1.sales_organization,
         s1.disctribution_channel,
         s1.created_by,
         s1.created_on,
