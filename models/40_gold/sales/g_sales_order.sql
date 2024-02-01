@@ -12,7 +12,7 @@ gold_model as (
     
     select 
         s1.document_id,
-        s1.net_value,
+        -- s1.net_value,
         s1.currency,
         s1.sales_organization,
         s1.disctribution_channel,
