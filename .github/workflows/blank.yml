@@ -28,7 +28,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Branche check
         run: |
-          # This git hook will prevent merging from specific branches
           ALLOWED_BRANCH="20-quality"
           if [[ $GIT_REFLOG_ACTION == *merge* ]]; then
           	if [[ $GIT_REFLOG_ACTION == *$ALLOWED_BRANCH* ]]; then
