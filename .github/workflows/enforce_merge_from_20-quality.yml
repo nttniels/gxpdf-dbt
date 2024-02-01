@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "10-production" branch
+  # push:
+  #  branches: [ "10-production" ]
+  pull_request:
+    branches: [ "10-production" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check_branche:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check branche
+        if: github.base_ref == '10-production' && github.head_ref != '20-quality'
+        run: |
+          echo "ERROR: You can only merge to 10-production from 20-quality."
+          exit 1
