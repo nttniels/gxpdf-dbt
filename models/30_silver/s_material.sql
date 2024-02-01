@@ -12,6 +12,7 @@ silver_model as (
         bp1.material_id,
         bp1.uom_base,
         bp1.material_group,
+        bp1.created_on,
         bp2.lang,
         bp2.description
     from bp1

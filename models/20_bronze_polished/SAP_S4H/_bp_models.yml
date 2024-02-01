@@ -8,6 +8,11 @@ models:
       - name: material_id
         tags:
           - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true
+        
 
   - name: bp_SAP_S4H_makt
     description: material master text
@@ -15,6 +20,10 @@ models:
       - name: material_id
         tags:
           - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true
 
   - name: bp_SAP_S4H_vbak
     description: Sales order header
@@ -22,6 +31,10 @@ models:
       - name: document_id
         tags:
           - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true
 
   - name: bp_SAP_S4H_vbap
     description: Sales order item
@@ -32,3 +45,7 @@ models:
       - name: item_id
         tags:
           - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true
