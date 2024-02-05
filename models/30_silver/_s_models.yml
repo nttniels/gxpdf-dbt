@@ -10,7 +10,7 @@ models:
     meta:
       datafold:
         datadiff:
-          never_diff: false
+          never_diff: true
           include_columns:
             - material_id
             - uom_base
@@ -25,7 +25,7 @@ models:
     meta:
       datafold:
         datadiff:
-          never_diff: false
+          never_diff: true
 
   - name: s_sales_order_line
     columns:
@@ -38,4 +38,4 @@ models:
     meta:
       datafold:
         datadiff:
-          never_diff: false
+          never_diff: true
