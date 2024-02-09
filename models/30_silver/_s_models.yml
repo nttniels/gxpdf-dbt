@@ -7,6 +7,9 @@ models:
       - name: material_id
         tags:
           - primary-key
+        tests:
+         - unique
+         - not_null
     meta:
       datafold:
         datadiff:
