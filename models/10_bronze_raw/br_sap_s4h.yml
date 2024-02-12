@@ -6,25 +6,58 @@ sources:
     database: d1010_prod_bronze_raw                           # specication required to deviate from default DB d3020
     schema: SAP_S4H_LSD200                                    # temporary: schema should match source system name
     description: "SAP S4Hana lifesciences system"
+
+    #freshness:                                                # freshness settings for entire source. Can be overwritten per table
+      # warn_after:   { count: 1, period: day }                 # minute | hour | day
+      # error_after:  { count: 2, period: day }                 # carefull, run will fail if this is criterium is not met.
+      # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
+    #loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
+
+    tags:
+      - "sap_s4h"
+
     tables:
       - name: makt
         description: material master texts
       - name: mara
         description: material master
+        freshness:                                                # table-specific source freshness
+          warn_after:   { count: 7, period: day }                 # minute | hour | day
+          # error_after:  { count: 10, period: day }                 # carefull, run will fail if this is criterium is not met.
+          # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
+        loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
+
       - name: vbak
         description: sales document - header data
+        freshness:                                                # table-specific source freshness
+          warn_after:   { count: 2, period: day }                 # minute | hour | day
+          # error_after:  { count: 10, period: day }                # carefull, run will fail if this is criterium is not met.
+          # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
+        loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
+
       - name: vbap
         description: sales document - item data
+
       - name: vbbe
         description: sales requirements - individual items
+        freshness:                                                # table-specific source freshness
+          warn_after:   { count: 1, period: day }                 # minute | hour | day
+          # error_after:  { count: 2, period: day }                # carefull, run will fail if this is criteria is not met.
+          # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
+        loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
+
       - name: vbfa
         description: Sales Document Flow
+
       - name: vbkd
         description: Sales Document - Business Data
+
       - name: vbpa
         description: Sales Document - Partner
+
       - name: vbuk
         description: Sales document - header status & adminis
+        
 
 
 # look at possibility to generate this file from schema definition in bronze_raw
