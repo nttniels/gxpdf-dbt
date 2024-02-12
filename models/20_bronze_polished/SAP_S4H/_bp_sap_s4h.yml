@@ -11,8 +11,7 @@ models:
     meta:
         datafold:
           datadiff:
-            never_diff: true
-        
+            never_diff: true        
 
   - name: bp_SAP_S4H_makt
     description: material master text
