@@ -2,9 +2,8 @@ version: 1 #match verstion with data contract
 
 
 sources:
-  - name: br_sap_s4h                                          #br_[supplier]_[system]   all lowercase
-    database: d1010_prod_bronze_raw                           # specication required to deviate from default DB d3020
-    schema: SAP_S4H_LSD200                                    # temporary: schema should match source system name
+  - name: SAP_S4H                                    #[supplier]_[system]   = schema name
+    database: d1010_prod_bronze_raw                  # specication required to deviate from default DB d3020
     description: "SAP S4Hana lifesciences system"
 
     #freshness:                                                # freshness settings for entire source. Can be overwritten per table
