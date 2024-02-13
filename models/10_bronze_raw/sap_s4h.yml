@@ -2,7 +2,7 @@ version: 1 #match verstion with data contract
 
 
 sources:
-  - name: SAP_S4H                                    #[supplier]_[system]   = schema name
+  - name: sap_s4h                                   #[supplier]_[system] (lowercase)  = schema name
     database: d1010_prod_bronze_raw                  # specication required to deviate from default DB d3020
     description: "SAP S4Hana lifesciences system"
 
