@@ -24,7 +24,6 @@ models:
         description: Language of the description
       - name: description
         description: Description of the material. Max 40 characters.
-
     meta:
         datafold:
           datadiff:
