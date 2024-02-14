@@ -5,11 +5,17 @@ models:
   - name: s_material
     columns:
       - name: material_id
+        description: Material number
         tags:
           - primary-key
         tests:
          - unique
          - not_null
+      - name: uom_base
+      - name: material_group
+      - name: created_on
+      - name: lang
+      - name: description
     meta:
       datafold:
         datadiff:
@@ -31,6 +37,19 @@ models:
           never_diff: true
 
   - name: s_sales_order_line
+    columns:
+      - name: document_id
+        tags:
+          - primary-key
+      - name: item_id
+        tags:
+          - primary-key
+    meta:
+      datafold:
+        datadiff:
+          never_diff: true
+
+  - name: s_predictive_maintenance
     columns:
       - name: document_id
         tags:

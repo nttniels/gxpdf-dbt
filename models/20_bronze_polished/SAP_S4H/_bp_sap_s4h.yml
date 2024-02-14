@@ -19,6 +19,8 @@ models:
       - name: material_id
         tags:
           - primary-key
+      - name: lang
+      - name: description
     meta:
         datafold:
           datadiff:

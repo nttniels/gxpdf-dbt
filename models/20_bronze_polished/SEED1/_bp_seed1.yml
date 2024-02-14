@@ -1,0 +1,26 @@
+version: 1
+
+# BRONZE POLISHED
+models:
+  - name: bp_seed1_predictive_maintenance
+    description: predictive maintenance sample dataset
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true   
+
+    columns:
+      - name: UDI,
+        tags:
+          - primary-key
+
+      - name: PRODUCT_ID
+      - name: TYPE
+      - name: AIR_TEMP_K
+      - name: PROCESS_TEMP_K
+      - name: ROTATION_SPEED
+      - name: TORQUE_NM
+      - name: TOOL_WEAR_MINUTES
+      - name: TARGET
+      - name: FAILURE_TYPE
+         
