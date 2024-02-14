@@ -17,8 +17,13 @@ models:
     description: material master text
     columns:
       - name: material_id
+        description: Material number
         tags:
-          - primary-key
+          - primary-key        
+      - name: lang
+        description: Language of the description
+      - name: description
+        description: Description of the material. Max 40 characters.
     meta:
         datafold:
           datadiff:
