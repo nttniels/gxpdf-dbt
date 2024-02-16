@@ -1,27 +1,7 @@
 version: 1
 
 models:
-  - name: g_material
+  - name: g_llm_mara
     description: material master
-    columns:
-        - name: material_id
-          tags:
-            - primary-key
-    meta:
-        datafold:
-          datadiff:
-            never_diff: false
-
-  - name: g_sales_order
-    description: sales order header & item combined
-    columns:
-        - name: document_id
-          tags:
-            - primary-key
-        - name: item_id
-          tags:
-            - primary-key
-    meta:
-        datafold:
-          datadiff:
-            never_diff: false
+  - name: g_llm_makt
+    description: material master descriptions
