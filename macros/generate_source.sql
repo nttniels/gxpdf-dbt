@@ -1,4 +1,6 @@
-{% macro generate_source(database_name, schema_name) %}
+{% macro generate_source(schema_name) %}
+
+{% set database_name = "d1010_prod_bronze_raw" %}
 
 -- BUILD SQL
 {% set sql %}
@@ -8,7 +10,7 @@
             '- name: ' || lower(column_name) || '\n            description: "'|| lower(ifnull(comment,'')) || '"' as column_statement,
             table_name,
             column_name
-        from {{ database_name }}.information_schema.columns
+        from {{ database_name | upper }}.information_schema.columns
         where table_schema = '{{ schema_name | upper }}'
     ),
     "tables1" as (
@@ -22,7 +24,7 @@
         select
         table_name,
         table_comment,
-        '\n\n      - name: "' || lower(table_name) || '"\n        description: "' || table_comment  || '"\n        columns:' || listagg('\n          ' || column_statement || '\n') within group ( order by column_name ) as table_desc
+        '\n\n# TABLE\n      - name: "' || lower(table_name) || '"\n        description: "' || table_comment  || '"\n\n        columns:\n\n' || listagg('          ' || column_statement || '\n') within group ( order by column_name ) as table_desc
         from "columns1" left join "tables1" on "columns1".table_name = "tables1".table_name2
         group by table_name, table_comment
     )
@@ -44,16 +46,17 @@
 
 -- BUILD YAML
 {% set sources_yaml=[] %}
-{% do sources_yaml.append('  ') %}
-{% do sources_yaml.append('  ') %}
-{% do sources_yaml.append('  - name: br_' ~ schema_name | lower) %}
+{% do sources_yaml.append('\n\n\n') %}
+{% do sources_yaml.append('version: #insert version number \n ') %}
+{% do sources_yaml.append('sources: ') %}
+{% do sources_yaml.append('  - name: ' ~ schema_name | lower) %}
 {% do sources_yaml.append('    description: ""' ) %}
 {% do sources_yaml.append('    database: ' ~ database_name | lower) %}
+{% do sources_yaml.append(' ') %}
 
-{% for states_entry in states_data -%}
-    {% for table_entry in states_entry -%}
-        {% do sources_yaml.append('    tables:' ~ table_entry ) %}
-    {% endfor %}
+
+{% for table_entry in states_data[0] -%}
+    {% do sources_yaml.append('    tables:' ~ table_entry ) %}
 {% endfor %}
 
 {% do sources_yaml.append('  ') %}
