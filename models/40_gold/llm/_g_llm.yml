@@ -3,5 +3,22 @@ version: 1
 models:
   - name: g_llm_mara
     description: material master
+    columns:
+      - name: material_id
+        description: The number of the material
+      - name: uom_base
+        description: The unit of measure this material is primarely expressed in
+      - name: material_group
+        description: The number of the material group this material belongs to
+      - name: created_on
+        description: The date on which the material was created
+
   - name: g_llm_makt
     description: material master descriptions
+    columns:
+      - name: material_id
+        description: The number of the material
+      - name: Description
+        description: A short description of the material
+
+    
