@@ -6,7 +6,6 @@ sources:
     database: d1010_prod_bronze_raw
     description: "maintenance history sample dataset"
 
-
     tags:
       - "seed1"
 
