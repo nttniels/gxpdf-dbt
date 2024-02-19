@@ -3,6 +3,7 @@ version: 1
 models:
   - name: g_llm_mara
     description: material master
+<<<<<<< HEAD
     columns:
       - name: material_id
         description: The number of the material
@@ -22,3 +23,7 @@ models:
         description: A short description of the material
 
     
+=======
+  - name: g_llm_makt
+    description: material master descriptions
+>>>>>>> 6e69af3dfae72791bad6dfdf69ed3b3dc67012ca
