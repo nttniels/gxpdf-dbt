@@ -3,11 +3,19 @@
 
 # all source tables in one file?
 # could benefit search
-
 version: 2 #insert version number 
 
+ 
+sources: 
+  - name: sap_s4h                                   #[supplier]_[system] (lowercase)  = schema name
+    description: "SAP S4Hana lifesciences system"   
+    database: d1010_prod_bronze_raw # specication required to deviate from default DB d3020
+ 
+    tables:
+
+
 # TABLE
-      - name: "eina"
+      - name: eina
         description: "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
 
         columns:
@@ -97,7 +105,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "eine"
+      - name: eine
         description: ""
 
         columns:
@@ -277,7 +285,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "ekbe"
+      - name: ekbe
         description: ""
 
         columns:
@@ -473,7 +481,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "ekes"
+      - name: ekes
         description: ""
 
         columns:
@@ -567,7 +575,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "eket"
+      - name: eket
         description: ""
 
         columns:
@@ -741,7 +749,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "ekkn"
+      - name: ekkn
         description: ""
 
         columns:
@@ -895,7 +903,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "ekko"
+      - name: ekko
         description: ""
 
         columns:
@@ -1293,7 +1301,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "ekpo"
+      - name: ekpo
         description: ""
 
         columns:
@@ -2117,7 +2125,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "iproduct"
+      - name: iproduct
         description: ""
 
         columns:
@@ -2409,7 +2417,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "makt"
+      - name: makt
         description: ""
 
         columns:
@@ -2427,7 +2435,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "mara"
+      - name: mara
         description: "Material Master"
 
         freshness:                                                # table-specific source freshness
@@ -3039,7 +3047,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "marc"
+      - name: marc
         description: ""
 
         columns:
@@ -3641,7 +3649,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "mard"
+      - name: mard
         description: ""
 
         columns:
@@ -3785,7 +3793,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "mch1"
+      - name: mch1
         description: ""
 
         columns:
@@ -3893,7 +3901,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "mcha"
+      - name: mcha
         description: ""
 
         columns:
@@ -4005,7 +4013,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "mchb"
+      - name: mchb
         description: ""
 
         columns:
@@ -4123,7 +4131,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbak"
+      - name: vbak
         description: ""
 
         columns:
@@ -4573,7 +4581,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbap"
+      - name: vbap
         description: ""
 
         freshness:                                                # table-specific source freshness
@@ -5441,7 +5449,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbbe"
+      - name: vbbe
         description: ""
 
         freshness:                                                # table-specific source freshness
@@ -5539,7 +5547,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbep"
+      - name: vbep
         description: ""
 
         columns:
@@ -5711,7 +5719,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbfa"
+      - name: vbfa
         description: ""
 
         columns:
@@ -5801,7 +5809,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbkd"
+      - name: vbkd
         description: ""
 
         columns:
@@ -6019,7 +6027,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbpa"
+      - name: vbpa
         description: ""
 
         columns:
@@ -6089,7 +6097,7 @@ version: 2 #insert version number
 
 
 # TABLE
-      - name: "vbuk"
+      - name: vbuk
         description: ""
 
         columns:

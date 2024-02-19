@@ -1,4 +1,9 @@
+
 {% macro generate_source(schema_name) %}
+
+-- dbt run-operation generate_source --args '{"schema_name": "sap_s4h"}'
+
+
 
 {% set database_name = "d1010_prod_bronze_raw" %}
 
@@ -24,7 +29,7 @@
         select
         table_name,
         table_comment,
-        '\n\n# TABLE\n      - name: "' || lower(table_name) || '"\n        description: "' || table_comment  || '"\n\n        columns:\n\n' || listagg('          ' || column_statement || '\n') within group ( order by column_name ) as table_desc
+        '\n\n# TABLE\n      - name: ' || lower(table_name) || '\n        description: "' || table_comment  || '"\n\n        columns:\n\n' || listagg('          ' || column_statement || '\n') within group ( order by column_name ) as table_desc
         from "columns1" left join "tables1" on "columns1".table_name = "tables1".table_name2
         group by table_name, table_comment
     )
