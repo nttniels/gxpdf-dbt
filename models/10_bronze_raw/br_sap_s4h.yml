@@ -1,67 +1,6296 @@
-version: 1 #match verstion with data contract
+# look at possibility to generate this file from schema definition in bronze_raw
+# 13-JAN-2024 current working assumption is to decouple this on purpose to have control over the transormation
 
+# all source tables in one file?
+# could benefit search
+version: 2 #insert version number 
 
-sources:
+ 
+sources: 
   - name: sap_s4h                                   #[supplier]_[system] (lowercase)  = schema name
-    database: d1010_prod_bronze_raw                  # specication required to deviate from default DB d3020
-    description: "SAP S4Hana lifesciences system"
-
-    #freshness:                                                # freshness settings for entire source. Can be overwritten per table
-      # warn_after:   { count: 1, period: day }                 # minute | hour | day
-      # error_after:  { count: 2, period: day }                 # carefull, run will fail if this is criterium is not met.
-      # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
-    #loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
-
-    tags:
-      - "sap_s4h"
-
+    description: "SAP S4Hana lifesciences system"   
+    database: d1010_prod_bronze_raw # specication required to deviate from default DB d3020
+ 
     tables:
+
+
+# TABLE
+      - name: eina
+        description: "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+
+        columns:
+
+          - name: anzpu
+            description: ""
+          - name: dummy_eina_incl_eew_ps
+            description: ""
+          - name: erdat
+            description: ""
+          - name: ernam
+            description: ""
+          - name: idnlf
+            description: ""
+          - name: infnr
+            description: ""
+          - name: iseopblocked
+            description: ""
+          - name: kolif
+            description: ""
+          - name: lastchangedatetime
+            description: ""
+          - name: lifab
+            description: ""
+          - name: lifbi
+            description: ""
+          - name: lifnr
+            description: ""
+          - name: lmein
+            description: ""
+          - name: loekz
+            description: ""
+          - name: ltsnr
+            description: ""
+          - name: ltssf
+            description: ""
+          - name: mahn1
+            description: ""
+          - name: mahn2
+            description: ""
+          - name: mahn3
+            description: ""
+          - name: matkl
+            description: ""
+          - name: matnr
+            description: ""
+          - name: meins
+            description: ""
+          - name: mfrnr
+            description: ""
+          - name: punei
+            description: ""
+          - name: regio
+            description: ""
+          - name: relif
+            description: ""
+          - name: rueck
+            description: ""
+          - name: sortl
+            description: ""
+          - name: telf1
+            description: ""
+          - name: txz01
+            description: ""
+          - name: umren
+            description: ""
+          - name: umrez
+            description: ""
+          - name: urzdt
+            description: ""
+          - name: urzla
+            description: ""
+          - name: urznr
+            description: ""
+          - name: urztp
+            description: ""
+          - name: urzzt
+            description: ""
+          - name: vabme
+            description: ""
+          - name: verkf
+            description: ""
+          - name: wglif
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: eine
+        description: ""
+
+        columns:
+
+          - name: abskz
+            description: ""
+          - name: amoam
+            description: ""
+          - name: amoaw
+            description: ""
+          - name: amobm
+            description: ""
+          - name: amobw
+            description: ""
+          - name: amodb
+            description: ""
+          - name: amodv
+            description: ""
+          - name: amors
+            description: ""
+          - name: anfnr
+            description: ""
+          - name: anfps
+            description: ""
+          - name: angdt
+            description: ""
+          - name: angnr
+            description: ""
+          - name: aplfz
+            description: ""
+          - name: aut_source
+            description: ""
+          - name: bonus
+            description: ""
+          - name: bprme
+            description: ""
+          - name: bpumn
+            description: ""
+          - name: bpumz
+            description: ""
+          - name: bstae
+            description: ""
+          - name: bstma
+            description: ""
+          - name: bstyp
+            description: ""
+          - name: bwtar
+            description: ""
+          - name: co_order
+            description: ""
+          - name: datlb
+            description: ""
+          - name: diff_invoice
+            description: ""
+          - name: dummy_eine_incl_eew_ps
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: ebelp
+            description: ""
+          - name: ebon2
+            description: ""
+          - name: ebon3
+            description: ""
+          - name: ebonf
+            description: ""
+          - name: ebonu
+            description: ""
+          - name: effpr
+            description: ""
+          - name: ekgrp
+            description: ""
+          - name: ekkol
+            description: ""
+          - name: ekorg
+            description: ""
+          - name: erdat
+            description: ""
+          - name: ernam
+            description: ""
+          - name: esokz
+            description: ""
+          - name: evers
+            description: ""
+          - name: exprf
+            description: ""
+          - name: fsh_dci_corr
+            description: ""
+          - name: fsh_mlt
+            description: ""
+          - name: fsh_plt
+            description: ""
+          - name: fsh_rlt
+            description: ""
+          - name: fsh_tlt
+            description: ""
+          - name: inco1
+            description: ""
+          - name: inco2
+            description: ""
+          - name: inco2_l
+            description: ""
+          - name: inco3_l
+            description: ""
+          - name: incov
+            description: ""
+          - name: infnr
+            description: ""
+          - name: iprkz
+            description: ""
+          - name: iseopblocked
+            description: ""
+          - name: j_1bnbm
+            description: ""
+          - name: kzabs
+            description: ""
+          - name: loekz
+            description: ""
+          - name: megru
+            description: ""
+          - name: meprf
+            description: ""
+          - name: mgbon
+            description: ""
+          - name: mhdrz
+            description: ""
+          - name: minbm
+            description: ""
+          - name: mrpind
+            description: ""
+          - name: mtxno
+            description: ""
+          - name: mwskz
+            description: ""
+          - name: netpr
+            description: ""
+          - name: norbm
+            description: ""
+          - name: peinh
+            description: ""
+          - name: prdat
+            description: ""
+          - name: rdprf
+            description: ""
+          - name: sgt_ssrel
+            description: ""
+          - name: sktof
+            description: ""
+          - name: spe_cre_ref_doc
+            description: ""
+          - name: staging_time
+            description: ""
+          - name: tax_country
+            description: ""
+          - name: transport_chain
+            description: ""
+          - name: uebtk
+            description: ""
+          - name: uebto
+            description: ""
+          - name: untto
+            description: ""
+          - name: vendor_rma_req
+            description: ""
+          - name: verid
+            description: ""
+          - name: waers
+            description: ""
+          - name: webre
+            description: ""
+          - name: werks
+            description: ""
+          - name: xersn
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: ekbe
+        description: ""
+
+        columns:
+
+          - name: /cwm/bamng
+            description: ""
+          - name: /cwm/ty2tq
+            description: ""
+          - name: /cwm/wesbb
+            description: ""
+          - name: /cwm/wesbs
+            description: ""
+          - name: arewb
+            description: ""
+          - name: arewr
+            description: ""
+          - name: arewr_pop
+            description: ""
+          - name: areww
+            description: ""
+          - name: bamng
+            description: ""
+          - name: bekkn
+            description: ""
+          - name: belnr
+            description: ""
+          - name: bewtp
+            description: ""
+          - name: bldat
+            description: ""
+          - name: bpmng
+            description: ""
+          - name: bpmng_pop
+            description: ""
+          - name: bpweb
+            description: ""
+          - name: bpwes
+            description: ""
+          - name: budat
+            description: ""
+          - name: buzei
+            description: ""
+          - name: bwart
+            description: ""
+          - name: bwtar
+            description: ""
+          - name: charg
+            description: ""
+          - name: cpudt
+            description: ""
+          - name: cputm
+            description: ""
+          - name: dmbtr
+            description: ""
+          - name: dmbtr_pop
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: ebelp
+            description: ""
+          - name: elikz
+            description: ""
+          - name: ematn
+            description: ""
+          - name: ernam
+            description: ""
+          - name: etens
+            description: ""
+          - name: et_upd
+            description: ""
+          - name: evere
+            description: ""
+          - name: fsh_collection
+            description: ""
+          - name: fsh_season
+            description: ""
+          - name: fsh_season_year
+            description: ""
+          - name: fsh_theme
+            description: ""
+          - name: gjahr
+            description: ""
+          - name: grund
+            description: ""
+          - name: hswae
+            description: ""
+          - name: introw
+            description: ""
+          - name: inv_item_origin
+            description: ""
+          - name: j_sc_die_comp_f
+            description: ""
+          - name: knumv
+            description: ""
+          - name: kudif
+            description: ""
+          - name: lemin
+            description: ""
+          - name: lfbnr
+            description: ""
+          - name: lfgja
+            description: ""
+          - name: lfpos
+            description: ""
+          - name: logsy
+            description: ""
+          - name: lsmeh
+            description: ""
+          - name: lsmng
+            description: ""
+          - name: matnr
+            description: ""
+          - name: menge
+            description: ""
+          - name: menge_pop
+            description: ""
+          - name: mwskz
+            description: ""
+          - name: packno
+            description: ""
+          - name: qty_diff
+            description: ""
+          - name: reewr
+            description: ""
+          - name: refwr
+            description: ""
+          - name: retamtp_fc
+            description: ""
+          - name: retamtp_lc
+            description: ""
+          - name: retamt_fc
+            description: ""
+          - name: retamt_lc
+            description: ""
+          - name: rewrb
+            description: ""
+          - name: saprl
+            description: ""
+          - name: sesuom
+            description: ""
+          - name: sgt_scat
+            description: ""
+          - name: shkzg
+            description: ""
+          - name: srvpos
+            description: ""
+          - name: tax_country
+            description: ""
+          - name: vbeln_st
+            description: ""
+          - name: vbelp_st
+            description: ""
+          - name: vgabe
+            description: ""
+          - name: waers
+            description: ""
+          - name: weora
+            description: ""
+          - name: werks
+            description: ""
+          - name: wesbb
+            description: ""
+          - name: wesbs
+            description: ""
+          - name: wkurs
+            description: ""
+          - name: wrbtr
+            description: ""
+          - name: wrbtr_pop
+            description: ""
+          - name: wrf_charstc1
+            description: ""
+          - name: wrf_charstc2
+            description: ""
+          - name: wrf_charstc3
+            description: ""
+          - name: xblnr
+            description: ""
+          - name: xmacc
+            description: ""
+          - name: xunpl
+            description: ""
+          - name: xwoff
+            description: ""
+          - name: xwsbr
+            description: ""
+          - name: zekkn
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: ekes
+        description: ""
+
+        columns:
+
+          - name: /cwm/dabmg
+            description: ""
+          - name: /cwm/menge
+            description: ""
+          - name: charg
+            description: ""
+          - name: dabmg
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: ebelp
+            description: ""
+          - name: ebtyp
+            description: ""
+          - name: eindt
+            description: ""
+          - name: ematn
+            description: ""
+          - name: enddate
+            description: ""
+          - name: erdat
+            description: ""
+          - name: estkz
+            description: ""
+          - name: etens
+            description: ""
+          - name: expected_value
+            description: ""
+          - name: ezeit
+            description: ""
+          - name: fsh_salloc_qty
+            description: ""
+          - name: handoverdate
+            description: ""
+          - name: handovertime
+            description: ""
+          - name: imwrk
+            description: ""
+          - name: kzdis
+            description: ""
+          - name: loekz
+            description: ""
+          - name: lpein
+            description: ""
+          - name: mahnz
+            description: ""
+          - name: menge
+            description: ""
+          - name: mprof
+            description: ""
+          - name: msgtstmp
+            description: ""
+          - name: ormng
+            description: ""
+          - name: ref_etens
+            description: ""
+          - name: serviceperformer
+            description: ""
+          - name: sgt_scat
+            description: ""
+          - name: startdate
+            description: ""
+          - name: supplier_conf_item
+            description: ""
+          - name: supplier_conf_no
+            description: ""
+          - name: tms_ref_uuid
+            description: ""
+          - name: uecha
+            description: ""
+          - name: uzeit
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbeln_st
+            description: ""
+          - name: vbelp
+            description: ""
+          - name: vbelp_st
+            description: ""
+          - name: xblnr
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: eket
+        description: ""
+
+        columns:
+
+          - name: /cwm/dabmg
+            description: ""
+          - name: /cwm/menge
+            description: ""
+          - name: /cwm/wemng
+            description: ""
+          - name: abart
+            description: ""
+          - name: altdt
+            description: ""
+          - name: ameng
+            description: ""
+          - name: anzsn
+            description: ""
+          - name: arun_req_dlvdate
+            description: ""
+          - name: aulwe
+            description: ""
+          - name: banfn
+            description: ""
+          - name: bedat
+            description: ""
+          - name: bnfpo
+            description: ""
+          - name: budg_type
+            description: ""
+          - name: cd_locno
+            description: ""
+          - name: cd_loctype
+            description: ""
+          - name: charg
+            description: ""
+          - name: check_type
+            description: ""
+          - name: chkom
+            description: ""
+          - name: cncl_ancmnt_done
+            description: ""
+          - name: dabmg
+            description: ""
+          - name: dat01
+            description: ""
+          - name: dateshift_number
+            description: ""
+          - name: dl_id
+            description: ""
+          - name: dng_date
+            description: ""
+          - name: dng_time
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: ebelp
+            description: ""
+          - name: eindt
+            description: ""
+          - name: eldat
+            description: ""
+          - name: eluhr
+            description: ""
+          - name: enddate
+            description: ""
+          - name: estkz
+            description: ""
+          - name: etenr
+            description: ""
+          - name: fixkz
+            description: ""
+          - name: fsh_os_id
+            description: ""
+          - name: fsh_ralloc_qty
+            description: ""
+          - name: fsh_salloc_qty
+            description: ""
+          - name: geo_route
+            description: ""
+          - name: glmng
+            description: ""
+          - name: gts_ind
+            description: ""
+          - name: handoverdate
+            description: ""
+          - name: handovertime
+            description: ""
+          - name: handover_date
+            description: ""
+          - name: key_id
+            description: ""
+          - name: lddat
+            description: ""
+          - name: lduhr
+            description: ""
+          - name: licha
+            description: ""
+          - name: lpein
+            description: ""
+          - name: mahnz
+            description: ""
+          - name: mbdat
+            description: ""
+          - name: mbuhr
+            description: ""
+          - name: menge
+            description: ""
+          - name: mng02
+            description: ""
+          - name: nodisp
+            description: ""
+          - name: no_scem
+            description: ""
+          - name: otb_curr
+            description: ""
+          - name: otb_reason
+            description: ""
+          - name: otb_res_value
+            description: ""
+          - name: otb_spec_value
+            description: ""
+          - name: otb_status
+            description: ""
+          - name: otb_value
+            description: ""
+          - name: qunum
+            description: ""
+          - name: qupos
+            description: ""
+          - name: route_gts
+            description: ""
+          - name: rsnum
+            description: ""
+          - name: sernr
+            description: ""
+          - name: slfdt
+            description: ""
+          - name: spr_rsn_profile
+            description: ""
+          - name: startdate
+            description: ""
+          - name: tddat
+            description: ""
+          - name: tduhr
+            description: ""
+          - name: tms_ref_uuid
+            description: ""
+          - name: tsp
+            description: ""
+          - name: uniqueid
+            description: ""
+          - name: uzeit
+            description: ""
+          - name: verid
+            description: ""
+          - name: wadat
+            description: ""
+          - name: wamng
+            description: ""
+          - name: wauhr
+            description: ""
+          - name: wemng
+            description: ""
+          - name: wesbb
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: ekkn
+        description: ""
+
+        columns:
+
+          - name: aa_final_ind
+            description: ""
+          - name: aa_final_qty
+            description: ""
+          - name: aa_final_reason
+            description: ""
+          - name: ablad
+            description: ""
+          - name: aedat
+            description: ""
+          - name: anln1
+            description: ""
+          - name: anln2
+            description: ""
+          - name: aplzl
+            description: ""
+          - name: aplzl_ord
+            description: ""
+          - name: aufnr
+            description: ""
+          - name: aufpl
+            description: ""
+          - name: aufpl_ord
+            description: ""
+          - name: budget_pd
+            description: ""
+          - name: dabrz
+            description: ""
+          - name: dateofservice
+            description: ""
+          - name: diffoptrate
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: ebelp
+            description: ""
+          - name: egrup
+            description: ""
+          - name: erekz
+            description: ""
+          - name: fipos
+            description: ""
+          - name: fistl
+            description: ""
+          - name: fkber
+            description: ""
+          - name: fmfgus_key
+            description: ""
+          - name: fm_split_batch
+            description: ""
+          - name: fm_split_begru
+            description: ""
+          - name: geber
+            description: ""
+          - name: grant_nbr
+            description: ""
+          - name: gsber
+            description: ""
+          - name: hasdiffoptrate
+            description: ""
+          - name: imkey
+            description: ""
+          - name: kblnr
+            description: ""
+          - name: kblnr_cab
+            description: ""
+          - name: kblpos
+            description: ""
+          - name: kblpos_cab
+            description: ""
+          - name: kflag
+            description: ""
+          - name: kokrs
+            description: ""
+          - name: kostl
+            description: ""
+          - name: kstrg
+            description: ""
+          - name: kzbrb
+            description: ""
+          - name: loekz
+            description: ""
+          - name: lstar
+            description: ""
+          - name: menge
+            description: ""
+          - name: mwskz
+            description: ""
+          - name: navnw
+            description: ""
+          - name: netwr
+            description: ""
+          - name: notaxcorr
+            description: ""
+          - name: nplnr
+            description: ""
+          - name: paobjnr
+            description: ""
+          - name: prctr
+            description: ""
+          - name: projn
+            description: ""
+          - name: prznr
+            description: ""
+          - name: ps_psp_pnr
+            description: ""
+          - name: recid
+            description: ""
+          - name: sakto
+            description: ""
+          - name: service_doc_id
+            description: ""
+          - name: service_doc_item_id
+            description: ""
+          - name: service_doc_type
+            description: ""
+          - name: tcobjnr
+            description: ""
+          - name: txjcd
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbelp
+            description: ""
+          - name: veten
+            description: ""
+          - name: vname
+            description: ""
+          - name: vproz
+            description: ""
+          - name: vptnr
+            description: ""
+          - name: wempf
+            description: ""
+          - name: xbauf
+            description: ""
+          - name: xbkst
+            description: ""
+          - name: xbpro
+            description: ""
+          - name: zekkn
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: ekko
+        description: ""
+
+        columns:
+
+          - name: /dmbe/dealnumber
+            description: ""
+          - name: /dmbe/evgidcancel
+            description: ""
+          - name: /dmbe/evgidrenewal
+            description: ""
+          - name: /dmbe/paymentdeemed
+            description: ""
+          - name: abgru
+            description: ""
+          - name: absgr
+            description: ""
+          - name: active_id
+            description: ""
+          - name: addnr
+            description: ""
+          - name: adrnr
+            description: ""
+          - name: aedat
+            description: ""
+          - name: angdt
+            description: ""
+          - name: angnr
+            description: ""
+          - name: apcgk_extend
+            description: ""
+          - name: aurel_allow
+            description: ""
+          - name: ausnr
+            description: ""
+          - name: autlf
+            description: ""
+          - name: bedat
+            description: ""
+          - name: bnddt
+            description: ""
+          - name: bsakz
+            description: ""
+          - name: bsart
+            description: ""
+          - name: bstyp
+            description: ""
+          - name: budg_type
+            description: ""
+          - name: bukrs
+            description: ""
+          - name: bwbdt
+            description: ""
+          - name: check_type
+            description: ""
+          - name: comp
+            description: ""
+          - name: conc
+            description: ""
+          - name: cont
+            description: ""
+          - name: contract_allow
+            description: ""
+          - name: con_distr_lev
+            description: ""
+          - name: con_otb_req
+            description: ""
+          - name: con_prebook_lev
+            description: ""
+          - name: cr_stat
+            description: ""
+          - name: delper_allow
+            description: ""
+          - name: description
+            description: ""
+          - name: desp
+            description: ""
+          - name: desp_cargo
+            description: ""
+          - name: desp_dat
+            description: ""
+          - name: distributiontype
+            description: ""
+          - name: dpamt
+            description: ""
+          - name: dpdat
+            description: ""
+          - name: dppct
+            description: ""
+          - name: dptyp
+            description: ""
+          - name: dummy_ekko_incl_eew_ps
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: eindt_allow
+            description: ""
+          - name: ekgrp
+            description: ""
+          - name: ekgrp_allow
+            description: ""
+          - name: ekorg
+            description: ""
+          - name: eq_eindt
+            description: ""
+          - name: eq_werks
+            description: ""
+          - name: ernam
+            description: ""
+          - name: exnum
+            description: ""
+          - name: externalreferenceid
+            description: ""
+          - name: externalsystem
+            description: ""
+          - name: ext_rev_tmstmp
+            description: ""
+          - name: fixpo
+            description: ""
+          - name: fixpo_allow
+            description: ""
+          - name: followon_doc_cat
+            description: ""
+          - name: followon_doc_type
+            description: ""
+          - name: force_cnt
+            description: ""
+          - name: force_id
+            description: ""
+          - name: frggr
+            description: ""
+          - name: frgke
+            description: ""
+          - name: frgrl
+            description: ""
+          - name: frgsx
+            description: ""
+          - name: frgzu
+            description: ""
+          - name: fsh_item_group
+            description: ""
+          - name: fsh_os_stg_change
+            description: ""
+          - name: fsh_snst_status
+            description: ""
+          - name: fsh_transaction
+            description: ""
+          - name: fsh_vas_last_item
+            description: ""
+          - name: grouping_id
+            description: ""
+          - name: grwcu
+            description: ""
+          - name: gwldt
+            description: ""
+          - name: handoverloc
+            description: ""
+          - name: hashcal
+            description: ""
+          - name: hashcal_bdat
+            description: ""
+          - name: hashcal_exists
+            description: ""
+          - name: hierarchy_exists
+            description: ""
+          - name: ihran
+            description: ""
+          - name: ihrez
+            description: ""
+          - name: inco1
+            description: ""
+          - name: inco2
+            description: ""
+          - name: inco2_key
+            description: ""
+          - name: inco2_l
+            description: ""
+          - name: inco3_key
+            description: ""
+          - name: inco3_l
+            description: ""
+          - name: inco4_key
+            description: ""
+          - name: incov
+            description: ""
+          - name: intra_excl
+            description: ""
+          - name: intra_rel
+            description: ""
+          - name: isaged
+            description: ""
+          - name: iseopblocked
+            description: ""
+          - name: kalsm
+            description: ""
+          - name: kdatb
+            description: ""
+          - name: kdate
+            description: ""
+          - name: key_id
+            description: ""
+          - name: key_id_allow
+            description: ""
+          - name: known_index
+            description: ""
+          - name: knumv
+            description: ""
+          - name: konnr
+            description: ""
+          - name: kornr
+            description: ""
+          - name: ktwrt
+            description: ""
+          - name: kufix
+            description: ""
+          - name: kunnr
+            description: ""
+          - name: lands
+            description: ""
+          - name: lastchangedatetime
+            description: ""
+          - name: lblif
+            description: ""
+          - name: legal_contract
+            description: ""
+          - name: lifnr
+            description: ""
+          - name: lifre
+            description: ""
+          - name: llief
+            description: ""
+          - name: loekz
+            description: ""
+          - name: logsy
+            description: ""
+          - name: lphis
+            description: ""
+          - name: lponr
+            description: ""
+          - name: ltsnr_allow
+            description: ""
+          - name: memory
+            description: ""
+          - name: memorytype
+            description: ""
+          - name: msr_id
+            description: ""
+          - name: negative
+            description: ""
+          - name: numerator
+            description: ""
+          - name: otb_cond_type
+            description: ""
+          - name: otb_curr
+            description: ""
+          - name: otb_level
+            description: ""
+          - name: otb_reason
+            description: ""
+          - name: otb_res_value
+            description: ""
+          - name: otb_spec_value
+            description: ""
+          - name: otb_status
+            description: ""
+          - name: otb_value
+            description: ""
+          - name: outr
+            description: ""
+          - name: pare
+            description: ""
+          - name: parent_id
+            description: ""
+          - name: pare_cargo
+            description: ""
+          - name: pare_dat
+            description: ""
+          - name: pfm_contract
+            description: ""
+          - name: pincr
+            description: ""
+          - name: pohf_type
+            description: ""
+          - name: postat
+            description: ""
+          - name: proce
+            description: ""
+          - name: process_indicator
+            description: ""
+          - name: procstat
+            description: ""
+          - name: pstyp_allow
+            description: ""
+          - name: qtn_erlst_submsn_date
+            description: ""
+          - name: reason_code
+            description: ""
+          - name: release_date
+            description: ""
+          - name: reloc_id
+            description: ""
+          - name: reloc_seq_id
+            description: ""
+          - name: reswk
+            description: ""
+          - name: retpc
+            description: ""
+          - name: rettp
+            description: ""
+          - name: revno
+            description: ""
+          - name: rlwrt
+            description: ""
+          - name: scmproc
+            description: ""
+          - name: shipcond
+            description: ""
+          - name: source_logsys
+            description: ""
+          - name: spras
+            description: ""
+          - name: spr_rsn_profile
+            description: ""
+          - name: stafo
+            description: ""
+          - name: stako
+            description: ""
+          - name: statu
+            description: ""
+          - name: stceg
+            description: ""
+          - name: stceg_l
+            description: ""
+          - name: submi
+            description: ""
+          - name: telf1
+            description: ""
+          - name: threshold_exists
+            description: ""
+          - name: tms_ref_uuid
+            description: ""
+          - name: total_status_dg
+            description: ""
+          - name: total_status_pcs
+            description: ""
+          - name: total_status_pma
+            description: ""
+          - name: total_status_sds
+            description: ""
+          - name: unsez
+            description: ""
+          - name: upinc
+            description: ""
+          - name: verkf
+            description: ""
+          - name: vsart
+            description: ""
+          - name: vzskz
+            description: ""
+          - name: waers
+            description: ""
+          - name: weakt
+            description: ""
+          - name: werks_allow
+            description: ""
+          - name: wkurs
+            description: ""
+          - name: zadattyp
+            description: ""
+          - name: zapcgk
+            description: ""
+          - name: zbas_date
+            description: ""
+          - name: zbd1p
+            description: ""
+          - name: zbd1t
+            description: ""
+          - name: zbd2p
+            description: ""
+          - name: zbd2t
+            description: ""
+          - name: zbd3t
+            description: ""
+          - name: zindanx
+            description: ""
+          - name: zlimit_dat
+            description: ""
+          - name: zstart_dat
+            description: ""
+          - name: zterm
+            description: ""
+          - name: z_dev
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: ekpo
+        description: ""
+
+        columns:
+
+          - name: /bev1/nedepfree
+            description: ""
+          - name: /bev1/negen_item
+            description: ""
+          - name: /bev1/nestruccat
+            description: ""
+          - name: /dmbe/accounting_type
+            description: ""
+          - name: /dmbe/cimax2
+            description: ""
+          - name: /dmbe/componentfor
+            description: ""
+          - name: /dmbe/deal_posted
+            description: ""
+          - name: /dmbe/effectivedatefrom
+            description: ""
+          - name: /dmbe/effectivedateto
+            description: ""
+          - name: /dmbe/fas_code
+            description: ""
+          - name: /dmbe/invoiceuom
+            description: ""
+          - name: /dmbe/item_type
+            description: ""
+          - name: /dmbe/mixedproduct
+            description: ""
+          - name: /dmbe/optionalityfor
+            description: ""
+          - name: /dmbe/optionalitykey
+            description: ""
+          - name: /dmbe/optionof
+            description: ""
+          - name: /dmbe/posteddate
+            description: ""
+          - name: /dmbe/scheduling_desk
+            description: ""
+          - name: /sapmp/gpose
+            description: ""
+          - name: abdat
+            description: ""
+          - name: abeln
+            description: ""
+          - name: abelp
+            description: ""
+          - name: abftz
+            description: ""
+          - name: abmng
+            description: ""
+          - name: abskz
+            description: ""
+          - name: abueb
+            description: ""
+          - name: adacn
+            description: ""
+          - name: addns
+            description: ""
+          - name: addrnum
+            description: ""
+          - name: admoi
+            description: ""
+          - name: adpri
+            description: ""
+          - name: adrn2
+            description: ""
+          - name: adrnr
+            description: ""
+          - name: advcode
+            description: ""
+          - name: aedat
+            description: ""
+          - name: afnam
+            description: ""
+          - name: afpnr
+            description: ""
+          - name: agdat
+            description: ""
+          - name: agmem
+            description: ""
+          - name: aktnr
+            description: ""
+          - name: anfnr
+            description: ""
+          - name: anfps
+            description: ""
+          - name: angnr
+            description: ""
+          - name: angpn
+            description: ""
+          - name: anzpu
+            description: ""
+          - name: anzsn
+            description: ""
+          - name: apcgk_extend
+            description: ""
+          - name: apoms
+            description: ""
+          - name: arsnr
+            description: ""
+          - name: arsps
+            description: ""
+          - name: arun_group_prio
+            description: ""
+          - name: assignment_priority
+            description: ""
+          - name: attyp
+            description: ""
+          - name: audat
+            description: ""
+          - name: aurel
+            description: ""
+          - name: banfn
+            description: ""
+          - name: bednr
+            description: ""
+          - name: belnr
+            description: ""
+          - name: berid
+            description: ""
+          - name: blk_reason_id
+            description: ""
+          - name: blk_reason_txt
+            description: ""
+          - name: bnfpo
+            description: ""
+          - name: bonba
+            description: ""
+          - name: bonus
+            description: ""
+          - name: borgr_miss
+            description: ""
+          - name: bprme
+            description: ""
+          - name: bpumn
+            description: ""
+          - name: bpumz
+            description: ""
+          - name: brgew
+            description: ""
+          - name: brtwr
+            description: ""
+          - name: bsark
+            description: ""
+          - name: bsgru
+            description: ""
+          - name: bstae
+            description: ""
+          - name: bstyp
+            description: ""
+          - name: budget_pd
+            description: ""
+          - name: bukrs
+            description: ""
+          - name: bwtar
+            description: ""
+          - name: bwtty
+            description: ""
+          - name: ccomp
+            description: ""
+          - name: chg_fplnr
+            description: ""
+          - name: chg_srv
+            description: ""
+          - name: cigit
+            description: ""
+          - name: cmpl_dlv_itm
+            description: ""
+          - name: cnfm_qty
+            description: ""
+          - name: consnum
+            description: ""
+          - name: cons_order
+            description: ""
+          - name: contract_for_limit
+            description: ""
+          - name: cqu_sar
+            description: ""
+          - name: creationdate
+            description: ""
+          - name: creationtime
+            description: ""
+          - name: cuobj
+            description: ""
+          - name: cupit
+            description: ""
+          - name: delivery_address_type
+            description: ""
+          - name: dep_id
+            description: ""
+          - name: diff_invoice
+            description: ""
+          - name: disub_kunnr
+            description: ""
+          - name: disub_owner
+            description: ""
+          - name: disub_posnr
+            description: ""
+          - name: disub_pspnr
+            description: ""
+          - name: disub_sobkz
+            description: ""
+          - name: disub_vbeln
+            description: ""
+          - name: dpamt
+            description: ""
+          - name: dpdat
+            description: ""
+          - name: dppct
+            description: ""
+          - name: dptyp
+            description: ""
+          - name: drdat
+            description: ""
+          - name: druhr
+            description: ""
+          - name: drunr
+            description: ""
+          - name: dummy_ekpo_incl_eew_ps
+            description: ""
+          - name: ean11
+            description: ""
+          - name: ebeln
+            description: ""
+          - name: ebelp
+            description: ""
+          - name: ebon2
+            description: ""
+          - name: ebon3
+            description: ""
+          - name: ebonf
+            description: ""
+          - name: effwr
+            description: ""
+          - name: eglkz
+            description: ""
+          - name: ehtyp
+            description: ""
+          - name: eildt
+            description: ""
+          - name: ekkol
+            description: ""
+          - name: elikz
+            description: ""
+          - name: ematn
+            description: ""
+          - name: emlif
+            description: ""
+          - name: emnfr
+            description: ""
+          - name: empst
+            description: ""
+          - name: enh_date1
+            description: ""
+          - name: enh_date2
+            description: ""
+          - name: enh_numc1
+            description: ""
+          - name: enh_percent
+            description: ""
+          - name: erekz
+            description: ""
+          - name: etdrk
+            description: ""
+          - name: etfz1
+            description: ""
+          - name: etfz2
+            description: ""
+          - name: evers
+            description: ""
+          - name: excpe
+            description: ""
+          - name: exlin
+            description: ""
+          - name: expected_value
+            description: ""
+          - name: exsnr
+            description: ""
+          - name: externalreferenceid
+            description: ""
+          - name: extmaterialforpurg
+            description: ""
+          - name: ext_rfx_item
+            description: ""
+          - name: ext_rfx_number
+            description: ""
+          - name: ext_rfx_system
+            description: ""
+          - name: fabkz
+            description: ""
+          - name: ffzhi
+            description: ""
+          - name: fipos
+            description: ""
+          - name: fiscal_incentive
+            description: ""
+          - name: fiscal_incentive_id
+            description: ""
+          - name: fistl
+            description: ""
+          - name: fixmg
+            description: ""
+          - name: fkber
+            description: ""
+          - name: fls_rsto
+            description: ""
+          - name: fmfgus_key
+            description: ""
+          - name: fplnr
+            description: ""
+          - name: fsh_atp_date
+            description: ""
+          - name: fsh_collection
+            description: ""
+          - name: fsh_grid_cond_rec
+            description: ""
+          - name: fsh_item
+            description: ""
+          - name: fsh_item_group
+            description: ""
+          - name: fsh_pqr_uepos
+            description: ""
+          - name: fsh_psm_pfm_split
+            description: ""
+          - name: fsh_season
+            description: ""
+          - name: fsh_season_year
+            description: ""
+          - name: fsh_ss
+            description: ""
+          - name: fsh_theme
+            description: ""
+          - name: fsh_transaction
+            description: ""
+          - name: fsh_vas_prnt_id
+            description: ""
+          - name: fsh_vas_rel
+            description: ""
+          - name: geber
+            description: ""
+          - name: gewei
+            description: ""
+          - name: gnetwr
+            description: ""
+          - name: grant_nbr
+            description: ""
+          - name: grwrt
+            description: ""
+          - name: gr_by_ses
+            description: ""
+          - name: handoverloc
+            description: ""
+          - name: hashcal
+            description: ""
+          - name: hashcal_bdat
+            description: ""
+          - name: hashcal_exists
+            description: ""
+          - name: idnlf
+            description: ""
+          - name: inco1
+            description: ""
+          - name: inco2
+            description: ""
+          - name: inco2_key
+            description: ""
+          - name: inco2_l
+            description: ""
+          - name: inco3_key
+            description: ""
+          - name: inco3_l
+            description: ""
+          - name: inco4_key
+            description: ""
+          - name: infnr
+            description: ""
+          - name: insmk
+            description: ""
+          - name: insnc
+            description: ""
+          - name: iprkz
+            description: ""
+          - name: isvco
+            description: ""
+          - name: itcons
+            description: ""
+          - name: iuid_relevant
+            description: ""
+          - name: j_1aidatep
+            description: ""
+          - name: j_1aindxp
+            description: ""
+          - name: j_1bindust
+            description: ""
+          - name: j_1bmatorg
+            description: ""
+          - name: j_1bmatuse
+            description: ""
+          - name: j_1bnbm
+            description: ""
+          - name: j_1bownpro
+            description: ""
+          - name: kanba
+            description: ""
+          - name: kblnr
+            description: ""
+          - name: kblnr_comp
+            description: ""
+          - name: kblpos
+            description: ""
+          - name: kblpos_cab
+            description: ""
+          - name: kblpos_comp
+            description: ""
+          - name: known_index
+            description: ""
+          - name: knttp
+            description: ""
+          - name: kolif
+            description: ""
+          - name: konnr
+            description: ""
+          - name: kostl
+            description: ""
+          - name: ko_gsber
+            description: ""
+          - name: ko_pargb
+            description: ""
+          - name: ko_pprctr
+            description: ""
+          - name: ko_prctr
+            description: ""
+          - name: ktmng
+            description: ""
+          - name: ktpnr
+            description: ""
+          - name: kunnr
+            description: ""
+          - name: kzabs
+            description: ""
+          - name: kzbws
+            description: ""
+          - name: kzfme
+            description: ""
+          - name: kzkfg
+            description: ""
+          - name: kzstu
+            description: ""
+          - name: kztlf
+            description: ""
+          - name: kzvbr
+            description: ""
+          - name: kzwi1
+            description: ""
+          - name: kzwi2
+            description: ""
+          - name: kzwi3
+            description: ""
+          - name: kzwi4
+            description: ""
+          - name: kzwi5
+            description: ""
+          - name: kzwi6
+            description: ""
+          - name: labnr
+            description: ""
+          - name: lblkz
+            description: ""
+          - name: lebre
+            description: ""
+          - name: lewed
+            description: ""
+          - name: lfret
+            description: ""
+          - name: lgbzo
+            description: ""
+          - name: lgbzo_b
+            description: ""
+          - name: lgort
+            description: ""
+          - name: limit_amount
+            description: ""
+          - name: lmein
+            description: ""
+          - name: loekz
+            description: ""
+          - name: lprio
+            description: ""
+          - name: ltsnr
+            description: ""
+          - name: mahn1
+            description: ""
+          - name: mahn2
+            description: ""
+          - name: mahn3
+            description: ""
+          - name: mahnz
+            description: ""
+          - name: manual_tc_reason
+            description: ""
+          - name: matkl
+            description: ""
+          - name: matnr
+            description: ""
+          - name: meins
+            description: ""
+          - name: menge
+            description: ""
+          - name: meprf
+            description: ""
+          - name: mfrgr
+            description: ""
+          - name: mfrnr
+            description: ""
+          - name: mfrpn
+            description: ""
+          - name: mfzhi
+            description: ""
+          - name: mhdrz
+            description: ""
+          - name: mlmaa
+            description: ""
+          - name: mprof
+            description: ""
+          - name: mrpind
+            description: ""
+          - name: mtart
+            description: ""
+          - name: mwskz
+            description: ""
+          - name: navnw
+            description: ""
+          - name: negative
+            description: ""
+          - name: netpr
+            description: ""
+          - name: netwr
+            description: ""
+          - name: nfabd
+            description: ""
+          - name: nlabd
+            description: ""
+          - name: notkz
+            description: ""
+          - name: novet
+            description: ""
+          - name: nrfhg
+            description: ""
+          - name: ntgew
+            description: ""
+          - name: numerator
+            description: ""
+          - name: packno
+            description: ""
+          - name: peinh
+            description: ""
+          - name: plifz
+            description: ""
+          - name: pnstat
+            description: ""
+          - name: pol_id
+            description: ""
+          - name: prdat
+            description: ""
+          - name: prio_req
+            description: ""
+          - name: prio_urg
+            description: ""
+          - name: producttype
+            description: ""
+          - name: prsdr
+            description: ""
+          - name: pstyp
+            description: ""
+          - name: ps_psp_pnr
+            description: ""
+          - name: punei
+            description: ""
+          - name: put_back
+            description: ""
+          - name: rdprf
+            description: ""
+          - name: reason_code
+            description: ""
+          - name: refsite
+            description: ""
+          - name: ref_item
+            description: ""
+          - name: repos
+            description: ""
+          - name: requestforquotation
+            description: ""
+          - name: requestforquotationitem
+            description: ""
+          - name: reslo
+            description: ""
+          - name: retpc
+            description: ""
+          - name: retpo
+            description: ""
+          - name: revlv
+            description: ""
+          - name: rfm_diversion
+            description: ""
+          - name: rfm_psst_group
+            description: ""
+          - name: rfm_psst_rule
+            description: ""
+          - name: rfm_ref_action
+            description: ""
+          - name: rfm_ref_doc
+            description: ""
+          - name: rfm_ref_item
+            description: ""
+          - name: rfm_ref_slitem
+            description: ""
+          - name: rfm_scc_indicator
+            description: ""
+          - name: saisj
+            description: ""
+          - name: saiso
+            description: ""
+          - name: sakto
+            description: ""
+          - name: satnr
+            description: ""
+          - name: schpr
+            description: ""
+          - name: sernp
+            description: ""
+          - name: serru
+            description: ""
+          - name: serviceperformer
+            description: ""
+          - name: sf_txjcd
+            description: ""
+          - name: sgt_rcat
+            description: ""
+          - name: sgt_scat
+            description: ""
+          - name: sikgr
+            description: ""
+          - name: sktof
+            description: ""
+          - name: sobkz
+            description: ""
+          - name: source_id
+            description: ""
+          - name: source_key
+            description: ""
+          - name: spe_abgru
+            description: ""
+          - name: spe_chng_sys
+            description: ""
+          - name: spe_cq_ctrltype
+            description: ""
+          - name: spe_cq_nocq
+            description: ""
+          - name: spe_crm_fkrel
+            description: ""
+          - name: spe_crm_ref_item
+            description: ""
+          - name: spe_crm_ref_so
+            description: ""
+          - name: spe_crm_so
+            description: ""
+          - name: spe_crm_so_item
+            description: ""
+          - name: spe_ewm_dtc
+            description: ""
+          - name: spe_insmk_src
+            description: ""
+          - name: spinf
+            description: ""
+          - name: srm_contract_id
+            description: ""
+          - name: srm_contract_itm
+            description: ""
+          - name: srv_bas_com
+            description: ""
+          - name: ssqss
+            description: ""
+          - name: stafo
+            description: ""
+          - name: stapo
+            description: ""
+          - name: statu
+            description: ""
+          - name: status
+            description: ""
+          - name: status_dg
+            description: ""
+          - name: status_pcs
+            description: ""
+          - name: status_pma
+            description: ""
+          - name: status_sds
+            description: ""
+          - name: stawn
+            description: ""
+          - name: stpac
+            description: ""
+          - name: target_value
+            description: ""
+          - name: tax_country
+            description: ""
+          - name: tax_subject_st
+            description: ""
+          - name: tc_aut_det
+            description: ""
+          - name: techs
+            description: ""
+          - name: tms_des_loc_key
+            description: ""
+          - name: tms_ref_uuid
+            description: ""
+          - name: tms_src_loc_key
+            description: ""
+          - name: trmrisk_relevant
+            description: ""
+          - name: twrkz
+            description: ""
+          - name: txdat
+            description: ""
+          - name: txjcd
+            description: ""
+          - name: txs_business_transaction
+            description: ""
+          - name: txs_usage_purpose
+            description: ""
+          - name: txz01
+            description: ""
+          - name: tzonrc
+            description: ""
+          - name: uebpo
+            description: ""
+          - name: uebtk
+            description: ""
+          - name: uebto
+            description: ""
+          - name: umren
+            description: ""
+          - name: umrez
+            description: ""
+          - name: umsok
+            description: ""
+          - name: uniqueid
+            description: ""
+          - name: untto
+            description: ""
+          - name: uptyp
+            description: ""
+          - name: upvor
+            description: ""
+          - name: usequ
+            description: ""
+          - name: vcm_chain_category
+            description: ""
+          - name: voleh
+            description: ""
+          - name: volum
+            description: ""
+          - name: vorab
+            description: ""
+          - name: vrtkz
+            description: ""
+          - name: vsart
+            description: ""
+          - name: wabwe
+            description: ""
+          - name: wbs_element
+            description: ""
+          - name: webaz
+            description: ""
+          - name: webre
+            description: ""
+          - name: weora
+            description: ""
+          - name: wepos
+            description: ""
+          - name: werks
+            description: ""
+          - name: weunb
+            description: ""
+          - name: wrf_charstc1
+            description: ""
+          - name: wrf_charstc2
+            description: ""
+          - name: wrf_charstc3
+            description: ""
+          - name: xconditions
+            description: ""
+          - name: xersy
+            description: ""
+          - name: xoblr
+            description: ""
+          - name: zadattyp
+            description: ""
+          - name: zapcgk
+            description: ""
+          - name: zbas_date
+            description: ""
+          - name: zgtyp
+            description: ""
+          - name: zindanx
+            description: ""
+          - name: zlimit_dat
+            description: ""
+          - name: zstart_dat
+            description: ""
+          - name: zwert
+            description: ""
+          - name: z_dev
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: iproduct
+        description: ""
+
+        columns:
+
+          - name: adjustmentprofile
+            description: "adjustment profile "
+          - name: anpcode
+            description: "anp code "
+          - name: articlecategory
+            description: "product category "
+          - name: assortmentlisttype
+            description: "assortment list type "
+          - name: authorizationgroup
+            description: "authorization group "
+          - name: baseunit
+            description: "base unit of measure "
+          - name: baseunitspecificproductheight
+            description: "height "
+          - name: baseunitspecificproductlength
+            description: "length "
+          - name: baseunitspecificproductwidth
+            description: "width "
+          - name: basicmaterial
+            description: "basic material "
+          - name: brand
+            description: "brand "
+          - name: changenumber
+            description: "change number "
+          - name: comparisonpricequantity
+            description: "comparison price unit "
+          - name: competitorid
+            description: "competitor "
+          - name: contentunit
+            description: "content unit "
+          - name: countryoforigin
+            description: "country/region of origin of material (non-preferential ori.) "
+          - name: createdbyuser
+            description: "name of person responsible for creating the object "
+          - name: creationdate
+            description: "created on "
+          - name: creationdatetime
+            description: "product created on "
+          - name: creationtime
+            description: "time of creation "
+          - name: crossplantconfigurableproduct
+            description: "cross-plant configurable product "
+          - name: crossplantstatus
+            description: "cross-plant product status "
+          - name: crossplantstatusvaliditydate
+            description: "date from which the cross-plant material status is valid "
+          - name: dangerousgoodsindprofile
+            description: "dangerous goods indicator profile "
+          - name: dfsammunitiongroupcode
+            description: "interchangeability code for ammunition "
+          - name: dfslogisticslevel
+            description: "return to logistics level "
+          - name: dfsmanufacturerpartlongnumber
+            description: "long manufacturer part number "
+          - name: dfsmatlconditionmgmt
+            description: "material condition management "
+          - name: dfsnationalitemidnnumber
+            description: "nato stock number "
+          - name: dfsproductsensitivity
+            description: "sensitivity for characteristics "
+          - name: dfsreturndelivery
+            description: "return code "
+          - name: dfsricidentifier
+            description: "reportable item code - numerical id "
+          - name: discountinkindeligibility
+            description: "material qualifies for discount in kind "
+          - name: division
+            description: "division "
+          - name: documentiscreatedbycad
+            description: "cad indicator "
+          - name: externalproductgroup
+            description: "external product group "
+          - name: globaltradeitemnumbervariant
+            description: "global trade item number variant "
+          - name: grosscontent
+            description: "gross contents "
+          - name: grossweight
+            description: "gross weight "
+          - name: handlingindicator
+            description: "handling indicator "
+          - name: handlingunittype
+            description: "handling unit type "
+          - name: hasemptiesbom
+            description: "empties bill of material "
+          - name: hastextilepartswthanimalorigin
+            description: "indicator: contains non-textile parts of animal origin "
+          - name: hasvariabletareweight
+            description: "variable tare weight "
+          - name: industrysector
+            description: "industry sector "
+          - name: industrystandardname
+            description: "industry standard description (such as ansi or iso) "
+          - name: internationalarticlenumbercat
+            description: "category of international article number (ean) "
+          - name: isactiveentity
+            description: "draft - indicator - is active document "
+          - name: isapprovedbatchrecordreqd
+            description: "approved batch record required "
+          - name: isbatchmanagementrequired
+            description: "batch management requirement indicator "
+          - name: ischemicalcompliancerelevant
+            description: "chemical compliance relevance indicator "
+          - name: ismarkedfordeletion
+            description: "deletion indicator "
+          - name: ispilferable
+            description: "pilferable "
+          - name: isrelevantforhzdssubstances
+            description: "relevant for hazardous substances "
+          - name: itemcategorygroup
+            description: "general item category group "
+          - name: laboratoryordesignoffice
+            description: "laboratory/design office "
+          - name: lastchangedate
+            description: "date of last change "
+          - name: lastchangedatetime
+            description: "change time stamp "
+          - name: lastchangedbyuser
+            description: "name of person who changed object "
+          - name: lastchangetime
+            description: "time of last change "
+          - name: logisticalproductcategory
+            description: "category of a logistical material "
+          - name: lowlevelcode
+            description: "low-level code "
+          - name: manufacturernumber
+            description: "manufacturer number "
+          - name: manufacturerpartprofile
+            description: "mfr part profile "
+          - name: materialrevisionlevel
+            description: "revision level "
+          - name: materialvolume
+            description: "volume "
+          - name: maximumcapacity
+            description: "maximum allowed capacity of packaging material "
+          - name: maximumpackagingheight
+            description: "maximum packing height of packaging material "
+          - name: maximumpackaginglength
+            description: "maximum packing length of packaging material "
+          - name: maximumpackagingwidth
+            description: "maximum packing width of packaging material "
+          - name: netcontent
+            description: "net contents "
+          - name: netweight
+            description: "net weight "
+          - name: overcapacitytolerance
+            description: "overcapacity tolerance of the handling unit "
+          - name: owninventorymanagedproduct
+            description: "number of firm's own (internal) inventory-managed material "
+          - name: packagingmaterialgroup
+            description: "material group: packaging materials "
+          - name: packingreferenceproduct
+            description: "reference material for materials packed in same way "
+          - name: preferredunitofmeasure
+            description: "preferred alternative uom for warehouse operations "
+          - name: procurementrule
+            description: "procurement rule "
+          - name: prodallocdetnprocedure
+            description: "product allocation determination procedure "
+          - name: prodcharc1internalnumber
+            description: "internal charactieristic number for color characteristics "
+          - name: prodcharc2internalnumber
+            description: "internal char. number for characteristics for main sizes "
+          - name: prodcharc3internalnumber
+            description: "internal char. number for characteristics for second sizes "
+          - name: prodeffctyparamvalsareassigned
+            description: "assign effectivity parameter values/ override change numbers "
+          - name: prodisenvironmentallyrelevant
+            description: "environmentally relevant "
+          - name: prodnoingenprodinprepackprod
+            description: "material number of the generic material in prepack materials "
+          - name: prodsupchnmgmtuuid22
+            description: "internal number (uid) for product "
+          - name: product
+            description: "product number "
+          - name: productcategory
+            description: "product category "
+          - name: productcharacteristic1
+            description: "characteristic value for colors of variants "
+          - name: productcharacteristic2
+            description: "characteristic value for main sizes of variants "
+          - name: productcharacteristic3
+            description: "characteristic value for second size for variants "
+          - name: productconfiguration
+            description: "internal object number "
+          - name: productdocumentchangenumber
+            description: "document change number (without document management system) "
+          - name: productdocumentnumber
+            description: "document number (without document management system) "
+          - name: productdocumentpagecount
+            description: "number of sheets (without document management system) "
+          - name: productdocumentpageformat
+            description: "page format of document (without document management system) "
+          - name: productdocumentpagenumber
+            description: "page number of document (without document management system) "
+          - name: productdocumenttype
+            description: "document type (without document management system) "
+          - name: productdocumentversion
+            description: "document version (without document management system) "
+          - name: productexternalid
+            description: "external representation of material number "
+          - name: productgroup
+            description: "product group "
+          - name: producthierarchy
+            description: "product hierarchy "
+          - name: productionmemopageformat
+            description: "page format of production memo "
+          - name: productionorinspectionmemotxt
+            description: "production/inspection memo "
+          - name: productisconfigurable
+            description: "product is configurable "
+          - name: productishighlyviscous
+            description: "indicator: highly viscous "
+          - name: productislocked
+            description: "material is locked "
+          - name: productmanufacturernumber
+            description: "manufacturer part number "
+          - name: productmeasurementunit
+            description: "unit of dimension for length/width/height "
+          - name: productoldid
+            description: "old product number "
+          - name: productseasonusagecategory
+            description: "indicator: use of season "
+          - name: productstandardid
+            description: "global trade item number (ean/upc/gtin) "
+          - name: producttype
+            description: "product type "
+          - name: productuuid
+            description: "internal key for product "
+          - name: productvalidenddate
+            description: "deletion date "
+          - name: productvalidstartdate
+            description: "valid-from date "
+          - name: purchaseorderquantityunit
+            description: "purchase order unit of measure "
+          - name: qltymgmtinprocmtisactive
+            description: "qm in procurement is active "
+          - name: qualityinspectiongroup
+            description: "quality inspection group "
+          - name: salesproduct
+            description: "material number of a sales material "
+          - name: salesstatus
+            description: "cross-distribution-chain material status "
+          - name: salesstatusvaliditydate
+            description: "date from which the x-distr.-chain material status is valid "
+          - name: segmentationisrelevant
+            description: "segmentation relevant "
+          - name: segmentationstrategy
+            description: "segmentation strategy "
+          - name: serialidentifierassgmtprofile
+            description: "serial number profile "
+          - name: serialnoexplicitnesslevel
+            description: "level of explicitness for serial number "
+          - name: serialnumberprofile
+            description: "serial number profile "
+          - name: sizeordimensiontext
+            description: "size/dimensions "
+          - name: smartformname
+            description: "form name "
+          - name: sourceofsupply
+            description: "source of supply "
+          - name: standardhandlingunittype
+            description: "standard hu type "
+          - name: timeunitforquarantineperiod
+            description: "time unit for quarantine period "
+          - name: transportationgroup
+            description: "transportation group "
+          - name: transportisinbulk
+            description: "indicator: in bulk/liquid "
+          - name: unitformaxpackagingdimensions
+            description: "unit of measure for maximum packing length/width/height "
+          - name: validitystartdate
+            description: "valid-from date "
+          - name: varblpurordunitisactive
+            description: "variable purchase order unit active "
+          - name: volumeunit
+            description: "volume unit "
+          - name: warehouseproductgroup
+            description: "warehouse material group "
+          - name: warehousestoragecondition
+            description: "warehouse storage condition "
+          - name: weightunit
+            description: "weight unit "
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: makt
-        description: material master texts
+        description: ""
+
+        columns:
+
+          - name: maktg
+            description: ""
+          - name: maktx
+            description: ""
+          - name: matnr
+            description: ""
+          - name: spras
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: mara
-        description: material master
+        description: "Material Master"
+
         freshness:                                                # table-specific source freshness
           warn_after:   { count: 7, period: day }                 # minute | hour | day
           # error_after:  { count: 10, period: day }                 # carefull, run will fail if this is criterium is not met.
           # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
         loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
 
+        columns:
+
+          - name: /bev1/luldegrp
+            description: "loading unit group: is beverage "
+          - name: /bev1/luleinh
+            description: "loading units "
+          - name: /bev1/nestruccat
+            description: "structure category for material relationship "
+          - name: /cwm/tara
+            description: "consider complete tare for each reference unit of measure "
+          - name: /cwm/tarum
+            description: "reference unit of measure for the tare calculation "
+          - name: /cwm/tolgr
+            description: "tolerance group for cwm "
+          - name: /cwm/valum
+            description: "valuation unit of measure "
+          - name: /cwm/xcwmat
+            description: "material is activated for cw "
+          - name: /dsd/sl_toltyp
+            description: "tolerance type id "
+          - name: /dsd/sv_cnt_grp
+            description: "counting group "
+          - name: /dsd/vc_group
+            description: "dsd grouping "
+          - name: /sapmp/abmein
+            description: "unit for dimensions "
+          - name: /sapmp/aho
+            description: "maximum number of vertical layers "
+          - name: /sapmp/brad
+            description: "bending factor "
+          - name: /sapmp/fbak
+            description: "run-out flange "
+          - name: /sapmp/fbdk
+            description: "run-out flange thickness "
+          - name: /sapmp/fbhk
+            description: "r-o flange height "
+          - name: /sapmp/kadp
+            description: "cable diameter allowance in percent "
+          - name: /sapmp/kadu
+            description: "cable diameter "
+          - name: /sapmp/kedu
+            description: "core diameter "
+          - name: /sapmp/mifrr
+            description: "smallest permissible reel clearance for a cable "
+          - name: /sapmp/rili
+            description: "coil delivery "
+          - name: /sapmp/spbi
+            description: "inner width "
+          - name: /sapmp/sptr
+            description: "load capacity "
+          - name: /sapmp/trad
+            description: "outer diameter "
+          - name: /sttpec/country_ref
+            description: "profile relevant country/region "
+          - name: /sttpec/prdcat
+            description: "product category "
+          - name: /sttpec/sertype
+            description: "serialization type "
+          - name: /sttpec/syncact
+            description: "synchronization active "
+          - name: /sttpec/syncchg
+            description: "indicator changed since integration "
+          - name: /sttpec/synctime
+            description: "synchronization time stamp "
+          - name: /vso/r_bot_ind
+            description: "bottom layer (vehicle space optimization) "
+          - name: /vso/r_kzgvh_ind
+            description: "closed packaging material required (vso) "
+          - name: /vso/r_no_p_gvh
+            description: "number of materials for each closed pkm (vso) "
+          - name: /vso/r_pal_b_ht
+            description: "maximum stacking height of the packaging material (vso) "
+          - name: /vso/r_pal_ind
+            description: "load without packaging material (vso) "
+          - name: /vso/r_pal_min_h
+            description: "minimum stacking height of the packaging material (vso) "
+          - name: /vso/r_pal_ovr_d
+            description: "permissible overhang (depth) of packaging material (vso) "
+          - name: /vso/r_pal_ovr_w
+            description: "permissible overhang (width) of shipping material (vso) "
+          - name: /vso/r_quan_unit
+            description: "unit of measure vehicle space optimization "
+          - name: /vso/r_stack_ind
+            description: "stacking not allowed (vso) "
+          - name: /vso/r_stack_no
+            description: "stacking factor (vehicle space optimization) "
+          - name: /vso/r_tilt_ind
+            description: "material may be tilted (vehicle space optimization) "
+          - name: /vso/r_tol_b_ht
+            description: "tolerance to exceed the max. stacking height (vso) "
+          - name: /vso/r_top_ind
+            description: "top layer (vso) "
+          - name: adprof
+            description: "adjustment profile "
+          - name: adspc_spc
+            description: "spare part class code "
+          - name: aeklk
+            description: "stock transfer net change costing "
+          - name: aenam
+            description: "name of person who changed object "
+          - name: aeszn
+            description: "document change number (without document management system) "
+          - name: allow_pmat_igno
+            description: "variant price allowed (for material master) "
+          - name: animal_origin
+            description: "indicator: contains non-textile parts of animal origin "
+          - name: anp
+            description: "anp code "
+          - name: attyp
+            description: "material category "
+          - name: bbtyp
+            description: "assortment list type "
+          - name: begru
+            description: "authorization group "
+          - name: behvo
+            description: "container requirements "
+          - name: bflme
+            description: "generic material with logistical variants "
+          - name: bismt
+            description: "old material number "
+          - name: blanz
+            description: "number of sheets (without document management system) "
+          - name: blatt
+            description: "page number of document (without document management system) "
+          - name: bmatn
+            description: "number of firm's own (internal) inventory-managed material "
+          - name: brand_id
+            description: "brand "
+          - name: breit
+            description: "width "
+          - name: brgew
+            description: "gross weight "
+          - name: bridge_max_slope
+            description: "maximum slope for bridges [°] "
+          - name: bridge_tresh
+            description: "bridge threshold [%] "
+          - name: bstat
+            description: "creation status - seasonal procurement "
+          - name: bstme
+            description: "purchase order unit of measure "
+          - name: bwscl
+            description: "source of supply "
+          - name: bwvor
+            description: "procurement rule "
+          - name: cadkz
+            description: "cad indicator "
+          - name: care_code
+            description: "care codes (such as washing code, ironing code, etc.) "
+          - name: chml_cmplnc_rlvnce_ind
+            description: "chemical compliance relevance indicator "
+          - name: cmeth
+            description: "quantity conversion method "
+          - name: cmrel
+            description: "relevant for configuration management "
+          - name: color
+            description: "characteristic value for colors of variants "
+          - name: color_atinn
+            description: "internal charactieristic number for color characteristics "
+          - name: commodity
+            description: "commodity "
+          - name: compl
+            description: "material completion level "
+          - name: created_at_time
+            description: "time of creation "
+          - name: cuobf
+            description: "internal object number "
+          - name: cwqproc
+            description: "ewm cw: catch weight profile for entering cw quantity "
+          - name: cwqrel
+            description: "ewm cw: material is a catch weight material "
+          - name: cwqtolgr
+            description: "catch weight tolerance group "
+          - name: datab
+            description: "valid-from date "
+          - name: dfs_mfrp2
+            description: "long manufacturer part number "
+          - name: dfs_sensitivity_key
+            description: "sensitivity for characteristics "
+          - name: dg_pack_status
+            description: "dangerous goods packaging status "
+          - name: disst
+            description: "low-level code "
+          - name: dpcbt
+            description: "single-unit batch def. value "
+          - name: dummy_prd_incl_eew_ps
+            description: "dummy field "
+          - name: ean11
+            description: "international article number (ean/upc) "
+          - name: eannr
+            description: "european article number (ean) - obsolete!!!!! "
+          - name: ekwsl
+            description: "purchasing value key "
+          - name: entar
+            description: "deactivated "
+          - name: ergei
+            description: "unit of weight (allowed packaging weight) "
+          - name: ergew
+            description: "allowed packaging weight "
+          - name: ernam
+            description: "name of person responsible for creating the object "
+          - name: ersda
+            description: "created on "
+          - name: ervoe
+            description: "volume unit (allowed packaging volume) "
+          - name: ervol
+            description: "allowed packaging volume "
+          - name: etiag
+            description: "is-r labeling: material grouping (deactivated in 4.0) "
+          - name: etiar
+            description: "label type "
+          - name: etifo
+            description: "label form "
+          - name: extwg
+            description: "external material group "
+          - name: fashgrd
+            description: "fashion grade "
+          - name: ferth
+            description: "production/inspection memo "
+          - name: fiber_code1
+            description: "fiber code for textiles (component 1) "
+          - name: fiber_code2
+            description: "fiber code for textiles (component 2) "
+          - name: fiber_code3
+            description: "fiber code for textiles (component 3) "
+          - name: fiber_code4
+            description: "fiber code for textiles (component 4) "
+          - name: fiber_code5
+            description: "fiber code for textiles (component 5) "
+          - name: fiber_part1
+            description: "percentage share of fiber (component 1) "
+          - name: fiber_part2
+            description: "percentage share of fiber (component 2) "
+          - name: fiber_part3
+            description: "percentage share of fiber (component 3) "
+          - name: fiber_part4
+            description: "percentage share of fiber (component 4) "
+          - name: fiber_part5
+            description: "percentage share of fiber (component 5) "
+          - name: formt
+            description: "page format of production memo "
+          - name: free_char
+            description: "characteristic value for evaluation purposes "
+          - name: fsh_mg_at1
+            description: "fashion information field: 1 "
+          - name: fsh_mg_at2
+            description: "fashion information field: 2 "
+          - name: fsh_mg_at3
+            description: "fashion information field: 3 "
+          - name: fsh_sc_mid
+            description: "material conversion id for characteristic value conversion "
+          - name: fsh_seaim
+            description: "indicator: season active in inventory management "
+          - name: fsh_sealv
+            description: "indicator: use of season "
+          - name: fuelg
+            description: "maximum level (by volume) "
+          - name: gds_relevant
+            description: "indicator: global data synchronization-relevant "
+          - name: gennr
+            description: "material number of the generic material in prepack materials "
+          - name: gewei
+            description: "weight unit "
+          - name: gewto
+            description: "excess weight tolerance for handling unit "
+          - name: groes
+            description: "size/dimensions "
+          - name: gtin_variant
+            description: "global trade item number variant "
+          - name: hazmat
+            description: "relevant for hazardous substances "
+          - name: height_nonflat
+            description: "absolute height threshold for stacking on non-flat surface "
+          - name: height_nonflat_uom
+            description: "uom of abs. height threshold (stacking on non-flat surface) "
+          - name: herkl
+            description: "country/region of origin of material (non-preferential ori.) "
+          - name: hndlcode
+            description: "handling indicator "
+          - name: hoehe
+            description: "height "
+          - name: hutyp
+            description: "handling unit type "
+          - name: hutyp_dflt
+            description: "standard hu type "
+          - name: icfa
+            description: "interchangeability code for ammunition "
+          - name: identification_tag_type
+            description: "identification tag type "
+          - name: ihivi
+            description: "indicator: highly viscous "
+          - name: iloos
+            description: "indicator: in bulk/liquid "
+          - name: imatn
+            description: "fff class "
+          - name: inhal
+            description: "net contents "
+          - name: inhbr
+            description: "gross contents "
+          - name: inhme
+            description: "content unit "
+          - name: ipmipproduct
+            description: "id for an intellectual property (crm product) "
+          - name: iprkz
+            description: "period indicator for shelf life expiration date "
+          - name: kosch
+            description: "product allocation determination procedure "
+          - name: kunnr
+            description: "competitor "
+          - name: kzeff
+            description: "assign effectivity parameter values/ override change numbers "
+          - name: kzgvh
+            description: "packaging material is closed packaging "
+          - name: kzkfg
+            description: "configurable material "
+          - name: kzkup
+            description: "indicator: material can be co-product "
+          - name: kznfm
+            description: "indicator: the material has a follow-up material "
+          - name: kzrev
+            description: "revision level has been assigned to the material "
+          - name: kzumw
+            description: "environmentally relevant "
+          - name: kzwsm
+            description: "units of measure usage "
+          - name: labor
+            description: "laboratory/design office "
+          - name: laeda
+            description: "date of last change "
+          - name: laeng
+            description: "length "
+          - name: last_changed_time
+            description: "time of last change "
+          - name: liqdt
+            description: "deletion date "
+          - name: logistical_mat_category
+            description: "category of a logistical material "
+          - name: loglev_reto
+            description: "return to logistics level "
+          - name: logunit
+            description: "ewm cw: logistics unit of measure "
+          - name: lvorm
+            description: "flag material for deletion at client level "
+          - name: magrv
+            description: "material group: packaging materials "
+          - name: matfi
+            description: "material is locked "
+          - name: matkl
+            description: "material group "
+          - name: matnr
+            description: "kitchen id"
+          - name: matnr_external
+            description: "external representation of material number "
+          - name: maxb
+            description: "maximum packing width of packaging material "
+          - name: maxc
+            description: "maximum allowed capacity of packaging material "
+          - name: maxc_tol
+            description: "overcapacity tolerance of the handling unit "
+          - name: maxdim_uom
+            description: "unit of measure for maximum packing length/width/height "
+          - name: maxh
+            description: "maximum packing height of packaging material "
+          - name: maxl
+            description: "maximum packing length of packaging material "
+          - name: mbrsh
+            description: "industry sector "
+          - name: mcond
+            description: "material condition management "
+          - name: meabm
+            description: "unit of dimension for length/width/height "
+          - name: medium
+            description: "medium "
+          - name: meins
+            description: "base unit of measure "
+          - name: mfrgr
+            description: "material freight group "
+          - name: mfrnr
+            description: "manufacturer number "
+          - name: mfrpn
+            description: "manufacturer part number "
+          - name: mhdhb
+            description: "total shelf life "
+          - name: mhdlp
+            description: "storage percentage "
+          - name: mhdrz
+            description: "minimum remaining shelf life "
+          - name: mlgut
+            description: "empties bill of material "
+          - name: mo_profile_id
+            description: "product orientation profile "
+          - name: mprof
+            description: "mfr part profile "
+          - name: msbookpartno
+            description: "manufacturer book part number "
+          - name: mstae
+            description: "cross-plant material status "
+          - name: mstav
+            description: "cross-distribution-chain material status "
+          - name: mstde
+            description: "date from which the cross-plant material status is valid "
+          - name: mstdv
+            description: "date from which the x-distr.-chain material status is valid "
+          - name: mtart
+            description: "material type "
+          - name: mtpos_mara
+            description: "general item category group "
+          - name: normt
+            description: "industry standard description (such as ansi or iso) "
+          - name: nrfhg
+            description: "material qualifies for discount in kind "
+          - name: nsnid
+            description: "nato stock number "
+          - name: ntgew
+            description: "net weight "
+          - name: numtp
+            description: "category of international article number (ean) "
+          - name: overhang_tresh
+            description: "overhang threshold [%] "
+          - name: ovlpn
+            description: "overlength part number "
+          - name: packcode
+            description: "packaging code "
+          - name: picnum
+            description: "supersession chain number "
+          - name: pilferable
+            description: "pilferable "
+          - name: plgtp
+            description: "price band category "
+          - name: pmata
+            description: "pricing reference material "
+          - name: prdha
+            description: "product hierarchy "
+          - name: prod_shape
+            description: "product shape "
+          - name: profl
+            description: "dangerous goods indicator profile "
+          - name: przus
+            description: "indicator: product composition printed on packaging "
+          - name: psm_code
+            description: "code of protected species management "
+          - name: pstat
+            description: "maintenance status "
+          - name: ps_smartform
+            description: "form name "
+          - name: qgrp
+            description: "quality inspection group "
+          - name: qmpur
+            description: "qm in procurement is active "
+          - name: qqtimeuom
+            description: "time unit for quarantine period "
+          - name: raube
+            description: "storage conditions "
+          - name: rbnrm
+            description: "catalog profile "
+          - name: rdmhd
+            description: "rounding rule for calculation of sled "
+          - name: retdelc
+            description: "return code "
+          - name: ric_id
+            description: "reportable item code - numerical id "
+          - name: rmatp
+            description: "reference material for materials packed in same way "
+          - name: rmatp_pb
+            description: "reference product for package building "
+          - name: saisj
+            description: "season year "
+          - name: saiso
+            description: "season category "
+          - name: saity
+            description: "rollout in a season "
+          - name: sales_material
+            description: "material number of a sales material "
+          - name: satnr
+            description: "cross-plant configurable material "
+          - name: scm_bod_deplvl
+            description: "carry out push deployment from supplier "
+          - name: scm_drp_gl_stock
+            description: "global stock on entry location drp "
+          - name: scm_excl_expedite
+            description: "exclude from express shipment "
+          - name: scm_kitcomp
+            description: "product for kit-to-order "
+          - name: scm_matid_guid16
+            description: "internal key for product "
+          - name: scm_matid_guid22
+            description: "internal number (uid) for product "
+          - name: scm_maturity_dur
+            description: "maturation time "
+          - name: scm_prod_paoopt
+            description: "product can be used for procure-to-order "
+          - name: scm_puom
+            description: "preferred alternative uom for warehouse operations "
+          - name: scm_restrict_invbal
+            description: "inventory balancing not allowed "
+          - name: scm_shlf_lfe_req_max
+            description: "required maximum shelf life "
+          - name: scm_shlf_lfe_req_min
+            description: "obsolete. use /sapapo/matkey-/sapapo/shelf_life_req_min. "
+          - name: serial
+            description: "serial number profile "
+          - name: serlv
+            description: "level of explicitness for serial number "
+          - name: sgt_covsa
+            description: "segmentation strategy "
+          - name: sgt_csgr
+            description: "segmentation structure "
+          - name: sgt_rel
+            description: "segmentation relevant "
+          - name: sgt_scope
+            description: "segmentation strategy scope "
+          - name: sgt_stat
+            description: "segmentation material master status "
+          - name: size1
+            description: "characteristic value for main sizes of variants "
+          - name: size1_atinn
+            description: "internal char. number for characteristics for main sizes "
+          - name: size2
+            description: "characteristic value for second size for variants "
+          - name: size2_atinn
+            description: "internal char. number for characteristics for second sizes "
+          - name: sled_bbd
+            description: "expiration date "
+          - name: som_ctr_autorenewal
+            description: "contract auto renewal indicator "
+          - name: som_cycle
+            description: "billing cycle "
+          - name: som_cycle_rule
+            description: "billing cycle determination rule id "
+          - name: som_tc_schema
+            description: "assignment schema "
+          - name: spart
+            description: "division "
+          - name: sprof
+            description: "pricing profile for variants "
+          - name: srv_dura
+            description: "duration of work "
+          - name: srv_dura_uom
+            description: "unit for duration of work "
+          - name: srv_escal
+            description: "response profile "
+          - name: srv_serwi
+            description: "service profile "
+          - name: stfak
+            description: "stacking factor "
+          - name: stoff
+            description: "hazardous material number "
+          - name: taklv
+            description: "tax classification of the material "
+          - name: tare_var
+            description: "variable tare weight "
+          - name: tempb
+            description: "temperature conditions indicator "
+          - name: textile_comp_ind
+            description: "indicator: new textile composition function "
+          - name: tolerance_type
+            description: "tolerance type "
+          - name: tragr
+            description: "transportation group "
+          - name: vabme
+            description: "variable purchase order unit active "
+          - name: varid
+            description: "guid variable object identification "
+          - name: vhart
+            description: "packaging material type "
+          - name: voleh
+            description: "volume unit "
+          - name: volto
+            description: "excess volume tolerance of the handling unit "
+          - name: volum
+            description: "volume "
+          - name: vpreh
+            description: "comparison price unit "
+          - name: vpsta
+            description: "maintenance status of complete material "
+          - name: weora
+            description: "acceptance at origin "
+          - name: wesch
+            description: "quantity: number of gr/gi slips to be printed "
+          - name: whmatgr
+            description: "warehouse material group "
+          - name: whstc
+            description: "warehouse storage condition "
+          - name: wrkst
+            description: "basic material "
+          - name: xchpf
+            description: "batch management requirement indicator "
+          - name: xgchp
+            description: "approved batch record required "
+          - name: xgrdt
+            description: "goods receipt to posted single-unit batch allowed "
+          - name: zeiar
+            description: "document type (without document management system) "
+          - name: zeifo
+            description: "page format of document (without document management system) "
+          - name: zeinr
+            description: "document number (without document management system) "
+          - name: zeivr
+            description: "document version (without document management system) "
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: marc
+        description: ""
+
+        columns:
+
+          - name: /cwm/bwesb
+            description: ""
+          - name: /cwm/trame
+            description: ""
+          - name: /cwm/umlmc
+            description: ""
+          - name: /sapmp/tolprmi
+            description: ""
+          - name: /sapmp/tolprpl
+            description: ""
+          - name: /sttpec/servalid
+            description: ""
+          - name: /vso/r_fork_dir
+            description: ""
+          - name: /vso/r_lane_num
+            description: ""
+          - name: /vso/r_pal_vend
+            description: ""
+          - name: /vso/r_pkgrp
+            description: ""
+          - name: abcin
+            description: ""
+          - name: abfac
+            description: ""
+          - name: ahdis
+            description: ""
+          - name: altsl
+            description: ""
+          - name: aplal
+            description: ""
+          - name: apokz
+            description: ""
+          - name: arun_fix_batch
+            description: ""
+          - name: atpkz
+            description: ""
+          - name: auftl
+            description: ""
+          - name: ausdt
+            description: ""
+          - name: ausme
+            description: ""
+          - name: ausss
+            description: ""
+          - name: autru
+            description: ""
+          - name: awsls
+            description: ""
+          - name: basmg
+            description: ""
+          - name: bearz
+            description: ""
+          - name: beskz
+            description: ""
+          - name: bstfe
+            description: ""
+          - name: bstma
+            description: ""
+          - name: bstmi
+            description: ""
+          - name: bstrf
+            description: ""
+          - name: bwesb
+            description: ""
+          - name: bwscl
+            description: ""
+          - name: bwtty
+            description: ""
+          - name: casnr
+            description: ""
+          - name: ccfix
+            description: ""
+          - name: compl
+            description: ""
+          - name: conf_gmsync
+            description: ""
+          - name: cons_procg
+            description: ""
+          - name: convt
+            description: ""
+          - name: copam
+            description: ""
+          - name: cuobj
+            description: ""
+          - name: cuobv
+            description: ""
+          - name: diber
+            description: ""
+          - name: disgr
+            description: ""
+          - name: disls
+            description: ""
+          - name: dismm
+            description: ""
+          - name: dispo
+            description: ""
+          - name: dispr
+            description: ""
+          - name: dpcbt
+            description: ""
+          - name: dplfs
+            description: ""
+          - name: dplho
+            description: ""
+          - name: dplpu
+            description: ""
+          - name: dummy_plnt_incl_eew_ps
+            description: ""
+          - name: dzeit
+            description: ""
+          - name: eisbe
+            description: ""
+          - name: eislo
+            description: ""
+          - name: ekgrp
+            description: ""
+          - name: eprio
+            description: ""
+          - name: esppflg
+            description: ""
+          - name: excise_tax_rlvnce
+            description: ""
+          - name: expme
+            description: ""
+          - name: fabkz
+            description: ""
+          - name: fevor
+            description: ""
+          - name: ffrei
+            description: ""
+          - name: fhori
+            description: ""
+          - name: fixls
+            description: ""
+          - name: fprfm
+            description: ""
+          - name: frtme
+            description: ""
+          - name: fsh_calendar_group
+            description: ""
+          - name: fsh_kzech
+            description: ""
+          - name: fsh_mg_arun_req
+            description: ""
+          - name: fsh_seaim
+            description: ""
+          - name: fsh_var_group
+            description: ""
+          - name: fvidk
+            description: ""
+          - name: fxhor
+            description: ""
+          - name: fxpru
+            description: ""
+          - name: gi_pr_time
+            description: ""
+          - name: glgmg
+            description: ""
+          - name: gpmkz
+            description: ""
+          - name: gpnum
+            description: ""
+          - name: herbl
+            description: ""
+          - name: herkl
+            description: ""
+          - name: herkr
+            description: ""
+          - name: indus
+            description: ""
+          - name: insmk
+            description: ""
+          - name: itark
+            description: ""
+          - name: iuid_relevant
+            description: ""
+          - name: iuid_type
+            description: ""
+          - name: kausf
+            description: ""
+          - name: kautb
+            description: ""
+          - name: kordb
+            description: ""
+          - name: kzagl
+            description: ""
+          - name: kzaus
+            description: ""
+          - name: kzbed
+            description: ""
+          - name: kzdie
+            description: ""
+          - name: kzdkz
+            description: ""
+          - name: kzech
+            description: ""
+          - name: kzkfk
+            description: ""
+          - name: kzkri
+            description: ""
+          - name: kzkup
+            description: ""
+          - name: kzppv
+            description: ""
+          - name: kzpro
+            description: ""
+          - name: kzpsp
+            description: ""
+          - name: ladgr
+            description: ""
+          - name: lagpr
+            description: ""
+          - name: lfgja
+            description: ""
+          - name: lfmon
+            description: ""
+          - name: lfrhy
+            description: ""
+          - name: lgfsb
+            description: ""
+          - name: lgpro
+            description: ""
+          - name: lgrad
+            description: ""
+          - name: lizyk
+            description: ""
+          - name: loggr
+            description: ""
+          - name: losfx
+            description: ""
+          - name: losgr
+            description: ""
+          - name: ltinc
+            description: ""
+          - name: lvorm
+            description: ""
+          - name: lzeih
+            description: ""
+          - name: maabc
+            description: ""
+          - name: mabst
+            description: ""
+          - name: matgr
+            description: ""
+          - name: matnr
+            description: ""
+          - name: maxls
+            description: ""
+          - name: maxlz
+            description: ""
+          - name: max_troc
+            description: ""
+          - name: mcrue
+            description: ""
+          - name: mdach
+            description: ""
+          - name: megru
+            description: ""
+          - name: mfrgr
+            description: ""
+          - name: minbe
+            description: ""
+          - name: minls
+            description: ""
+          - name: min_troc
+            description: ""
+          - name: miskz
+            description: ""
+          - name: mmsta
+            description: ""
+          - name: mmstd
+            description: ""
+          - name: mogru
+            description: ""
+          - name: mownr
+            description: ""
+          - name: mpdau
+            description: ""
+          - name: mrppp
+            description: ""
+          - name: mtver
+            description: ""
+          - name: mtvfp
+            description: ""
+          - name: multiple_ekgrp
+            description: ""
+          - name: ncost
+            description: ""
+          - name: nfmat
+            description: ""
+          - name: nf_flag
+            description: ""
+          - name: nkmpr
+            description: ""
+          - name: objid
+            description: ""
+          - name: ocmpf
+            description: ""
+          - name: otype
+            description: ""
+          - name: periv
+            description: ""
+          - name: perkz
+            description: ""
+          - name: pfrei
+            description: ""
+          - name: plifz
+            description: ""
+          - name: plnnr
+            description: ""
+          - name: plnty
+            description: ""
+          - name: plvar
+            description: ""
+          - name: ppskz
+            description: ""
+          - name: prctr
+            description: ""
+          - name: prefe
+            description: ""
+          - name: prenc
+            description: ""
+          - name: prend
+            description: ""
+          - name: prene
+            description: ""
+          - name: preng
+            description: ""
+          - name: preno
+            description: ""
+          - name: prfrq
+            description: ""
+          - name: profil
+            description: ""
+          - name: pstat
+            description: ""
+          - name: qmata
+            description: ""
+          - name: qmatv
+            description: ""
+          - name: qssys
+            description: ""
+          - name: quazt
+            description: ""
+          - name: qzgtp
+            description: ""
+          - name: rdprf
+            description: ""
+          - name: ref_schema
+            description: ""
+          - name: resvp
+            description: ""
+          - name: rgekz
+            description: ""
+          - name: rotation_date
+            description: ""
+          - name: ruezt
+            description: ""
+          - name: rwpro
+            description: ""
+          - name: sauft
+            description: ""
+          - name: sbdkz
+            description: ""
+          - name: schgt
+            description: ""
+          - name: scm_conhap
+            description: ""
+          - name: scm_conhap_out
+            description: ""
+          - name: scm_coninp
+            description: ""
+          - name: scm_fixpeg_prod_set
+            description: ""
+          - name: scm_ges_bst_use
+            description: ""
+          - name: scm_ges_mng_use
+            description: ""
+          - name: scm_get_alerts
+            description: ""
+          - name: scm_giprt
+            description: ""
+          - name: scm_grprt
+            description: ""
+          - name: scm_hunit
+            description: ""
+          - name: scm_hunit_out
+            description: ""
+          - name: scm_iunit
+            description: ""
+          - name: scm_lsuom
+            description: ""
+          - name: scm_matlocid_guid16
+            description: ""
+          - name: scm_matlocid_guid22
+            description: ""
+          - name: scm_maturity_dur
+            description: ""
+          - name: scm_maxstock_v
+            description: ""
+          - name: scm_min_pass_amount
+            description: ""
+          - name: scm_peg_future_alert
+            description: ""
+          - name: scm_peg_past_alert
+            description: ""
+          - name: scm_peg_strategy
+            description: ""
+          - name: scm_peg_wo_alert_fst
+            description: ""
+          - name: scm_ppsaftystk
+            description: ""
+          - name: scm_ppsaftystk_v
+            description: ""
+          - name: scm_prio
+            description: ""
+          - name: scm_proc_cost
+            description: ""
+          - name: scm_profid
+            description: ""
+          - name: scm_reldt
+            description: ""
+          - name: scm_reord_dur
+            description: ""
+          - name: scm_reord_v
+            description: ""
+          - name: scm_repsafty
+            description: ""
+          - name: scm_repsafty_v
+            description: ""
+          - name: scm_res_net_name
+            description: ""
+          - name: scm_safty_v
+            description: ""
+          - name: scm_scost
+            description: ""
+          - name: scm_scost_prcnt
+            description: ""
+          - name: scm_sft_lock
+            description: ""
+          - name: scm_shelf_life_dur
+            description: ""
+          - name: scm_shelf_life_loc
+            description: ""
+          - name: scm_shlf_lfe_req_max
+            description: ""
+          - name: scm_shlf_lfe_req_min
+            description: ""
+          - name: scm_sspen
+            description: ""
+          - name: scm_stra1
+            description: ""
+          - name: scm_target_dur
+            description: ""
+          - name: scm_thruput_time
+            description: ""
+          - name: scm_tpop
+            description: ""
+          - name: scm_tstrid
+            description: ""
+          - name: scm_whatbom
+            description: ""
+          - name: sernp
+            description: ""
+          - name: servg
+            description: ""
+          - name: sfcpf
+            description: ""
+          - name: sfepr
+            description: ""
+          - name: sfty_stk_meth
+            description: ""
+          - name: sgt_chint
+            description: ""
+          - name: sgt_covs
+            description: ""
+          - name: sgt_defsc
+            description: ""
+          - name: sgt_mmstd
+            description: ""
+          - name: sgt_mrpsi
+            description: ""
+          - name: sgt_mrp_atp_status
+            description: ""
+          - name: sgt_prcm
+            description: ""
+          - name: sgt_scope
+            description: ""
+          - name: sgt_statc
+            description: ""
+          - name: sgt_stk_prt
+            description: ""
+          - name: shflg
+            description: ""
+          - name: shpro
+            description: ""
+          - name: shzet
+            description: ""
+          - name: sobsk
+            description: ""
+          - name: sobsl
+            description: ""
+          - name: sproz
+            description: ""
+          - name: ssqss
+            description: ""
+          - name: stawn
+            description: ""
+          - name: stdpd
+            description: ""
+          - name: steuc
+            description: ""
+          - name: stlal
+            description: ""
+          - name: stlan
+            description: ""
+          - name: strgr
+            description: ""
+          - name: takzt
+            description: ""
+          - name: target_stock
+            description: ""
+          - name: trame
+            description: ""
+          - name: tranz
+            description: ""
+          - name: uchkz
+            description: ""
+          - name: ucmat
+            description: ""
+          - name: ueetk
+            description: ""
+          - name: ueeto
+            description: ""
+          - name: uid_iea
+            description: ""
+          - name: umlmc
+            description: ""
+          - name: umrsl
+            description: ""
+          - name: uneto
+            description: ""
+          - name: uomgr
+            description: ""
+          - name: usequ
+            description: ""
+          - name: vbamg
+            description: ""
+          - name: vbeaz
+            description: ""
+          - name: verkz
+            description: ""
+          - name: vint1
+            description: ""
+          - name: vint2
+            description: ""
+          - name: vkglg
+            description: ""
+          - name: vktrw
+            description: ""
+          - name: vkumc
+            description: ""
+          - name: vrbdt
+            description: ""
+          - name: vrbfk
+            description: ""
+          - name: vrbmt
+            description: ""
+          - name: vrbwk
+            description: ""
+          - name: vrmod
+            description: ""
+          - name: vrvez
+            description: ""
+          - name: vspvb
+            description: ""
+          - name: vzusl
+            description: ""
+          - name: webaz
+            description: ""
+          - name: werks
+            description: ""
+          - name: wstgh
+            description: ""
+          - name: wzeit
+            description: ""
+          - name: xchar
+            description: ""
+          - name: xchpf
+            description: ""
+          - name: xmcng
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: mard
+        description: ""
+
+        columns:
+
+          - name: /cwm/einme
+            description: ""
+          - name: /cwm/insme
+            description: ""
+          - name: /cwm/keinm
+            description: ""
+          - name: /cwm/kinsm
+            description: ""
+          - name: /cwm/klabs
+            description: ""
+          - name: /cwm/kspem
+            description: ""
+          - name: /cwm/labst
+            description: ""
+          - name: /cwm/retme
+            description: ""
+          - name: /cwm/speme
+            description: ""
+          - name: /cwm/umlme
+            description: ""
+          - name: /cwm/vmein
+            description: ""
+          - name: /cwm/vmins
+            description: ""
+          - name: /cwm/vmlab
+            description: ""
+          - name: /cwm/vmret
+            description: ""
+          - name: /cwm/vmspe
+            description: ""
+          - name: /cwm/vmuml
+            description: ""
+          - name: bskrf
+            description: ""
+          - name: diskz
+            description: ""
+          - name: dlinl
+            description: ""
+          - name: dummy_stl_incl_eew_ps
+            description: ""
+          - name: einme
+            description: ""
+          - name: ersda
+            description: ""
+          - name: exppg
+            description: ""
+          - name: exver
+            description: ""
+          - name: fsh_salloc_qty_s
+            description: ""
+          - name: herkl
+            description: ""
+          - name: insme
+            description: ""
+          - name: keinm
+            description: ""
+          - name: kinsm
+            description: ""
+          - name: klabs
+            description: ""
+          - name: kspem
+            description: ""
+          - name: kzile
+            description: ""
+          - name: kzill
+            description: ""
+          - name: kzilq
+            description: ""
+          - name: kzils
+            description: ""
+          - name: kzvle
+            description: ""
+          - name: kzvll
+            description: ""
+          - name: kzvlq
+            description: ""
+          - name: kzvls
+            description: ""
+          - name: labst
+            description: ""
+          - name: lbstf
+            description: ""
+          - name: lfgja
+            description: ""
+          - name: lfmon
+            description: ""
+          - name: lgort
+            description: ""
+          - name: lgpbe
+            description: ""
+          - name: lminb
+            description: ""
+          - name: lsobs
+            description: ""
+          - name: lvorm
+            description: ""
+          - name: lwmkb
+            description: ""
+          - name: matnr
+            description: ""
+          - name: mdjin
+            description: ""
+          - name: mdrue
+            description: ""
+          - name: prctl
+            description: ""
+          - name: pstat
+            description: ""
+          - name: retme
+            description: ""
+          - name: speme
+            description: ""
+          - name: sperr
+            description: ""
+          - name: umlme
+            description: ""
+          - name: vklab
+            description: ""
+          - name: vkuml
+            description: ""
+          - name: vmein
+            description: ""
+          - name: vmins
+            description: ""
+          - name: vmlab
+            description: ""
+          - name: vmret
+            description: ""
+          - name: vmspe
+            description: ""
+          - name: vmuml
+            description: ""
+          - name: werks
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: mch1
+        description: ""
+
+        columns:
+
+          - name: /sttpec/plant
+            description: ""
+          - name: /sttpec/sertype
+            description: ""
+          - name: /sttpec/syncact
+            description: ""
+          - name: /sttpec/synctime
+            description: ""
+          - name: aenam
+            description: ""
+          - name: batch_type
+            description: ""
+          - name: chame
+            description: ""
+          - name: charg
+            description: ""
+          - name: creation_datetime
+            description: ""
+          - name: cuobj_bm
+            description: ""
+          - name: deact_bm
+            description: ""
+          - name: ernam
+            description: ""
+          - name: ersda
+            description: ""
+          - name: ersda_tmstp
+            description: ""
+          - name: ersda_tz_sys
+            description: ""
+          - name: ersda_tz_usr
+            description: ""
+          - name: fsh_collection
+            description: ""
+          - name: fsh_season
+            description: ""
+          - name: fsh_season_year
+            description: ""
+          - name: fsh_theme
+            description: ""
+          - name: fvdt1
+            description: ""
+          - name: fvdt2
+            description: ""
+          - name: fvdt3
+            description: ""
+          - name: fvdt4
+            description: ""
+          - name: fvdt5
+            description: ""
+          - name: fvdt6
+            description: ""
+          - name: herkl
+            description: ""
+          - name: herkr
+            description: ""
+          - name: hsdat
+            description: ""
+          - name: laeda
+            description: ""
+          - name: lastchange_datetime
+            description: ""
+          - name: licha
+            description: ""
+          - name: lifnr
+            description: ""
+          - name: lvorm
+            description: ""
+          - name: lwedt
+            description: ""
+          - name: matnr
+            description: ""
+          - name: mtver
+            description: ""
+          - name: qndat
+            description: ""
+          - name: sgt_scat
+            description: ""
+          - name: verab
+            description: ""
+          - name: vfdat
+            description: ""
+          - name: vlcha
+            description: ""
+          - name: vlmat
+            description: ""
+          - name: vlwrk
+            description: ""
+          - name: xpcbt
+            description: ""
+          - name: zaedt
+            description: ""
+          - name: zfdat
+            description: ""
+          - name: zusch
+            description: ""
+          - name: zustd
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: mcha
+        description: ""
+
+        columns:
+
+          - name: /sttpec/plant
+            description: ""
+          - name: /sttpec/sertype
+            description: ""
+          - name: /sttpec/syncact
+            description: ""
+          - name: /sttpec/synctime
+            description: ""
+          - name: aenam
+            description: ""
+          - name: batch_type
+            description: ""
+          - name: bwtar
+            description: ""
+          - name: chame
+            description: ""
+          - name: charg
+            description: ""
+          - name: creation_datetime
+            description: ""
+          - name: cuobj_bm
+            description: ""
+          - name: deact_bm
+            description: ""
+          - name: ernam
+            description: ""
+          - name: ersda
+            description: ""
+          - name: ersda_tmstp
+            description: ""
+          - name: ersda_tz_sys
+            description: ""
+          - name: ersda_tz_usr
+            description: ""
+          - name: fsh_collection
+            description: ""
+          - name: fsh_season
+            description: ""
+          - name: fsh_season_year
+            description: ""
+          - name: fsh_theme
+            description: ""
+          - name: fvdt1
+            description: ""
+          - name: fvdt2
+            description: ""
+          - name: fvdt3
+            description: ""
+          - name: fvdt4
+            description: ""
+          - name: fvdt5
+            description: ""
+          - name: fvdt6
+            description: ""
+          - name: herkl
+            description: ""
+          - name: herkr
+            description: ""
+          - name: hsdat
+            description: ""
+          - name: laeda
+            description: ""
+          - name: lastchange_datetime
+            description: ""
+          - name: licha
+            description: ""
+          - name: lifnr
+            description: ""
+          - name: lvorm
+            description: ""
+          - name: lwedt
+            description: ""
+          - name: matnr
+            description: ""
+          - name: mtver
+            description: ""
+          - name: qndat
+            description: ""
+          - name: sgt_scat
+            description: ""
+          - name: verab
+            description: ""
+          - name: vfdat
+            description: ""
+          - name: vlcha
+            description: ""
+          - name: vlmat
+            description: ""
+          - name: vlwrk
+            description: ""
+          - name: werks
+            description: ""
+          - name: xpcbt
+            description: ""
+          - name: zaedt
+            description: ""
+          - name: zfdat
+            description: ""
+          - name: zusch
+            description: ""
+          - name: zustd
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: mchb
+        description: ""
+
+        columns:
+
+          - name: /cwm/ceinm
+            description: ""
+          - name: /cwm/cinsm
+            description: ""
+          - name: /cwm/clabs
+            description: ""
+          - name: /cwm/cretm
+            description: ""
+          - name: /cwm/cspem
+            description: ""
+          - name: /cwm/cumlm
+            description: ""
+          - name: /cwm/cvmei
+            description: ""
+          - name: /cwm/cvmin
+            description: ""
+          - name: /cwm/cvmla
+            description: ""
+          - name: /cwm/cvmre
+            description: ""
+          - name: /cwm/cvmsp
+            description: ""
+          - name: /cwm/cvmum
+            description: ""
+          - name: aenam
+            description: ""
+          - name: ceinm
+            description: ""
+          - name: charg
+            description: ""
+          - name: chdll
+            description: ""
+          - name: chjin
+            description: ""
+          - name: chrue
+            description: ""
+          - name: cinsm
+            description: ""
+          - name: clabs
+            description: ""
+          - name: cretm
+            description: ""
+          - name: cspem
+            description: ""
+          - name: cumlm
+            description: ""
+          - name: cvmei
+            description: ""
+          - name: cvmin
+            description: ""
+          - name: cvmla
+            description: ""
+          - name: cvmre
+            description: ""
+          - name: cvmsp
+            description: ""
+          - name: cvmum
+            description: ""
+          - name: ernam
+            description: ""
+          - name: ersda
+            description: ""
+          - name: fsh_collection
+            description: ""
+          - name: fsh_salloc_qty
+            description: ""
+          - name: fsh_season
+            description: ""
+          - name: fsh_season_year
+            description: ""
+          - name: fsh_theme
+            description: ""
+          - name: herkl
+            description: ""
+          - name: kzice
+            description: ""
+          - name: kzicl
+            description: ""
+          - name: kzicq
+            description: ""
+          - name: kzics
+            description: ""
+          - name: kzvce
+            description: ""
+          - name: kzvcl
+            description: ""
+          - name: kzvcq
+            description: ""
+          - name: kzvcs
+            description: ""
+          - name: laeda
+            description: ""
+          - name: lfgja
+            description: ""
+          - name: lfmon
+            description: ""
+          - name: lgort
+            description: ""
+          - name: lvorm
+            description: ""
+          - name: matnr
+            description: ""
+          - name: sgt_scat
+            description: ""
+          - name: sperc
+            description: ""
+          - name: werks
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: vbak
-        description: sales document - header data
+        description: ""
+
+        columns:
+
+          - name: /dmbe/dealnumber
+            description: ""
+          - name: /dmbe/evgidcancel
+            description: ""
+          - name: /dmbe/evgidrenewal
+            description: ""
+          - name: abdis
+            description: ""
+          - name: abhob
+            description: ""
+          - name: abhod
+            description: ""
+          - name: abhov
+            description: ""
+          - name: abruf_part
+            description: ""
+          - name: abrvw
+            description: ""
+          - name: abstk
+            description: ""
+          - name: ad01basdoc
+            description: ""
+          - name: ad01fareg
+            description: ""
+          - name: aedat
+            description: ""
+          - name: agrzr
+            description: ""
+          - name: amtbl
+            description: ""
+          - name: angdt
+            description: ""
+          - name: apcgk_extendh
+            description: ""
+          - name: apm_approval_reason
+            description: ""
+          - name: apm_approval_status
+            description: ""
+          - name: apm_rejection_reason
+            description: ""
+          - name: auart
+            description: ""
+          - name: audat
+            description: ""
+          - name: aufnr
+            description: ""
+          - name: augru
+            description: ""
+          - name: autlf
+            description: ""
+          - name: awahr
+            description: ""
+          - name: b2b_msg_processing_status
+            description: ""
+          - name: bestk
+            description: ""
+          - name: betc
+            description: ""
+          - name: bname
+            description: ""
+          - name: bnddt
+            description: ""
+          - name: bob_status
+            description: ""
+          - name: bpn
+            description: ""
+          - name: bsark
+            description: ""
+          - name: bstdk
+            description: ""
+          - name: bstnk
+            description: ""
+          - name: bstzd
+            description: ""
+          - name: bukrs_vf
+            description: ""
+          - name: cancel_allow
+            description: ""
+          - name: cmfre
+            description: ""
+          - name: cmgst
+            description: ""
+          - name: cmngv
+            description: ""
+          - name: cmnup
+            description: ""
+          - name: cmpsc
+            description: ""
+          - name: cmpsd
+            description: ""
+          - name: cmpsi
+            description: ""
+          - name: cmpsj
+            description: ""
+          - name: cmpsk
+            description: ""
+          - name: cmps_cm
+            description: ""
+          - name: cmps_te
+            description: ""
+          - name: cmwae
+            description: ""
+          - name: cont_dg
+            description: ""
+          - name: costa
+            description: ""
+          - name: crm_guid
+            description: ""
+          - name: crossitem_prc_date
+            description: ""
+          - name: ctlpc
+            description: ""
+          - name: dat_fzau
+            description: ""
+          - name: dcstk
+            description: ""
+          - name: delivery_date_type_rule
+            description: ""
+          - name: dp_clear_sta_hdr
+            description: ""
+          - name: dummy_salesdoc_incl_eew_ps
+            description: ""
+          - name: enqueue_grp
+            description: ""
+          - name: erdat
+            description: ""
+          - name: ernam
+            description: ""
+          - name: erzet
+            description: ""
+          - name: ext_bus_syst_id
+            description: ""
+          - name: ext_comm_syst_type
+            description: ""
+          - name: ext_ref_doc_id
+            description: ""
+          - name: ext_rev_tmstmp
+            description: ""
+          - name: faksk
+            description: ""
+          - name: fkara
+            description: ""
+          - name: fksak
+            description: ""
+          - name: fmbdat
+            description: ""
+          - name: fmstk
+            description: ""
+          - name: fsh_candate
+            description: ""
+          - name: fsh_cq_check
+            description: ""
+          - name: fsh_kvgr10
+            description: ""
+          - name: fsh_kvgr6
+            description: ""
+          - name: fsh_kvgr7
+            description: ""
+          - name: fsh_kvgr8
+            description: ""
+          - name: fsh_kvgr9
+            description: ""
+          - name: fsh_os_stg_change
+            description: ""
+          - name: fsh_rereg
+            description: ""
+          - name: fsh_ss
+            description: ""
+          - name: fsh_transaction
+            description: ""
+          - name: fsh_vas_cg
+            description: ""
+          - name: fsh_vrsn_status
+            description: ""
+          - name: fsstk
+            description: ""
+          - name: gbstk
+            description: ""
+          - name: glo_log_ref1_hd
+            description: ""
+          - name: grupp
+            description: ""
+          - name: gsber
+            description: ""
+          - name: gskst
+            description: ""
+          - name: guebg
+            description: ""
+          - name: gueen
+            description: ""
+          - name: gwldt
+            description: ""
+          - name: handle
+            description: ""
+          - name: handoverloc
+            description: ""
+          - name: hityp_pr
+            description: ""
+          - name: ihrez
+            description: ""
+          - name: j_3gkbaul
+            description: ""
+          - name: kalcd
+            description: ""
+          - name: kalsm
+            description: ""
+          - name: kalsm_ch
+            description: ""
+          - name: kkber
+            description: ""
+          - name: knkli
+            description: ""
+          - name: knuma
+            description: ""
+          - name: knumv
+            description: ""
+          - name: kokrs
+            description: ""
+          - name: kostl
+            description: ""
+          - name: ktext
+            description: ""
+          - name: kunnr
+            description: ""
+          - name: kurst
+            description: ""
+          - name: kvgr1
+            description: ""
+          - name: kvgr2
+            description: ""
+          - name: kvgr3
+            description: ""
+          - name: kvgr4
+            description: ""
+          - name: kvgr5
+            description: ""
+          - name: landtx
+            description: ""
+          - name: lastvchr
+            description: ""
+          - name: last_changed_by_user
+            description: ""
+          - name: lfgsk
+            description: ""
+          - name: lfstk
+            description: ""
+          - name: lifsk
+            description: ""
+          - name: logsysb
+            description: ""
+          - name: lsstk
+            description: ""
+          - name: mahdt
+            description: ""
+          - name: mahza
+            description: ""
+          - name: manek
+            description: ""
+          - name: mill_appl_id
+            description: ""
+          - name: mod_allow
+            description: ""
+          - name: msr_id
+            description: ""
+          - name: multi
+            description: ""
+          - name: netwr
+            description: ""
+          - name: objnr
+            description: ""
+          - name: oipbl
+            description: ""
+          - name: pay_method
+            description: ""
+          - name: proli
+            description: ""
+          - name: psm_budat
+            description: ""
+          - name: ps_psp_pnr
+            description: ""
+          - name: qmnum
+            description: ""
+          - name: rep_freq
+            description: ""
+          - name: retro_purchdoc_creation
+            description: ""
+          - name: rfgsk
+            description: ""
+          - name: rfstk
+            description: ""
+          - name: rplnr
+            description: ""
+          - name: sbgrp
+            description: ""
+          - name: scheme_grp
+            description: ""
+          - name: sdm_version
+            description: ""
+          - name: solution_order_id
+            description: ""
+          - name: spart
+            description: ""
+          - name: sppaym
+            description: ""
+          - name: spstg
+            description: ""
+          - name: stafo
+            description: ""
+          - name: stceg_l
+            description: ""
+          - name: stwae
+            description: ""
+          - name: submi
+            description: ""
+          - name: tas
+            description: ""
+          - name: taxk1
+            description: ""
+          - name: taxk2
+            description: ""
+          - name: taxk3
+            description: ""
+          - name: taxk4
+            description: ""
+          - name: taxk5
+            description: ""
+          - name: taxk6
+            description: ""
+          - name: taxk7
+            description: ""
+          - name: taxk8
+            description: ""
+          - name: taxk9
+            description: ""
+          - name: telf1
+            description: ""
+          - name: total_deliv_reltd_billg_sta
+            description: ""
+          - name: total_dgsta
+            description: ""
+          - name: total_emcst
+            description: ""
+          - name: total_lccst
+            description: ""
+          - name: total_pcsta
+            description: ""
+          - name: total_sdssta
+            description: ""
+          - name: total_slcst
+            description: ""
+          - name: trsta
+            description: ""
+          - name: trvog
+            description: ""
+          - name: upd_tmstmp
+            description: ""
+          - name: uvall
+            description: ""
+          - name: uvals
+            description: ""
+          - name: uvfak
+            description: ""
+          - name: uvfas
+            description: ""
+          - name: uvk01
+            description: ""
+          - name: uvk02
+            description: ""
+          - name: uvk03
+            description: ""
+          - name: uvk04
+            description: ""
+          - name: uvk05
+            description: ""
+          - name: uvprs
+            description: ""
+          - name: uvs01
+            description: ""
+          - name: uvs02
+            description: ""
+          - name: uvs03
+            description: ""
+          - name: uvs04
+            description: ""
+          - name: uvs05
+            description: ""
+          - name: uvvlk
+            description: ""
+          - name: uvvls
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbeln_grp
+            description: ""
+          - name: vbkla
+            description: ""
+          - name: vbklt
+            description: ""
+          - name: vbtyp
+            description: ""
+          - name: vdatu
+            description: ""
+          - name: vgbel
+            description: ""
+          - name: vgtyp
+            description: ""
+          - name: vkbur
+            description: ""
+          - name: vkgrp
+            description: ""
+          - name: vkorg
+            description: ""
+          - name: vprgr
+            description: ""
+          - name: vsbed
+            description: ""
+          - name: vsnmr_v
+            description: ""
+          - name: vtweg
+            description: ""
+          - name: vzeit
+            description: ""
+          - name: waerk
+            description: ""
+          - name: wbstk
+            description: ""
+          - name: wtysc_clm_hdr
+            description: ""
+          - name: xblnr
+            description: ""
+          - name: xegdr
+            description: ""
+          - name: zabdath
+            description: ""
+          - name: zapcgkh
+            description: ""
+          - name: zuonr
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: vbap
+        description: ""
+
         freshness:                                                # table-specific source freshness
           warn_after:   { count: 2, period: day }                 # minute | hour | day
           # error_after:  { count: 10, period: day }                # carefull, run will fail if this is criterium is not met.
           # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
         loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
 
-      - name: vbap
-        description: sales document - item data
+        columns:
 
+          - name: /dmbe/accounting_type
+            description: ""
+          - name: /dmbe/cimax2
+            description: ""
+          - name: /dmbe/componentfor
+            description: ""
+          - name: /dmbe/deal_posted
+            description: ""
+          - name: /dmbe/effectivedatefrom
+            description: ""
+          - name: /dmbe/effectivedateto
+            description: ""
+          - name: /dmbe/fas_code
+            description: ""
+          - name: /dmbe/invoiceuom
+            description: ""
+          - name: /dmbe/item_type
+            description: ""
+          - name: /dmbe/mixedproduct
+            description: ""
+          - name: /dmbe/optionalityfor
+            description: ""
+          - name: /dmbe/optionalitykey
+            description: ""
+          - name: /dmbe/optionof
+            description: ""
+          - name: /dmbe/paymentdeemed
+            description: ""
+          - name: /dmbe/posteddate
+            description: ""
+          - name: /dmbe/scheduling_desk
+            description: ""
+          - name: abdat
+            description: ""
+          - name: abfor
+            description: ""
+          - name: abges
+            description: ""
+          - name: abgrs
+            description: ""
+          - name: abgru
+            description: ""
+          - name: ablfz
+            description: ""
+          - name: absfz
+            description: ""
+          - name: absta
+            description: ""
+          - name: ad01profnr
+            description: ""
+          - name: adacn
+            description: ""
+          - name: addns
+            description: ""
+          - name: adicc
+            description: ""
+          - name: admoi
+            description: ""
+          - name: adpri
+            description: ""
+          - name: aedat
+            description: ""
+          - name: antlf
+            description: ""
+          - name: anzsn
+            description: ""
+          - name: apcgk_extendi
+            description: ""
+          - name: aplzl_oaa
+            description: ""
+          - name: aplzl_olc
+            description: ""
+          - name: arktx
+            description: ""
+          - name: arsnum
+            description: ""
+          - name: arspos
+            description: ""
+          - name: arun_group_prio
+            description: ""
+          - name: assignment_priority
+            description: ""
+          - name: atpkz
+            description: ""
+          - name: atp_abc_substitution_status
+            description: ""
+          - name: auart_ana
+            description: ""
+          - name: audat_ana
+            description: ""
+          - name: aufnr
+            description: ""
+          - name: aufpl_oaa
+            description: ""
+          - name: aufpl_olc
+            description: ""
+          - name: augru_ana
+            description: ""
+          - name: awahr
+            description: ""
+          - name: bedae
+            description: ""
+          - name: berid
+            description: ""
+          - name: besta
+            description: ""
+          - name: betc
+            description: ""
+          - name: bob_fg_id
+            description: ""
+          - name: bob_promotion_id
+            description: ""
+          - name: bonus
+            description: ""
+          - name: bpn
+            description: ""
+          - name: brgew
+            description: ""
+          - name: bstkd_ana
+            description: ""
+          - name: budget_pd
+            description: ""
+          - name: bwtar
+            description: ""
+          - name: bwtex
+            description: ""
+          - name: bzirk_ana
+            description: ""
+          - name: cancel_allow
+            description: ""
+          - name: capped_net_amount
+            description: ""
+          - name: capped_net_amount_alert_thld
+            description: ""
+          - name: cats_overtime_category
+            description: ""
+          - name: cepok
+            description: ""
+          - name: charg
+            description: ""
+          - name: chmvs
+            description: ""
+          - name: chspl
+            description: ""
+          - name: clint
+            description: ""
+          - name: cmkua
+            description: ""
+          - name: cmpnt
+            description: ""
+          - name: cmppi
+            description: ""
+          - name: cmppj
+            description: ""
+          - name: cmpre
+            description: ""
+          - name: cmpre_flt
+            description: ""
+          - name: cmtd_deliv_creadate
+            description: ""
+          - name: cmtd_deliv_date
+            description: ""
+          - name: cmtd_deliv_qty_su
+            description: ""
+          - name: cmtfg
+            description: ""
+          - name: costa
+            description: ""
+          - name: cpd_updat
+            description: ""
+          - name: cuobj
+            description: ""
+          - name: cuobj_ch
+            description: ""
+          - name: dcsta
+            description: ""
+          - name: delivery_date_type_rule
+            description: ""
+          - name: deliv_reltd_billg_sta
+            description: ""
+          - name: dgsta
+            description: ""
+          - name: dp_clear_sta_itm
+            description: ""
+          - name: dummy_slsdocitem_incl_eew_ps
+            description: ""
+          - name: ean11
+            description: ""
+          - name: eannr
+            description: ""
+          - name: emcst
+            description: ""
+          - name: eqart
+            description: ""
+          - name: equnr
+            description: ""
+          - name: erdat
+            description: ""
+          - name: erlre
+            description: ""
+          - name: ernam
+            description: ""
+          - name: erzet
+            description: ""
+          - name: exart
+            description: ""
+          - name: ext_ref_item_id
+            description: ""
+          - name: fabsg
+            description: ""
+          - name: faksp
+            description: ""
+          - name: ferc_ind
+            description: ""
+          - name: fiscal_incentive
+            description: ""
+          - name: fiscal_incentive_id
+            description: ""
+          - name: fistl
+            description: ""
+          - name: fixmg
+            description: ""
+          - name: fkber
+            description: ""
+          - name: fkdat_ana
+            description: ""
+          - name: fkrel
+            description: ""
+          - name: fksaa
+            description: ""
+          - name: fmeng
+            description: ""
+          - name: fmfgus_key
+            description: ""
+          - name: fonds
+            description: ""
+          - name: fplnr_ana
+            description: ""
+          - name: freeze_paobjnr
+            description: ""
+          - name: fsh_candate
+            description: ""
+          - name: fsh_collection
+            description: ""
+          - name: fsh_crsd
+            description: ""
+          - name: fsh_grid_cond_rec
+            description: ""
+          - name: fsh_item
+            description: ""
+          - name: fsh_item_group
+            description: ""
+          - name: fsh_pqr_uepos
+            description: ""
+          - name: fsh_psm_pfm_split
+            description: ""
+          - name: fsh_searef
+            description: ""
+          - name: fsh_season
+            description: ""
+          - name: fsh_season_year
+            description: ""
+          - name: fsh_theme
+            description: ""
+          - name: fsh_transaction
+            description: ""
+          - name: fsh_vasref
+            description: ""
+          - name: fsh_vas_prnt_id
+            description: ""
+          - name: fsh_vas_rel
+            description: ""
+          - name: fssta
+            description: ""
+          - name: gbsta
+            description: ""
+          - name: gewei
+            description: ""
+          - name: glo_log_ref1_it
+            description: ""
+          - name: grant_nbr
+            description: ""
+          - name: grkor
+            description: ""
+          - name: grpos
+            description: ""
+          - name: gsber
+            description: ""
+          - name: handle
+            description: ""
+          - name: handoverdate
+            description: ""
+          - name: handoverloc
+            description: ""
+          - name: handovertime
+            description: ""
+          - name: ifrs15_relevance
+            description: ""
+          - name: ifrs15_total_ssp
+            description: ""
+          - name: iuid_relevant
+            description: ""
+          - name: j_1bcfop
+            description: ""
+          - name: j_1btaxlw1
+            description: ""
+          - name: j_1btaxlw2
+            description: ""
+          - name: j_1btaxlw3
+            description: ""
+          - name: j_1btaxlw4
+            description: ""
+          - name: j_1btaxlw5
+            description: ""
+          - name: j_1btxsdc
+            description: ""
+          - name: j_3gbelnri
+            description: ""
+          - name: j_3gdatbi
+            description: ""
+          - name: j_3gdatvo
+            description: ""
+          - name: j_3glvart
+            description: ""
+          - name: j_3gposnri
+            description: ""
+          - name: kalnr
+            description: ""
+          - name: kalsm_k
+            description: ""
+          - name: kalvar
+            description: ""
+          - name: kannr
+            description: ""
+          - name: kbmeng
+            description: ""
+          - name: kbver
+            description: ""
+          - name: kdgrp_ana
+            description: ""
+          - name: kdmat
+            description: ""
+          - name: kever
+            description: ""
+          - name: klmeng
+            description: ""
+          - name: klvar
+            description: ""
+          - name: kmein
+            description: ""
+          - name: kmpmg
+            description: ""
+          - name: knttp
+            description: ""
+          - name: knuma_ag
+            description: ""
+          - name: knuma_pi
+            description: ""
+          - name: knumh
+            description: ""
+          - name: knumv_ana
+            description: ""
+          - name: kondm
+            description: ""
+          - name: kosch
+            description: ""
+          - name: kostl
+            description: ""
+          - name: koupd
+            description: ""
+          - name: kowrr
+            description: ""
+          - name: kpein
+            description: ""
+          - name: ktgrm
+            description: ""
+          - name: kunnr_ana
+            description: ""
+          - name: kunre_ana
+            description: ""
+          - name: kunrg_ana
+            description: ""
+          - name: kunwe_ana
+            description: ""
+          - name: kvgr1_ana
+            description: ""
+          - name: kvgr2_ana
+            description: ""
+          - name: kvgr3_ana
+            description: ""
+          - name: kvgr4_ana
+            description: ""
+          - name: kvgr5_ana
+            description: ""
+          - name: kwmeng
+            description: ""
+          - name: kzbws
+            description: ""
+          - name: kzfme
+            description: ""
+          - name: kztlf
+            description: ""
+          - name: kzvbr
+            description: ""
+          - name: kzwi1
+            description: ""
+          - name: kzwi2
+            description: ""
+          - name: kzwi3
+            description: ""
+          - name: kzwi4
+            description: ""
+          - name: kzwi5
+            description: ""
+          - name: kzwi6
+            description: ""
+          - name: labsg
+            description: ""
+          - name: lfgsa
+            description: ""
+          - name: lfmng
+            description: ""
+          - name: lfrel
+            description: ""
+          - name: lfsta
+            description: ""
+          - name: lglc_lic_ind
+            description: ""
+          - name: lgort
+            description: ""
+          - name: lmd_scheduled_delivery_date
+            description: ""
+          - name: logsys_ext
+            description: ""
+          - name: lprio
+            description: ""
+          - name: lsmeng
+            description: ""
+          - name: lssta
+            description: ""
+          - name: lstanr
+            description: ""
+          - name: magrv
+            description: ""
+          - name: manek
+            description: ""
+          - name: manual_tc_reason
+            description: ""
+          - name: matkl
+            description: ""
+          - name: matnr
+            description: ""
+          - name: matwa
+            description: ""
+          - name: meins
+            description: ""
+          - name: mfrgr
+            description: ""
+          - name: mill_batch_sel_f
+            description: ""
+          - name: mill_se_gposn
+            description: ""
+          - name: mod_allow
+            description: ""
+          - name: mprok
+            description: ""
+          - name: msr_approv_block
+            description: ""
+          - name: msr_refund_code
+            description: ""
+          - name: msr_ret_reason
+            description: ""
+          - name: mtvfp
+            description: ""
+          - name: mvgr1
+            description: ""
+          - name: mvgr2
+            description: ""
+          - name: mvgr3
+            description: ""
+          - name: mvgr4
+            description: ""
+          - name: mvgr5
+            description: ""
+          - name: mwsbp
+            description: ""
+          - name: nachl
+            description: ""
+          - name: netpr
+            description: ""
+          - name: netwr
+            description: ""
+          - name: nrab_knumh
+            description: ""
+          - name: ntgew
+            description: ""
+          - name: objnr
+            description: ""
+          - name: original_plant
+            description: ""
+          - name: paobjnr
+            description: ""
+          - name: pargb
+            description: ""
+          - name: pay_method
+            description: ""
+          - name: pbs_state
+            description: ""
+          - name: pcsta
+            description: ""
+          - name: pctrf
+            description: ""
+          - name: perve_ana
+            description: ""
+          - name: perzm_ana
+            description: ""
+          - name: plavo
+            description: ""
+          - name: pmatn
+            description: ""
+          - name: posar
+            description: ""
+          - name: posex
+            description: ""
+          - name: posnr
+            description: ""
+          - name: posnv
+            description: ""
+          - name: po_quan
+            description: ""
+          - name: po_unit
+            description: ""
+          - name: prbme
+            description: ""
+          - name: prctr
+            description: ""
+          - name: prefe
+            description: ""
+          - name: process_code
+            description: ""
+          - name: prodh
+            description: ""
+          - name: prodh_univ_batdet_det_origin
+            description: ""
+          - name: prodh_univ_batdet_parnt_nodid
+            description: ""
+          - name: prodh_univ_sales_det_origin
+            description: ""
+          - name: prodh_univ_sales_parnt_nodid
+            description: ""
+          - name: prosa
+            description: ""
+          - name: provg
+            description: ""
+          - name: prsok
+            description: ""
+          - name: prs_objnr
+            description: ""
+          - name: prs_sd_spsnr
+            description: ""
+          - name: prs_work_period
+            description: ""
+          - name: pr_f_f
+            description: ""
+          - name: pr_f_l
+            description: ""
+          - name: pr_l_l
+            description: ""
+          - name: pstyv
+            description: ""
+          - name: ps_psp_pnr
+            description: ""
+          - name: reason_code
+            description: ""
+          - name: rep_freq
+            description: ""
+          - name: reqqty_bu
+            description: ""
+          - name: resource_id
+            description: ""
+          - name: revfp
+            description: ""
+          - name: rfgsa
+            description: ""
+          - name: rfm_psst_group
+            description: ""
+          - name: rfm_psst_rule
+            description: ""
+          - name: rfm_scc_indicator
+            description: ""
+          - name: rfsta
+            description: ""
+          - name: rkfkf
+            description: ""
+          - name: route
+            description: ""
+          - name: sdssta
+            description: ""
+          - name: serail
+            description: ""
+          - name: sernr
+            description: ""
+          - name: service_doc_id
+            description: ""
+          - name: service_doc_item_id
+            description: ""
+          - name: service_doc_type
+            description: ""
+          - name: session_creation_date
+            description: ""
+          - name: session_creation_time
+            description: ""
+          - name: sgt_rcat
+            description: ""
+          - name: shkzg
+            description: ""
+          - name: skopf
+            description: ""
+          - name: sktof
+            description: ""
+          - name: slcst
+            description: ""
+          - name: sloctype
+            description: ""
+          - name: smeng
+            description: ""
+          - name: sobkz
+            description: ""
+          - name: solution_order_id
+            description: ""
+          - name: solution_order_itm_id
+            description: ""
+          - name: spart
+            description: ""
+          - name: spart_ana
+            description: ""
+          - name: spcsto
+            description: ""
+          - name: sposn
+            description: ""
+          - name: stadat
+            description: ""
+          - name: stafo
+            description: ""
+          - name: stcur
+            description: ""
+          - name: stdat
+            description: ""
+          - name: stkey
+            description: ""
+          - name: stlkn
+            description: ""
+          - name: stlnr
+            description: ""
+          - name: stlty
+            description: ""
+          - name: stman
+            description: ""
+          - name: stockloc
+            description: ""
+          - name: stpos
+            description: ""
+          - name: stpoz
+            description: ""
+          - name: sugrd
+            description: ""
+          - name: sumbd
+            description: ""
+          - name: tas
+            description: ""
+          - name: taxm1
+            description: ""
+          - name: taxm2
+            description: ""
+          - name: taxm3
+            description: ""
+          - name: taxm4
+            description: ""
+          - name: taxm5
+            description: ""
+          - name: taxm6
+            description: ""
+          - name: taxm7
+            description: ""
+          - name: taxm8
+            description: ""
+          - name: taxm9
+            description: ""
+          - name: tax_subject_st
+            description: ""
+          - name: tc_aut_det
+            description: ""
+          - name: techs
+            description: ""
+          - name: total_lccst
+            description: ""
+          - name: transit_plant
+            description: ""
+          - name: trmrisk_relevant
+            description: ""
+          - name: txs_business_transaction
+            description: ""
+          - name: txs_usage_purpose
+            description: ""
+          - name: uebtk
+            description: ""
+          - name: uebto
+            description: ""
+          - name: uepos
+            description: ""
+          - name: uepvw
+            description: ""
+          - name: ukonm
+            description: ""
+          - name: umref
+            description: ""
+          - name: umvkn
+            description: ""
+          - name: umvkz
+            description: ""
+          - name: umzin
+            description: ""
+          - name: umziz
+            description: ""
+          - name: untto
+            description: ""
+          - name: upflu
+            description: ""
+          - name: upmat
+            description: ""
+          - name: uvall
+            description: ""
+          - name: uvfak
+            description: ""
+          - name: uvp01
+            description: ""
+          - name: uvp02
+            description: ""
+          - name: uvp03
+            description: ""
+          - name: uvp04
+            description: ""
+          - name: uvp05
+            description: ""
+          - name: uvprs
+            description: ""
+          - name: uvvlk
+            description: ""
+          - name: vbeaf
+            description: ""
+          - name: vbeav
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbelv
+            description: ""
+          - name: vbkd_posnr
+            description: ""
+          - name: vbtyp_ana
+            description: ""
+          - name: vcm_chain_category
+            description: ""
+          - name: vcm_chain_uuid
+            description: ""
+          - name: vdatu_ana
+            description: ""
+          - name: veda_posnr
+            description: ""
+          - name: vgbel
+            description: ""
+          - name: vgpos
+            description: ""
+          - name: vgref
+            description: ""
+          - name: vgtyp
+            description: ""
+          - name: vkaus
+            description: ""
+          - name: vkbur_ana
+            description: ""
+          - name: vkgrp_ana
+            description: ""
+          - name: vkgru
+            description: ""
+          - name: vkorg_ana
+            description: ""
+          - name: vlcendcu
+            description: ""
+          - name: voleh
+            description: ""
+          - name: volum
+            description: ""
+          - name: voref
+            description: ""
+          - name: vpmat
+            description: ""
+          - name: vpwrk
+            description: ""
+          - name: vpzuo
+            description: ""
+          - name: vrkme
+            description: ""
+          - name: vsart_ana
+            description: ""
+          - name: vsbed_ana
+            description: ""
+          - name: vstel
+            description: ""
+          - name: vtweg_ana
+            description: ""
+          - name: waerk
+            description: ""
+          - name: wavwr
+            description: ""
+          - name: wbsta
+            description: ""
+          - name: werks
+            description: ""
+          - name: wgru1
+            description: ""
+          - name: wgru2
+            description: ""
+          - name: wktnr
+            description: ""
+          - name: wktps
+            description: ""
+          - name: wrf_charstc1
+            description: ""
+          - name: wrf_charstc2
+            description: ""
+          - name: wrf_charstc3
+            description: ""
+          - name: wtysc_clmitem
+            description: ""
+          - name: xchar
+            description: ""
+          - name: xchpf
+            description: ""
+          - name: zabdati
+            description: ""
+          - name: zapcgki
+            description: ""
+          - name: zieme
+            description: ""
+          - name: zmeng
+            description: ""
+          - name: zschl_k
+            description: ""
+          - name: zwert
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: vbbe
-        description: sales requirements - individual items
+        description: ""
+
         freshness:                                                # table-specific source freshness
           warn_after:   { count: 1, period: day }                 # minute | hour | day
           # error_after:  { count: 2, period: day }                # carefull, run will fail if this is criteria is not met.
           # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
         loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
 
+        columns:
+
+          - name: auart
+            description: ""
+          - name: awahr
+            description: ""
+          - name: bdart
+            description: ""
+          - name: berid
+            description: ""
+          - name: charg
+            description: ""
+          - name: cuobj
+            description: ""
+          - name: etene
+            description: ""
+          - name: etenr
+            description: ""
+          - name: fsh_ralloc_qty
+            description: ""
+          - name: knttp
+            description: ""
+          - name: kunnr
+            description: ""
+          - name: kzbws
+            description: ""
+          - name: kzvbr
+            description: ""
+          - name: lgort
+            description: ""
+          - name: matnr
+            description: ""
+          - name: mbdat
+            description: ""
+          - name: meins
+            description: ""
+          - name: monkz
+            description: ""
+          - name: nodis
+            description: ""
+          - name: omeng
+            description: ""
+          - name: plart
+            description: ""
+          - name: plnkz
+            description: ""
+          - name: posne
+            description: ""
+          - name: posnr
+            description: ""
+          - name: prbme
+            description: ""
+          - name: projn
+            description: ""
+          - name: pspel
+            description: ""
+          - name: pzmng
+            description: ""
+          - name: sernr
+            description: ""
+          - name: sgt_rcat
+            description: ""
+          - name: sobkz
+            description: ""
+          - name: techs
+            description: ""
+          - name: umref
+            description: ""
+          - name: vbele
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbtyp
+            description: ""
+          - name: vmeng
+            description: ""
+          - name: vpmat
+            description: ""
+          - name: vpwrk
+            description: ""
+          - name: vpzuo
+            description: ""
+          - name: werks
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
+      - name: vbep
+        description: ""
+
+        columns:
+
+          - name: abart
+            description: ""
+          - name: abges
+            description: ""
+          - name: abruf
+            description: ""
+          - name: aeskd
+            description: ""
+          - name: aufnr
+            description: ""
+          - name: aulwe
+            description: ""
+          - name: banfn
+            description: ""
+          - name: bdart
+            description: ""
+          - name: bddat
+            description: ""
+          - name: bedar
+            description: ""
+          - name: bmeng
+            description: ""
+          - name: bnfpo
+            description: ""
+          - name: bsart
+            description: ""
+          - name: bstyp
+            description: ""
+          - name: bwart
+            description: ""
+          - name: cmeng
+            description: ""
+          - name: crea_dlvdate
+            description: ""
+          - name: crqqty_bu
+            description: ""
+          - name: delivery_date_type_rule
+            description: ""
+          - name: dlvqty_bu
+            description: ""
+          - name: dlvqty_su
+            description: ""
+          - name: dummy_slsdocschedl_incl_eew_ps
+            description: ""
+          - name: edatu
+            description: ""
+          - name: etart
+            description: ""
+          - name: etene
+            description: ""
+          - name: etenr
+            description: ""
+          - name: ettyp
+            description: ""
+          - name: ezeit
+            description: ""
+          - name: fsh_os_id
+            description: ""
+          - name: fsh_pqr_rc
+            description: ""
+          - name: fsh_ralloc_qty
+            description: ""
+          - name: grstr
+            description: ""
+          - name: handle
+            description: ""
+          - name: handoverdate
+            description: ""
+          - name: handovertime
+            description: ""
+          - name: idnnr
+            description: ""
+          - name: lccst
+            description: ""
+          - name: lddat
+            description: ""
+          - name: lduhr
+            description: ""
+          - name: lfrel
+            description: ""
+          - name: lifsp
+            description: ""
+          - name: lmeng
+            description: ""
+          - name: lrgdt
+            description: ""
+          - name: mbdat
+            description: ""
+          - name: mbdat_drs
+            description: ""
+          - name: mbuhr
+            description: ""
+          - name: meins
+            description: ""
+          - name: ocdqty_bu
+            description: ""
+          - name: ocdqty_su
+            description: ""
+          - name: odn_amount
+            description: ""
+          - name: ordqty_bu
+            description: ""
+          - name: ordqty_su
+            description: ""
+          - name: plart
+            description: ""
+          - name: plnum
+            description: ""
+          - name: posne
+            description: ""
+          - name: posnr
+            description: ""
+          - name: prgrs
+            description: ""
+          - name: repos
+            description: ""
+          - name: req_dlvdate
+            description: ""
+          - name: rform
+            description: ""
+          - name: romei
+            description: ""
+          - name: roms1
+            description: ""
+          - name: roms2
+            description: ""
+          - name: roms3
+            description: ""
+          - name: rrqqty_bu
+            description: ""
+          - name: rsdat
+            description: ""
+          - name: sernr
+            description: ""
+          - name: tddat
+            description: ""
+          - name: tduhr
+            description: ""
+          - name: umvkn
+            description: ""
+          - name: umvkz
+            description: ""
+          - name: vbele
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: verfp
+            description: ""
+          - name: vrkme
+            description: ""
+          - name: wadat
+            description: ""
+          - name: waerk
+            description: ""
+          - name: wauhr
+            description: ""
+          - name: wepos
+            description: ""
+          - name: wmeng
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: vbfa
-        description: Sales Document Flow
+        description: ""
 
+        columns:
+
+          - name: abges
+            description: ""
+          - name: aedat
+            description: ""
+          - name: bdart
+            description: ""
+          - name: brgew
+            description: ""
+          - name: bwart
+            description: ""
+          - name: cmeth
+            description: ""
+          - name: erdat
+            description: ""
+          - name: erzet
+            description: ""
+          - name: fktyp
+            description: ""
+          - name: fplnr
+            description: ""
+          - name: fpltr
+            description: ""
+          - name: gewei
+            description: ""
+          - name: kzbef
+            description: ""
+          - name: lgnum
+            description: ""
+          - name: logsys
+            description: ""
+          - name: matnr
+            description: ""
+          - name: meins
+            description: ""
+          - name: mjahr
+            description: ""
+          - name: ntgew
+            description: ""
+          - name: plart
+            description: ""
+          - name: plmin
+            description: ""
+          - name: posnn
+            description: ""
+          - name: posnv
+            description: ""
+          - name: rfmng
+            description: ""
+          - name: rfmng_flo
+            description: ""
+          - name: rfmng_flt
+            description: ""
+          - name: rfwrt
+            description: ""
+          - name: sobkz
+            description: ""
+          - name: sonum
+            description: ""
+          - name: stufe
+            description: ""
+          - name: taqui
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbelv
+            description: ""
+          - name: vbtyp_n
+            description: ""
+          - name: vbtyp_v
+            description: ""
+          - name: voleh
+            description: ""
+          - name: volum
+            description: ""
+          - name: vrkme
+            description: ""
+          - name: waers
+            description: ""
+          - name: wbsta
+            description: ""
+          - name: _dataaging
+            description: ""
+
+
+# TABLE
       - name: vbkd
-        description: Sales Document - Business Data
+        description: ""
 
+        columns:
+
+          - name: abssc
+            description: ""
+          - name: abtnr
+            description: ""
+          - name: acdatv
+            description: ""
+          - name: akkur
+            description: ""
+          - name: akprz
+            description: ""
+          - name: akwae
+            description: ""
+          - name: bemot
+            description: ""
+          - name: bsark
+            description: ""
+          - name: bsark_e
+            description: ""
+          - name: bstdk
+            description: ""
+          - name: bstdk_e
+            description: ""
+          - name: bstkd
+            description: ""
+          - name: bstkd_e
+            description: ""
+          - name: bstkd_m
+            description: ""
+          - name: bzirk
+            description: ""
+          - name: campaign
+            description: ""
+          - name: compreas
+            description: ""
+          - name: delco
+            description: ""
+          - name: dpbp_ref_fplnr
+            description: ""
+          - name: dpbp_ref_fpltr
+            description: ""
+          - name: empst
+            description: ""
+          - name: faktf
+            description: ""
+          - name: farr_reltype
+            description: ""
+          - name: fbuda
+            description: ""
+          - name: ffprf
+            description: ""
+          - name: fkber
+            description: ""
+          - name: fkdat
+            description: ""
+          - name: formc1
+            description: ""
+          - name: formc2
+            description: ""
+          - name: fplnr
+            description: ""
+          - name: gjahr
+            description: ""
+          - name: ihrez
+            description: ""
+          - name: ihrez_e
+            description: ""
+          - name: inco1
+            description: ""
+          - name: inco2
+            description: ""
+          - name: inco2_key
+            description: ""
+          - name: inco2_l
+            description: ""
+          - name: inco3_key
+            description: ""
+          - name: inco3_l
+            description: ""
+          - name: inco4_key
+            description: ""
+          - name: incov
+            description: ""
+          - name: j_1adtyp
+            description: ""
+          - name: j_1afitp
+            description: ""
+          - name: j_1agicd
+            description: ""
+          - name: j_1aidatep
+            description: ""
+          - name: j_1aindxp
+            description: ""
+          - name: j_1aregio
+            description: ""
+          - name: j_1arfz
+            description: ""
+          - name: j_1atxrel
+            description: ""
+          - name: j_1tpbupl
+            description: ""
+          - name: kdgrp
+            description: ""
+          - name: kdkg1
+            description: ""
+          - name: kdkg2
+            description: ""
+          - name: kdkg3
+            description: ""
+          - name: kdkg4
+            description: ""
+          - name: kdkg5
+            description: ""
+          - name: konda
+            description: ""
+          - name: ktgrd
+            description: ""
+          - name: kurrf
+            description: ""
+          - name: kurrf_dat
+            description: ""
+          - name: kursk
+            description: ""
+          - name: kursk_dat
+            description: ""
+          - name: kzazu
+            description: ""
+          - name: lcnum
+            description: ""
+          - name: mansp
+            description: ""
+          - name: mndid
+            description: ""
+          - name: mndvg
+            description: ""
+          - name: mrnkz
+            description: ""
+          - name: mschl
+            description: ""
+          - name: packno
+            description: ""
+          - name: pay_type
+            description: ""
+          - name: perfk
+            description: ""
+          - name: perop_beg
+            description: ""
+          - name: perop_end
+            description: ""
+          - name: perrl
+            description: ""
+          - name: pltyp
+            description: ""
+          - name: podkz
+            description: ""
+          - name: poper
+            description: ""
+          - name: posex_e
+            description: ""
+          - name: posnr
+            description: ""
+          - name: prsdt
+            description: ""
+          - name: revevtyp
+            description: ""
+          - name: revsp
+            description: ""
+          - name: rrrel
+            description: ""
+          - name: sdabw
+            description: ""
+          - name: sepon
+            description: ""
+          - name: stcode
+            description: ""
+          - name: stcur
+            description: ""
+          - name: steuc
+            description: ""
+          - name: traty
+            description: ""
+          - name: trmtyp
+            description: ""
+          - name: valdt
+            description: ""
+          - name: valtg
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vkont
+            description: ""
+          - name: vsart
+            description: ""
+          - name: vtref
+            description: ""
+          - name: waktion
+            description: ""
+          - name: wkkur
+            description: ""
+          - name: wkwae
+            description: ""
+          - name: wminr
+            description: ""
+          - name: zlsch
+            description: ""
+          - name: zterm
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: vbpa
-        description: Sales Document - Partner
+        description: ""
 
+        columns:
+
+          - name: ablad
+            description: ""
+          - name: addr_operation
+            description: ""
+          - name: addr_type
+            description: ""
+          - name: adrda
+            description: ""
+          - name: adrnp
+            description: ""
+          - name: adrnr
+            description: ""
+          - name: assigned_bp
+            description: ""
+          - name: bokre
+            description: ""
+          - name: bp_ref_adrnr
+            description: ""
+          - name: dummy_sddocpartner_incl_eew_ps
+            description: ""
+          - name: histunr
+            description: ""
+          - name: hityp
+            description: ""
+          - name: hzuor
+            description: ""
+          - name: kale
+            description: ""
+          - name: knref
+            description: ""
+          - name: kunnr
+            description: ""
+          - name: land1
+            description: ""
+          - name: lifnr
+            description: ""
+          - name: lzone
+            description: ""
+          - name: parnr
+            description: ""
+          - name: parvw
+            description: ""
+          - name: parvw_ff
+            description: ""
+          - name: pernr
+            description: ""
+          - name: posnr
+            description: ""
+          - name: prfre
+            description: ""
+          - name: sdm_version
+            description: ""
+          - name: stceg
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: xcpdk
+            description: ""
+          - name: _dataaging
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+
+# TABLE
       - name: vbuk
-        description: Sales document - header status & adminis
-        
+        description: ""
 
+        columns:
 
-# look at possibility to generate this file from schema definition in bronze_raw
-# 13-JAN-2024 current working assumption is to decouple this on purpose to have control over the transormation
-
-
-# all source tables in one file?
-# could benefit search
+          - name: /sapmp/lbask
+            description: ""
+          - name: abstk
+            description: ""
+          - name: aedat
+            description: ""
+          - name: bestk
+            description: ""
+          - name: block
+            description: ""
+          - name: buchk
+            description: ""
+          - name: cmgst
+            description: ""
+          - name: cmps0
+            description: ""
+          - name: cmps1
+            description: ""
+          - name: cmps2
+            description: ""
+          - name: cmpsa
+            description: ""
+          - name: cmpsb
+            description: ""
+          - name: cmpsc
+            description: ""
+          - name: cmpsd
+            description: ""
+          - name: cmpse
+            description: ""
+          - name: cmpsf
+            description: ""
+          - name: cmpsg
+            description: ""
+          - name: cmpsh
+            description: ""
+          - name: cmpsi
+            description: ""
+          - name: cmpsj
+            description: ""
+          - name: cmpsk
+            description: ""
+          - name: cmpsl
+            description: ""
+          - name: cmpsm
+            description: ""
+          - name: cmps_cm
+            description: ""
+          - name: cmps_te
+            description: ""
+          - name: costa
+            description: ""
+          - name: dcstk
+            description: ""
+          - name: fkivk
+            description: ""
+          - name: fksak
+            description: ""
+          - name: fkstk
+            description: ""
+          - name: fmstk
+            description: ""
+          - name: fsh_ar_stat_hdr
+            description: ""
+          - name: fsstk
+            description: ""
+          - name: gbstk
+            description: ""
+          - name: hdall
+            description: ""
+          - name: hdals
+            description: ""
+          - name: ico_fkivk
+            description: ""
+          - name: koquk
+            description: ""
+          - name: kostk
+            description: ""
+          - name: lfgsk
+            description: ""
+          - name: lfstk
+            description: ""
+          - name: lsstk
+            description: ""
+          - name: lvstk
+            description: ""
+          - name: manek
+            description: ""
+          - name: pdstk
+            description: ""
+          - name: pkstk
+            description: ""
+          - name: relik
+            description: ""
+          - name: rfgsk
+            description: ""
+          - name: rfstk
+            description: ""
+          - name: rrsta
+            description: ""
+          - name: saprl
+            description: ""
+          - name: shp_total_dgsta
+            description: ""
+          - name: shp_total_emcst
+            description: ""
+          - name: shp_total_lccst
+            description: ""
+          - name: shp_total_pcsta
+            description: ""
+          - name: shp_total_sdssta
+            description: ""
+          - name: shp_total_slcst
+            description: ""
+          - name: spe_tmpid
+            description: ""
+          - name: spstg
+            description: ""
+          - name: tm_whse_exec
+            description: ""
+          - name: total_arc_status
+            description: ""
+          - name: total_deliv_reltd_billg_sta
+            description: ""
+          - name: total_fkivk
+            description: ""
+          - name: trsta
+            description: ""
+          - name: uvall
+            description: ""
+          - name: uvals
+            description: ""
+          - name: uvfak
+            description: ""
+          - name: uvfas
+            description: ""
+          - name: uvgek
+            description: ""
+          - name: uvk01
+            description: ""
+          - name: uvk02
+            description: ""
+          - name: uvk03
+            description: ""
+          - name: uvk04
+            description: ""
+          - name: uvk05
+            description: ""
+          - name: uvpak
+            description: ""
+          - name: uvpas
+            description: ""
+          - name: uvpik
+            description: ""
+          - name: uvpis
+            description: ""
+          - name: uvprs
+            description: ""
+          - name: uvs01
+            description: ""
+          - name: uvs02
+            description: ""
+          - name: uvs03
+            description: ""
+          - name: uvs04
+            description: ""
+          - name: uvs05
+            description: ""
+          - name: uvvlk
+            description: ""
+          - name: uvvls
+            description: ""
+          - name: uvwak
+            description: ""
+          - name: uvwas
+            description: ""
+          - name: vbeln
+            description: ""
+          - name: vbobj
+            description: ""
+          - name: vbtyp
+            description: ""
+          - name: vbtyp_ext
+            description: ""
+          - name: vestk
+            description: ""
+          - name: vlstk
+            description: ""
+          - name: wbstk
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""

@@ -1,0 +1,10 @@
+macros:
+  - name: generate_source
+    description: A macro to generate source tables and columns from database_name.information_schema.columns
+    arguments:
+      - name: database_name
+        type: string
+        description: The database name
+      - name: schema_name
+        type: string
+        description: The schema name
