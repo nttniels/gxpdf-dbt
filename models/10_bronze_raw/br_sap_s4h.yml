@@ -3,9 +3,8 @@
 
 # all source tables in one file?
 # could benefit search
-
-
 version: 2 #insert version number 
+
  
 sources: 
   - name: sap_s4h                                   #[supplier]_[system] (lowercase)  = schema name
@@ -13,6 +12,7 @@ sources:
     database: d1010_prod_bronze_raw # specication required to deviate from default DB d3020
  
     tables:
+
 
 # TABLE
       - name: eina
