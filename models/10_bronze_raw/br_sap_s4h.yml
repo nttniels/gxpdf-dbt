@@ -2,7 +2,7 @@ version: 1 #match verstion with data contract
 
 
 sources:
-  - name: sap_s4h                                   #[supplier]_[system] (lowercase)  = schema name
+  - name: sap_s4h                                    #[supplier]_[system] (lowercase)  = schema name
     database: d1010_prod_bronze_raw                  # specication required to deviate from default DB d3020
     description: "SAP S4Hana lifesciences system"
 
@@ -18,6 +18,9 @@ sources:
     tables:
       - name: makt
         description: material master texts
+        columns:
+          - name: MATNR
+            description: "snowflake table comment"
       - name: mara
         description: material master
         freshness:                                                # table-specific source freshness

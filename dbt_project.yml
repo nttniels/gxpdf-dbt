@@ -20,6 +20,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Configuring models
 models:
+  +persist_docs:
+      relation: true
+      columns: true
   gxpdf:
     20_bronze_polished:
       +materialized: view

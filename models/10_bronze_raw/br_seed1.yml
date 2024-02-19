@@ -1,0 +1,19 @@
+version: 1 #match verstion with data contract
+
+
+sources:
+  - name: seed1                                
+    database: d1010_prod_bronze_raw
+    description: "maintenance history sample dataset"
+
+    tags:
+      - "seed1"
+
+    tables:
+      - name: predictive_maintenance
+        description: material master texts
+        freshness:                                                # table-specific source freshness
+          warn_after:   { count: 7, period: day }                 # minute | hour | day
+          # error_after:  { count: 10, period: day }                 # carefull, run will fail if this is criterium is not met.
+          # filter: datediff('day', _gxpdf_loaded_at, current_timestamp) < 2
+        loaded_at_field: "convert_timezone('UTC', 'Australia/Sydney', _gxpdf_loaded_at)::timestamp"
