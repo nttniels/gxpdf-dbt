@@ -30,6 +30,9 @@ models:
         node_color: "#CD7F32" #bronze
       +tags:
         - "bronze"
+      +persist_docs:
+        relation: true
+        columns: true
       #schema per source system defined in models
     30_silver:
       +materialized: view
@@ -38,14 +41,22 @@ models:
       +docs:
         node_color: "#C0C0C0" #silver
       # +schema: Public from environment setting
+      +persist_docs:
+        relation: true
+        columns: true
     40_gold:
       +materialized: view
       +docs:
         node_color: "#edc802"
         +tags:
         - "gold"
+      +persist_docs:
+        relation: true
+        columns: true
       sales:
         +schema: sales
+      llm:
+        +schema: llm
 
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
