@@ -10,6 +10,7 @@ gold_model as (
 
     select 
         material_id,
+        lang,
         description
     from silver_model
     
