@@ -10,6 +10,7 @@ bp2 as (select * from {{ ref("bp_SAP_S4H_makt") }}),
 silver_model as (
     select 
         bp1.material_id,
+        bp1.old_material_id,
         bp1.uom_base,
         bp1.material_group,
         bp1.created_on,
