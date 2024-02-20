@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Check Branche
 
 # Controls when the workflow will run
 on:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Check branche
+      - name: 20-Quality
         if: github.base_ref == '10-production' && github.head_ref != '20-quality'
         run: |
           echo "ERROR: You can only merge to 10-production from 20-quality."
