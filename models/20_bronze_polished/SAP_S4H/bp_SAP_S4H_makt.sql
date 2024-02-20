@@ -13,6 +13,7 @@ bronze_polished_model as (
         maktx::string(40) as description
     from bronze_raw_table
     where lang = 'E' or lang = 'D'    
+
 )
 
 -- SELECT MODEL

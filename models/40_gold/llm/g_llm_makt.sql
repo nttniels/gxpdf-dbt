@@ -4,16 +4,15 @@
 
 -- -- SELECTED FIELDS FROM SILVER
 with
-silver_model as (select * from {{ ref('s_material') }}),
+-- s1 as (select * from {{ ref('s_material') }}),
+bp1 as (select * from {{ ref('bp_SAP_S4H_makt') }}),
 
 gold_model as (
-
     select 
         material_id,
         lang,
         description
-    from silver_model
-    
+    from bp1
 )
 
 select * 
