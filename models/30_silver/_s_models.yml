@@ -11,6 +11,8 @@ models:
         tests:
          - unique
          - not_null
+      - name: old_material_id
+        description: old material number
       - name: uom_base
       - name: material_group
       - name: created_on

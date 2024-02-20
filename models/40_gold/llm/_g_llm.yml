@@ -14,6 +14,7 @@ models:
         description: The number of the material group this material belongs to
       - name: created_on
         description: The date on which the material was created
+        
   - name: g_llm_makt
     description: material master descriptions
     columns:
@@ -21,4 +22,3 @@ models:
         description: The number of the material
       - name: Description
         description: A short description of the material
-
