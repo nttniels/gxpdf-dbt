@@ -20,5 +20,7 @@ models:
     columns:
       - name: material_id
         description: The number of the material
+      - name: lang
+        description: Language the matial description is expressed in
       - name: Description
         description: A short description of the material
