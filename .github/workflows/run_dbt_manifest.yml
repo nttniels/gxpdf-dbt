@@ -1,4 +1,4 @@
-name: CI - Trigger dbt cloud refresh of artifacts manifest
+name: DBT artifacts
 on:
   pull_request:
     branches: [ "10-production" ]
@@ -7,7 +7,7 @@ jobs:
   refresh_manifest:
     runs-on: ubuntu-latest
     steps:
-    - name: Run dbt cloud manifest job
+    - name: trigger manifest refresh
       if: github.base_ref == '10-production'
       run: |
         RESPONSE=$(curl -v -H "Authorization:Token ${{ secrets.DBTCLOUDAPIKEY }}" -H "Content-Type:application/json" -d '{"cause":"Triggered by Github Actions. PR to production","git_branch":"10-production"}' https://cloud.getdbt.com/api/v2/accounts/228234/jobs/513698/run/)
