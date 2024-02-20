@@ -10,6 +10,7 @@ gold_model as (
 
     select 
         material_id,
+        old_material_id,
         uom_base,
         material_group,
         created_on

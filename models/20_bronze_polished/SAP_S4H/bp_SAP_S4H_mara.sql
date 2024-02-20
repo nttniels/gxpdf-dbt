@@ -9,8 +9,10 @@ with bronze_raw_table as (select * from {{ source("sap_s4h", "mara") }}),
 bronze_polished_model as (
     select 
         matnr::string(18) as material_id,
+        bismt::string(18) as old_material_id,
         meins::string(3) as uom_base,
         matkl::string(6) as material_group,
+        bismt::string(18) asold_material_id,
         ersda::date as created_on
     from bronze_raw_table
 )

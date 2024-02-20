@@ -6,12 +6,15 @@ models:
     columns:
       - name: material_id
         description: The number of the material
+      - name: old_material_id
+        description: The old number of the material
       - name: uom_base
         description: The unit of measure this material is primarely expressed in
       - name: material_group
         description: The number of the material group this material belongs to
       - name: created_on
         description: The date on which the material was created
+        
   - name: g_llm_makt
     description: material master descriptions
     columns:
