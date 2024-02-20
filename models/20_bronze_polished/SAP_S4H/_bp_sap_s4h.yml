@@ -8,6 +8,8 @@ models:
       - name: material_id
         tags:
           - primary-key
+      - name: old_material_id
+        description: "old material number"
     meta:
         datafold:
           datadiff:
