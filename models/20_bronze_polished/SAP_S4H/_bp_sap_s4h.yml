@@ -9,7 +9,7 @@ models:
         tags:
           - primary-key
       - name: old_material_id
-
+        description: "old material number"
     meta:
         datafold:
           datadiff:
