@@ -11,6 +11,7 @@ bronze_polished_model as (
         matnr::string(18) as material_id,
         meins::string(3) as uom_base,
         matkl::string(6) as material_group,
+        bismt::string(18) asold_material_id,
         ersda::date as created_on
     from bronze_raw_table
 )
