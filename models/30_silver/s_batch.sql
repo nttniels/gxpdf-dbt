@@ -6,10 +6,10 @@
 with
 bp1 as (select * from {{ ref("bp_SAP_S4H_mcha") }}),
 bp2 as (select * from {{ ref("bp_SAP_S4H_mchb") }}),
-bp3 as (select * from {{ ref("bp_SAP_S4H_makt") }})
+bp3 as (select * from {{ ref("bp_SAP_S4H_makt") }}),
 
 silver_model as (
-    select 
+    select
         bp1.charge_id,
         bp1.plant_id,
         bp2.sloc_id,
@@ -18,7 +18,7 @@ silver_model as (
         bp3.description,
         bp2.unrestrict_qty
     from bp1
-    left join bp2 on bp1.charge_id = bp2.charge_id,
+    left join bp2 on bp1.charge_id = bp2.charge_id
     left join bp3 on bp1.material_id = bp3.material_id
 )
 
