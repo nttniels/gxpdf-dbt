@@ -19,7 +19,7 @@ silver_model as (
         bp1.manufacturer_serial_no,
         bp1.equipment_model_number,
         bp1.construction_year,
-        bp1.construction_month,
+        bp1.construnction_month,
         bp1.startup_date,
         bp1.object_no,
         bp1.row_load_date
