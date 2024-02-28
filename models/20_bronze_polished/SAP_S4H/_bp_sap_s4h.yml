@@ -55,3 +55,60 @@ models:
         datafold:
           datadiff:
             never_diff: true
+  - name: bp_SAP_S4H_MCH1
+    description: "Cross-plant Batch Master"
+    columns:
+      - name: material_id
+        description: "Material number"
+        tags:
+          - primary-key
+      - name: charge_id
+        description: "Batch number"
+        tags:
+          - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true
+            
+  - name: bp_SAP_S4H_MCHA
+    description: "Batch Master"
+      - name: material_id
+        description: "Material Number"
+        tags:
+          - primary-key
+      - name: plant_id
+        description: "Plant ID Number"
+        tags:
+          - primary-key
+      - name: charge_id
+        description: "Batch number"
+        tags:
+          - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true      
+            
+  - name: bp_SAP_S4H_MCHB
+    description: "Batch Stocks"
+      - name: material_id
+        description: "Material Number"
+        tags:
+          - primary-key
+      - name: plant_id
+        description: "Plant ID Number"
+        tags:
+          - primary-key
+      - name: sloc_id
+        description: "Storage Location"
+        tags:
+          - primary-key
+      - name: charge_id
+        description: "Batch number"
+        tags:
+          - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true            
