@@ -49,3 +49,41 @@ models:
       datafold:
         datadiff:
           never_diff: true
+  
+  - name: g_equipment
+    description: "Equipment Master"
+    columns:
+      - name: equipment_id
+        description: "Equipment Number"
+        tags:
+          - primary-key
+      - name: equipment_description
+        description: "Equipment Description"
+      - name: record_creation_date
+        description: "Record Creation Date"
+      - name: created_by
+        description: "Name of Person Responsible for Creating the Record"
+      - name: manufacturer
+        description: "Manufacturer of Asset"
+      - name: manufacturer_country
+        description: "Country of Manufacturer"
+      - name: manufacturer_drawing_id
+        description: "Manufacturer Drawing Number"
+      - name: manufacturer_serial_no
+        description: "Manufacturer Serial Number"
+      - name: equipment_model_number
+        description: "Model Number"
+      - name: construction_year
+        description: "Year of Construction"
+      - name: construction_month
+        description: "Month of Construction"
+      - name: startup_date
+        description: "Start-up Date of Technical Object"
+      - name: object_no
+        description: "Object Number of Equipment"
+      - name: row_load_date
+        description: ""
+    meta:
+        datafold:
+          datadiff:
+            never_diff: true  
