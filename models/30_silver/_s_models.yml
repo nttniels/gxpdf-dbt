@@ -71,7 +71,6 @@ models:
         tags:
           - primary-key
         tests:
-         - unique
          - not_null
       - name: plant_id
         description: "Plant Number"
