@@ -10,6 +10,7 @@ bp2 as (select * from {{ ref("bp_SAP_S4H_eqkt") }}),
 silver_model as (
     select
         bp1.equipment_id,
+        bp2.language_key,
         bp2.equipment_description,
         bp1.record_creation_date,
         bp1.created_by,
