@@ -91,6 +91,8 @@ models:
         description: "Equipment Number"
         tags:
           - primary-key
+      - name: language_key
+        description: "Language of Description"
       - name: equipment_description
         description: "Equipment Description"
       - name: record_creation_date
