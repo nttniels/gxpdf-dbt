@@ -25,7 +25,8 @@ models:
         datafold:
           datadiff:
             never_diff: false
-    - name: g_llm_makt
+            
+  - name: g_llm_makt
     description: material master descriptions
     columns:
       - name: material_id
