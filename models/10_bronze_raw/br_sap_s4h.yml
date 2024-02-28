@@ -6294,3 +6294,223 @@ sources:
             description: ""
           - name: _gxpdf_loaded_at
             description: ""
+
+# TABLE
+      - name: equi
+        description: "equipment master"
+
+        columns:
+
+          - name: equnr
+            description: "Equipment Number"
+          - name: erdat
+            description: "Record Creation Date"
+          - name: ernam
+            description: "Name of Person Responsible for Creating the Record"
+          - name: eqasp
+            description: ""
+          - name: aedat
+            description: ""
+          - name: aenam
+            description: ""
+          - name: begru
+            description: ""
+          - name: eqtyp
+            description: ""
+          - name: eqart
+            description: ""
+          - name: lvorm
+            description: ""
+          - name: invnr
+            description: ""
+          - name: groes
+            description: ""
+          - name: brgew
+            description: ""
+          - name: gewei
+            description: ""
+          - name: ansdt
+            description: ""
+          - name: answt
+            description: ""
+          - name: waers
+            description: ""
+          - name: elief
+            description: ""
+          - name: gwlen
+            description: ""
+          - name: gwldt
+            description: ""
+          - name: wdbwt
+            description: ""
+          - name: herst
+            description: "Manufacturer of Asset"
+          - name: herld
+            description: "Country of Manufacturer"
+          - name: hzein
+            description: "Manufacturer Drawing Number"
+          - name: serge
+            description: "Manufacturer Serial Number"
+          - name: typbz
+            description: "Model Number"
+          - name: baujj
+            description: "Year of Construction"
+          - name: baumm
+            description: "Month of Construction"
+          - name: aplkz
+            description: ""
+          - name: auldt
+            description: ""
+          - name: inbdt
+            description: "Start-up Date of Technical Object"
+          - name: gernr
+            description: ""
+          - name: eqlfn
+            description: ""
+          - name: gwldv
+            description: ""
+          - name: eqdat
+            description: ""
+          - name: eqber
+            description: ""
+          - name: eqnum
+            description: ""
+          - name: objnr
+            description: "Object Number of Equipment"
+          - name: eqsnr
+            description: ""
+          - name: cuobj
+            description: ""
+          - name: krfkz
+            description: ""
+          - name: kmatn
+            description: ""
+          - name: matnr
+            description: ""
+          - name: sernr
+            description: ""
+          - name: werk
+            description: ""
+          - name: lager
+            description: ""
+          - name: charge
+            description: ""
+          - name: kunde
+            description: ""
+          - name: warpl
+            description: ""
+          - name: imrc_point
+            description: ""
+          - name: revlv
+            description: ""
+          - name: mganr
+            description: ""
+          - name: begrui
+            description: ""
+          - name: s_equi
+            description: ""
+          - name: s_serial
+            description: ""
+          - name: s_konfi
+            description: ""
+          - name: s_sale
+            description: ""
+          - name: s_fhm
+            description: ""
+          - name: s_else
+            description: ""
+          - name: s_isu
+            description: ""
+          - name: s_eqbs
+            description: ""
+          - name: s_fleet
+            description: ""
+          - name: bstvp
+            description: ""
+          - name: sparte
+            description: ""
+          - name: handle
+            description: ""
+          - name: tsegtp
+            description: ""
+          - name: ematn
+            description: ""
+          - name: act_change_aa
+            description: ""
+          - name: s_cc
+            description: ""
+          - name: datlwb
+            description: ""
+          - name: uii
+            description: ""
+          - name: iuid_type
+            description: ""
+          - name: uii_plant
+            description: ""
+          - name: changeddatetime
+            description: ""
+          - name: endofuse
+            description: ""
+          - name: eqext_active
+            description: ""
+          - name: equi_sntype
+            description: ""
+          - name: eqlb_duty
+            description: ""
+          - name: eqlb_hide
+            description: ""
+          - name: j_3gdispo
+            description: ""
+          - name: j_3gzdequi
+            description: ""
+          - name: j_3geqart
+            description: ""
+          - name: j_3gkzmeng
+            description: ""
+          - name: j_3gkonde
+            description: ""
+          - name: j_3gfiktiv
+            description: ""
+          - name: j_3gbeltyp
+            description: ""
+          - name: j_3gkzladg
+            description: ""
+          - name: j_3gkzberg
+            description: ""
+          - name: j_3geifr
+            description: ""
+          - name: j_3gvermein
+            description: ""
+          - name: j_3gzulnr
+            description: ""
+          - name: /sapcem/abrechvh
+            description: ""
+          - name: /sapcem/abrechlg
+            description: ""
+          - name: /sapcem/dispogr
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
+
+# TABLE
+      - name: eqkt
+        description: "equipment descriptions"
+
+        columns:
+
+          - name: equktu
+            description: "Equipment Description in Capital Letters"
+          - name: eqktx
+            description: "Equipment Description"
+          - name: equnr
+            description: "Equipment Number"
+          - name: kzltx
+            description: "Long Text Indicator"
+          - name: spras
+            description: "Language Key"
+          - name: textchangeddatetime
+            description: ""
+          - name: txasp
+            description: ""
+          - name: _gxpdf_loaded_at
+            description: ""
