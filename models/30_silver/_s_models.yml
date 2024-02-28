@@ -63,3 +63,23 @@ models:
       datafold:
         datadiff:
           never_diff: true
+    - name: s_batch
+    columns:
+      - name: charge_id
+        description: "Batch Number"
+        tags:
+          - primary-key
+        tests:
+         - unique
+         - not_null
+      - name: plant_id
+        description: "Plant Number"
+      - name: expiry_date
+      - name: material_id
+      - name: description
+      - name: sloc_id
+      - name: unrestrict_qty
+    meta:
+      datafold:
+        datadiff:
+          never_diff: true
