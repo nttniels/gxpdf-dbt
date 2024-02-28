@@ -12,8 +12,7 @@ bronze_polished_model as (
         charg::string(10) as charge_id,
         werks::string (4) as plant_id,
         lgort::string (4) as sloc_id, 
-        clabs::number (13) as unrestrict_qty,
-        vfdat::date as expiry_date
+        clabs::number (13) as unrestrict_qty
     from bronze_raw_table
 )
 
