@@ -24,3 +24,21 @@ models:
         description: Language the matial description is expressed in
       - name: Description
         description: A short description of the material
+
+  - name: g_llm_batch
+    description: batch master including stock quantity
+    columns:
+      - name: charge_id
+        description: The number of the batch
+      - name: plant_id
+        description: The number of the production plant
+      - name: sloc_id
+        description: The number of the storage location
+      - name: expiry_date
+        description: The expiry date of the batch
+      - name: material_id
+        description: The number of the material
+      - name: Description
+        description: A short description of the material
+      - name: unrestrict_qty
+        description: The stock quantity of the batch
