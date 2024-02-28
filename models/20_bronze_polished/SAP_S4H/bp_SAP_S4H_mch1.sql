@@ -10,7 +10,7 @@ bronze_polished_model as (
     select
         matnr::string(18) as material_id,
         charg::string(10) as charge_id,
-        vfdat::date(8) as expiry_date
+        vfdat::date as expiry_date
     from bronze_raw_table
 )
 
