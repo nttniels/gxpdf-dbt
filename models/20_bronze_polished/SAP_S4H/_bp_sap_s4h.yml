@@ -152,7 +152,7 @@ models:
             never_diff: true            
 
   - name: bp_SAP_S4H_eqkt
-    description: "Equipment Descriptions"
+    description: "Equipment Description"
     columns:
      - name: equipment_description
        description: "Equipment Description"
