@@ -25,16 +25,6 @@ models:
         datafold:
           datadiff:
             never_diff: false
-            
-  - name: g_llm_makt
-    description: material master descriptions
-    columns:
-      - name: material_id
-        description: The number of the material
-      - name: lang
-        description: Language the matial description is expressed in
-      - name: Description
-        description: A short description of the material
 
   - name: g_batch
     description: batch master including stock quantity
