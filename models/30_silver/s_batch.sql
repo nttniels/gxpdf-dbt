@@ -12,10 +12,10 @@ silver_model as (
     select 
         bp1.charge_id,
         bp1.plant_id,
+        bp2.sloc_id,
         bp1.expiry_date,
         bp1.material_id,
         bp3.description,
-        bp2.sloc_id,
         bp2.unrestrict_qty
     from bp1
     left join bp2 on bp1.charge_id = bp2.charge_id,
