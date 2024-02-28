@@ -63,7 +63,8 @@ models:
       datafold:
         datadiff:
           never_diff: true
-    - name: s_batch
+  
+  - name: s_batch
     columns:
       - name: charge_id
         description: "Batch Number"
