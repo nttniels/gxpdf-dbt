@@ -54,7 +54,7 @@ models:
         description: A short description of the material
       - name: unrestrict_qty
         description: The stock quantity of the batch
-        meta:
-        datafold:
-          datadiff:
-            never_diff: true
+    meta:
+      datafold:
+        datadiff:
+          never_diff: true
