@@ -5,12 +5,13 @@
 -- -- SELECTED FIELDS FROM SILVER
 with
 s1 as (select * from {{ ref('s_sales_order_header') }}),
+
 s2 as (select * from {{ ref('s_sales_order_line') }}),
+
 s3 as (select * from {{ ref('s_material') }}),
 
 gold_model as (
-    
-    select 
+    select
         s1.document_id,
         s1.net_value,
         s1.currency,
@@ -34,11 +35,10 @@ gold_model as (
         s2.first_date
     from s2
 
-    left join s1 on s1.document_id = s2.document_id
+    left join s1 on s2.document_id = s1.document_id
     left join s3 on s2.material = s3.material_id
-
+    where s2.material_group = 'L002'
     order by s1.document_id asc
-    
 )
 
 select * from gold_model {{ env_var("DBT_LIMIT") }}
