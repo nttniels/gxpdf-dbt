@@ -16,7 +16,7 @@ bronze_polished_model as (
         menge::number as purchase_order_quantity,
         meins::string(10) as quantity_unit,
         netpr::number as net_price,
-        peinh::string(10) as price_unit,
+        peinh::string(8) as price_unit,
         _gxpdf_loaded_at::timestamp_ntz as row_loaded_datetime
     from bronze_raw_table
 
