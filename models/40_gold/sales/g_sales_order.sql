@@ -37,7 +37,7 @@ gold_model as (
 
     left join s1 on s2.document_id = s1.document_id
     left join s3 on s2.material = s3.material_id
-    where s2.material_group = 'L002'
+    where s2.material_group = 'L004'
     order by s1.document_id asc
 )
 
