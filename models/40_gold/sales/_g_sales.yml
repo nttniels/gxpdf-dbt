@@ -86,4 +86,18 @@ models:
     meta:
         datafold:
           datadiff:
-            never_diff: true  
+            never_diff: true
+
+  - name: g_purchase_order
+    description: purchase order header & item combined
+    columns:
+        - name: purchase_order
+          tags:
+            - primary-key
+        - name: purchase_order_item
+          tags:
+            - primary-key
+    meta:
+        datafold:
+          datadiff:
+            never_diff: false 
