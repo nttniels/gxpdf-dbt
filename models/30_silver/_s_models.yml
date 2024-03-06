@@ -9,8 +9,8 @@ models:
         tags:
           - primary-key
         tests:
-         - unique
-         - not_null
+          - unique
+          - not_null
       - name: old_material_id
         description: old material number
       - name: uom_base
@@ -63,7 +63,7 @@ models:
       datafold:
         datadiff:
           never_diff: true
-  
+
   - name: s_batch
     columns:
       - name: charge_id
@@ -71,7 +71,7 @@ models:
         tags:
           - primary-key
         tests:
-         - not_null
+          - not_null
       - name: plant_id
         description: "Plant Number"
       - name: expiry_date
@@ -120,6 +120,32 @@ models:
       - name: row_load_date
         description: ""
     meta:
-        datafold:
-          datadiff:
-            never_diff: true            
+      datafold:
+        datadiff:
+          never_diff: true
+
+  - name: s_purchase_order_header
+    columns:
+      - name: purchase_order
+        tags:
+          - primary-key
+      - name: item_id
+        tags:
+          - primary-key
+    meta:
+      datafold:
+        datadiff:
+          never_diff: true
+
+  - name: s_purchase_order_item
+    columns:
+      - name: purchase_order
+        tags:
+          - primary-key
+      - name: purchase_order_item
+        tags:
+          - primary-key
+    meta:
+      datafold:
+        datadiff:
+          never_diff: true
