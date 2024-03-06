@@ -15,11 +15,13 @@ bronze_polished_model as (
         bsart::string(4) as purchase_doc_type,
         loekz::string(1) as deletion_indicator,
         statu::string(1) as status_document,
-        datefromparts(
-            substring(aedat::string, 0, 4),
-            substring(aedat::string, 5, 2),
-            substring(aedat::string, 7, 2)
-        )::date as first_date
+        ekorg::string(4) as purchase_organsation,
+        ekgrp::string(10) as purchase_group,
+        lifnr::string(10) as vendor_nr,
+        _GXPDF_LOADED_AT::timestamp_ntz as row_loaded_datetime,
+        DATE(aedat, 'YYYYMMDD') as creation_date,
+        TO_TIMESTAMP(lastchangedatetime::string, 'yyyymmddhhmiss.ff')
+            as last_change_datetime
     from bronze_raw_table
 
 )
