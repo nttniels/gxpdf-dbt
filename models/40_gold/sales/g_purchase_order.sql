@@ -29,7 +29,7 @@ gold_model as (
         s2.price_unit,
         s2.deletion_indicator,
         s2.material_id,
-        s3.description
+        s3.description as material_description
     from s2
 
     left join s1 on s2.purchase_order = s1.purchase_order
