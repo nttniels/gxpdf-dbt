@@ -30,9 +30,9 @@ gold_model as (
         --s2.deletion_indicator,
         s2.material_id,
         s3.description as material_description
-    from s2
+    from s1
 
-    left join s1 on s2.purchase_order = s1.purchase_order
+    left join s2 on s2.purchase_order = s1.purchase_order
     left join s3 on s2.material_id = s3.material_id
     order by s2.purchase_order asc
 )
