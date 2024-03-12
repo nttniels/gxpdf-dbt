@@ -27,7 +27,7 @@ gold_model as (
         s2.quantity_unit,
         s2.net_price,
         s2.price_unit,
-        s2.deletion_indicator,
+        --s2.deletion_indicator,
         s2.material_id,
         s3.description as material_description
     from s2
