@@ -23,7 +23,7 @@ models:
       - name: material_id
         description: Material number
         constraints:
-          - type: - not_null
+          - type: not_null
         tags:
           - primary-key        
       - name: lang
