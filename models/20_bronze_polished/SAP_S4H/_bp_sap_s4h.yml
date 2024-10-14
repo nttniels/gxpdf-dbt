@@ -10,6 +10,8 @@ models:
       - name: material_id
         tags:
           - primary-key
+        constraints:
+          - type: not_null
       - name: old_material_id
         description: "old material number"
     meta:
@@ -19,6 +21,8 @@ models:
 
   - name: bp_SAP_S4H_makt
     description: material master text
+    Contract:
+      Enforced: True
     columns:
       - name: material_id
         description: Material number
