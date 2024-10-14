@@ -12,7 +12,7 @@ s3 as (select * from {{ ref('s_material') }}),
 
 gold_model as (
     select
-        s2.purchase_order,
+        s1.purchase_order,
         s2.purchase_order_item,
         s1.company_code,
         s1.purchase_doc_category,
@@ -27,14 +27,15 @@ gold_model as (
         s2.quantity_unit,
         s2.net_price,
         s2.price_unit,
-        --s2.deletion_indicator,
+        s2.deletion_indicator,
         s2.material_id,
         s3.description as material_description
     from s1
 
-    left join s2 on s2.purchase_order = s1.purchase_order
+    left join s2 on s1.purchase_order = s2.purchase_order
     left join s3 on s2.material_id = s3.material_id
-    order by s2.purchase_order asc
+
+    order by s1.purchase_order asc
 )
 
 select * from gold_model {{ env_var("DBT_LIMIT") }}
