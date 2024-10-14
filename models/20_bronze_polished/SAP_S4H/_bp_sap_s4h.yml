@@ -4,6 +4,8 @@ version: 1
 models:
   - name: bp_SAP_S4H_mara
     description: material master
+    Contract:
+      Enforced: True
     columns:
       - name: material_id
         tags:
@@ -20,6 +22,8 @@ models:
     columns:
       - name: material_id
         description: Material number
+        constraints:
+          - type: - not_null
         tags:
           - primary-key        
       - name: lang
