@@ -5,7 +5,7 @@
 -- SELECTED FIELDS FROM BRONZE-POLISHED
 with
 bp1 as (select * from {{ ref("bp_SAP_S4H_ekko") }}),
-bp2 as (select * from {{ ref("bp_SAP_S4H_ekpo")}}),
+bp2 as (select * from {{ ref("bp_SAP_S4H_ekpo") }}),
 
 silver_model as (
 
@@ -29,7 +29,7 @@ silver_model as (
         bp2.net_price,
         bp2.price_unit
     from bp1
-   left join bp2 on bp1.purchase_order = bp2.purchase order
+    left join bp2 on bp1.purchase_order = bp2.purchase_order
 
 )
 
