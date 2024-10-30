@@ -3,7 +3,7 @@ version: 1
 # BRONZE POLISHED
 models:
   - name: bp_SAP_S4H_mara
-    description: material master
+    description: material master coming from SAP
     Contract:
       Enforced: True
     columns:
@@ -17,7 +17,9 @@ models:
     meta:
         datafold:
           datadiff:
-            never_diff: true        
+            never_diff: true    
+        additionaldata:
+          This is additional data added to this block to see if we can add more descriptions to it.    
 
   - name: bp_SAP_S4H_makt
     description: material master text
